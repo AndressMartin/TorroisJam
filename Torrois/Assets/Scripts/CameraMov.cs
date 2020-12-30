@@ -4,31 +4,39 @@ using UnityEngine;
 
 public class CameraMov : MonoBehaviour
 {
-    public float velocidade = 20f;
-    public Transform cameraMov;
-
+    public static bool podeMover;
+    private float velocidade = 20f;
+    private GameObject player;
+    private GameObject movePoint;
+    [SerializeField] public List<GameObject> listaSalas = new List<GameObject>();
+    public int indice = 0;
 
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
+        movePoint = player.transform.GetChild(0).gameObject;
         transform.position = new Vector3(0f, 0f, -10f);
-        cameraMov.parent = null;
     }
 
     void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position, cameraMov.position, velocidade * Time.deltaTime);
-
-        if (Vector3.Distance(transform.position, cameraMov.position) <= .05f)
+        if (podeMover)
         {
-            if (Mathf.Abs(Input.GetAxisRaw("Horizontal")) == 1f)
-            {
-                cameraMov.position += new Vector3(Input.GetAxisRaw("Horizontal")*10, 0f, 0f);
-            }
+            FazerMovimento();
+        }
+    }
 
-            if (Mathf.Abs(Input.GetAxisRaw("Vertical")) == 1f)
-            {
-                cameraMov.position += new Vector3(0f, Input.GetAxisRaw("Vertical")*10, 0f);
-            }
+    public void FazerMovimento()
+    {
+        transform.position = Vector3.MoveTowards(transform.position, listaSalas[indice+1].transform.position, velocidade * Time.deltaTime);
+        
+        if (Vector3.Distance(transform.position, listaSalas[indice+1].transform.position) == 0f)
+        {
+            indice += 1;
+            podeMover = false;
+            player.transform.position = transform.position;
+            movePoint.transform.position = transform.position;
+            
         }
     }
 }
