@@ -6,20 +6,20 @@ public class playerMoveGrid : MonoBehaviour
 {
     public float velocidade = 5f;
     public Transform pontoMov;
-    // Start is called before the first frame update
+
+
     void Start()
     {
         pontoMov.parent = null;
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position, pontoMov.position, velocidade * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, pontoMov.position, velocidade * Time.deltaTime);
 
-        if (Vector3.Distance(transform.position, pontoMov.position) <= .05f)
+        if (Vector2.Distance(transform.position, pontoMov.position) <= .05f)
         {
-            if (Mathf.Abs(Input.GetAxisRaw("Horizontal")) == 1f)
+            if (Mathf.Abs(Input.GetAxisRaw("Horizontal")) == 1f) 
             {
                 pontoMov.position += new Vector3(Input.GetAxisRaw("Horizontal"), 0f, 0f);
             }
