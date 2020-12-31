@@ -34,10 +34,17 @@ public class GridManagement : MonoBehaviour
             for (int coluna = 0; coluna < colunas; coluna++)
             {
                 GameObject GridTile = new GameObject("GridTile" + indice);
+                GridTile.gameObject.tag = "GridTile";
+                GridIndice ThisIndice = GridTile.AddComponent<GridIndice>();
+                ThisIndice.thisIndice = indice;
+                BoxCollider2D thisBoxCollider2d = GridTile.AddComponent<BoxCollider2D>();
+                //thisBoxCollider2d.offset = new Vector2(0.15f, -0.15f);
+                thisBoxCollider2d.size = new Vector2(0.25f, 0.25f);
+                thisBoxCollider2d.isTrigger = true;
                 GridTile.transform.SetParent(MyGrid.transform);
 
-                float posX = (coluna * tileSize)+0.5f;
-                float posY = (linha * -tileSize)+0.5f;
+                float posX = (coluna * tileSize) + 0.5f;
+                float posY = (linha * -tileSize) + 0.5f;
                 
                 GridTile.transform.position = new Vector2(posX-8, posY+5);
                 DrawIcon(GridTile, 2);
