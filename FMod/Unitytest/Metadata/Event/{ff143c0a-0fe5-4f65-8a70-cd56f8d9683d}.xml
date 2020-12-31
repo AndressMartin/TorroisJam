@@ -5,7 +5,7 @@
 			<value>gameplay</value>
 		</property>
 		<property name="outputFormat">
-			<value>0</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{c80a5899-77a3-42b3-8b52-f515b869ff33}</destination>
@@ -59,12 +59,25 @@
 	<object class="EventAutomatableProperties" id="{53b87269-0c11-4b32-9495-f90a030743a0}" />
 	<object class="MarkerTrack" id="{dcb3455b-2d81-4621-bb6a-48bd3cdcb615}" />
 	<object class="GroupTrack" id="{d48c7959-c296-4ad5-a7b4-0781b4819e48}">
+		<relationship name="modules">
+			<destination>{98dcc5ce-1cb6-4f36-be2e-e4bd11697a30}</destination>
+		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{1f0d0524-4dd5-40b7-8c1b-3a750eac4a22}</destination>
 		</relationship>
 	</object>
-	<object class="Timeline" id="{a962ecee-c1f3-4e9a-9534-a791d8514b87}" />
+	<object class="Timeline" id="{a962ecee-c1f3-4e9a-9534-a791d8514b87}">
+		<relationship name="modules">
+			<destination>{98dcc5ce-1cb6-4f36-be2e-e4bd11697a30}</destination>
+		</relationship>
+		<relationship name="markers">
+			<destination>{08a28ac2-b8be-461c-bd37-282e12ec7c08}</destination>
+		</relationship>
+	</object>
 	<object class="EventMixerMaster" id="{0722c950-622d-4c91-84cb-c6db4fa2738d}">
+		<relationship name="modulators">
+			<destination>{03c50325-0c04-41d3-b152-41ad15ea07f4}</destination>
+		</relationship>
 		<relationship name="effectChain">
 			<destination>{2f0761f2-901e-42f0-99eb-6480b567ad8f}</destination>
 		</relationship>
@@ -81,9 +94,17 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{956a4012-ee53-4b4d-870c-2d2718d3b982}" />
+	<object class="SingleSound" id="{98dcc5ce-1cb6-4f36-be2e-e4bd11697a30}">
+		<property name="length">
+			<value>181</value>
+		</property>
+		<relationship name="audioFile">
+			<destination>{94f2bf3e-f574-4f0c-ab0e-3face006d638}</destination>
+		</relationship>
+	</object>
 	<object class="EventMixerGroup" id="{1f0d0524-4dd5-40b7-8c1b-3a750eac4a22}">
 		<property name="name">
-			<value>Audio 1</value>
+			<value>Gameplay</value>
 		</property>
 		<relationship name="effectChain">
 			<destination>{876e07d6-5e90-42ad-af9c-21b2904746d8}</destination>
@@ -94,6 +115,43 @@
 		<relationship name="output">
 			<destination>{0722c950-622d-4c91-84cb-c6db4fa2738d}</destination>
 		</relationship>
+	</object>
+	<object class="LoopRegion" id="{08a28ac2-b8be-461c-bd37-282e12ec7c08}">
+		<property name="position">
+			<value>18</value>
+		</property>
+		<property name="length">
+			<value>162</value>
+		</property>
+		<relationship name="timeline">
+			<destination>{a962ecee-c1f3-4e9a-9534-a791d8514b87}</destination>
+		</relationship>
+		<relationship name="markerTrack">
+			<destination>{dcb3455b-2d81-4621-bb6a-48bd3cdcb615}</destination>
+		</relationship>
+	</object>
+	<object class="ADSRModulator" id="{03c50325-0c04-41d3-b152-41ad15ea07f4}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>volume</value>
+		</property>
+		<property name="initialValue">
+			<value>-80</value>
+		</property>
+		<property name="attackTime">
+			<value>403.84613</value>
+		</property>
+		<property name="attackShape">
+			<value>-1.00000048</value>
+		</property>
+		<property name="releaseTime">
+			<value>13205.1328</value>
+		</property>
+		<property name="releaseShape">
+			<value>0.197351366</value>
+		</property>
+		<property name="finalValue">
+			<value>-80</value>
+		</property>
 	</object>
 	<object class="MixerBusEffectChain" id="{2f0761f2-901e-42f0-99eb-6480b567ad8f}">
 		<relationship name="effects">
