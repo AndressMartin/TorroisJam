@@ -17,7 +17,7 @@ public class playerMoveGrid : MonoBehaviour
         pontoMov.parent = null;
     }
     
-    void Update()
+    void FixedUpdate()
     {
         Move();
         Debug.Log("Anterior = " + gridAnterior + "Atual = " + gridAtual);
@@ -42,7 +42,7 @@ public class playerMoveGrid : MonoBehaviour
     {
         transform.position = Vector2.MoveTowards(transform.position, pontoMov.position, velocidade * Time.deltaTime);
 
-        if (Vector2.Distance(transform.position, pontoMov.position) <= .05f)
+        if (Vector2.Distance(transform.position, pontoMov.position) == 0f)
         {
             if (Mathf.Abs(Input.GetAxisRaw("Horizontal")) == 1f)
             {
@@ -61,10 +61,6 @@ public class playerMoveGrid : MonoBehaviour
                                 gridAnterior = gridAtual;
                 pontoMov.position += new Vector3(0f, Input.GetAxisRaw("Vertical"), 0f);
             }
-            //cima = gridAtual - 10;
-            //baixo = gridAtual + 10;
-            //esquerda = gridAtual - 1;
-            //direita = gridAtual + 1;
         }
     }
 }

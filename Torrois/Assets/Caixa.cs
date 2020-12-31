@@ -18,7 +18,7 @@ public class Caixa : MonoBehaviour
     }
 
 
-    void Update()
+    void FixedUpdate()
     {
         //if (gridCaixa == gridDoJogador)
         //{
@@ -61,5 +61,4 @@ public class Caixa : MonoBehaviour
             colidiu = true;
         }
     }
-
 }
