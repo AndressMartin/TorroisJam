@@ -12,6 +12,10 @@ public class playerMoveGrid : MonoBehaviour
 
     private bool gameStarted = true;
 
+    public static bool voltando = false;
+
+    private Vector2 pontoMovPosAntes;
+
     void Start()
     {
         pontoMov.parent = null;
@@ -19,7 +23,10 @@ public class playerMoveGrid : MonoBehaviour
     
     void FixedUpdate()
     {
-        Move();
+        if (!voltando)
+            Move();
+        else
+            Voltar();
         Debug.Log("Anterior = " + gridAnterior + "Atual = " + gridAtual);
     }
 
@@ -46,6 +53,7 @@ public class playerMoveGrid : MonoBehaviour
         {
             if (Mathf.Abs(Input.GetAxisRaw("Horizontal")) == 1f)
             {
+                pontoMovPosAntes = pontoMov.position;
                             if (Input.GetAxisRaw("Horizontal") == -1)
                                 gridAnterior = gridAtual;
                             if (Input.GetAxisRaw("Horizontal") == +1)
@@ -55,6 +63,7 @@ public class playerMoveGrid : MonoBehaviour
 
             if (Mathf.Abs(Input.GetAxisRaw("Vertical")) == 1f)
             {
+                pontoMovPosAntes = pontoMov.position;
                             if (Input.GetAxisRaw("Vertical") == -1)
                                 gridAnterior = gridAtual;
                             if (Input.GetAxisRaw("Vertical") == +1)
@@ -62,5 +71,12 @@ public class playerMoveGrid : MonoBehaviour
                 pontoMov.position += new Vector3(0f, Input.GetAxisRaw("Vertical"), 0f);
             }
         }
+    }
+
+    private void Voltar()
+    {
+        pontoMov.position = pontoMovPosAntes;
+        if (Vector2.Distance(pontoMov.position, pontoMovPosAntes) == 0f)
+            voltando = false;
     }
 }
