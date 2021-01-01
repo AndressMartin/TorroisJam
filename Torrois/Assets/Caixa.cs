@@ -19,13 +19,9 @@ public class Caixa : MonoBehaviour
     void Start()
     {
         boxMoveTriggerer = GetComponent<BoxCollider2D>();
-        //boxCollider = gameObject.AddComponent<BoxCollider2D>();
-        //boxCollider.size = new Vector2(.7f, .7f);
         pontoMov.parent = null;
-        //if (gameObject.tag == "Imovel" || podeMover == false)
-        //    boxCollider.enabled = true;
-        //else
-        //    boxCollider.enabled = false;
+        if (gameObject.tag == "Imovel")
+            podeMover = false;
     }
 
 
@@ -36,23 +32,30 @@ public class Caixa : MonoBehaviour
     }
 
     private void Move()
-    { //TODO: Por onde o jogador está vindo?
+    {
 
         transform.position = Vector2.MoveTowards(transform.position, pontoMov.position, velocidade * Time.deltaTime);
         if (colidiu)
         {
-            //Debug.Log("Sai do IF");
-            if (podeMover == true && andaMax == false)
+            if (podeMover == true)
             {
-                if (playerMoveGrid.gridAnterior == gridDoJogador + 1) //Veio da direita
-                    pontoMov.position += new Vector3(-1f, 0f, 0f); //Caixa pra esquerda
-                else if (playerMoveGrid.gridAnterior == gridDoJogador - 1) //Veio da esquerda
-                    pontoMov.position += new Vector3(+1f, 0f, 0f); //Caixa pra direita
-                if (playerMoveGrid.gridAnterior == gridDoJogador - 16) //Veio de cima
-                    pontoMov.position += new Vector3(0f, -1f, 0f); //Caixa pra baixo
-                else if (playerMoveGrid.gridAnterior == gridDoJogador + 16) //Veio de baixo
-                    pontoMov.position += new Vector3(0f, +1f, 0f); //Caixa pra cima
-                colidiu = false;
+                if (andaMax == true)
+                {
+                    if (playerMoveGrid.gridAnterior == gridDoJogador + 1) //Veio da direita
+                        pontoMov.position += new Vector3(-1f, 0f, 0f); //Caixa pra esquerda
+                    else if (playerMoveGrid.gridAnterior == gridDoJogador - 1) //Veio da esquerda
+                        pontoMov.position += new Vector3(+1f, 0f, 0f); //Caixa pra direita
+                    if (playerMoveGrid.gridAnterior == gridDoJogador - 16) //Veio de cima
+                        pontoMov.position += new Vector3(0f, -1f, 0f); //Caixa pra baixo
+                    else if (playerMoveGrid.gridAnterior == gridDoJogador + 16) //Veio de baixo
+                        pontoMov.position += new Vector3(0f, +1f, 0f); //Caixa pra cima
+                    colidiu = false;
+                }
+                else
+                {
+                    Debug.Log("TODO: Limite da Sala.");
+                }
+                
             }
             if (podeMover == false)
             {
