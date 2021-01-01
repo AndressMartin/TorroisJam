@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Caixa : MonoBehaviour
 {
-    public float velocidade = 5f;
+    private float velocidade = 6f;
     public Transform pontoMov;
     public int gridCaixa;
     public int gridDoJogador;
@@ -13,16 +13,19 @@ public class Caixa : MonoBehaviour
     public bool podeMover;
     public bool andaMax;
 
-    private BoxCollider2D boxCollider;
+    //private BoxCollider2D boxCollider;
     private BoxCollider2D boxMoveTriggerer;
 
     void Start()
     {
+        boxMoveTriggerer = GetComponent<BoxCollider2D>();
+        //boxCollider = gameObject.AddComponent<BoxCollider2D>();
+        //boxCollider.size = new Vector2(.7f, .7f);
         pontoMov.parent = null;
-        //if (gameObject.tag == "Imovel")
-        //{
-
-        //}
+        //if (gameObject.tag == "Imovel" || podeMover == false)
+        //    boxCollider.enabled = true;
+        //else
+        //    boxCollider.enabled = false;
     }
 
 
@@ -49,6 +52,11 @@ public class Caixa : MonoBehaviour
                     pontoMov.position += new Vector3(0f, -1f, 0f); //Caixa pra baixo
                 else if (playerMoveGrid.gridAnterior == gridDoJogador + 16) //Veio de baixo
                     pontoMov.position += new Vector3(0f, +1f, 0f); //Caixa pra cima
+                colidiu = false;
+            }
+            if (podeMover == false)
+            {
+                playerMoveGrid.voltando = true;
                 colidiu = false;
             }
         }
