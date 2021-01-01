@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.01.00">
 	<object class="Event" id="{4a2002db-453f-49b3-9bf3-d591e65ca714}">
 		<property name="name">
-			<value>mover_caixa</value>
+			<value>mover_caixa_torre</value>
 		</property>
 		<property name="outputFormat">
 			<value>0</value>
