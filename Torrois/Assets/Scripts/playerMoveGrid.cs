@@ -27,7 +27,7 @@ public class playerMoveGrid : MonoBehaviour
             Move();
         else
             Voltar();
-        //Debug.Log("Anterior = " + gridAnterior + "Atual = " + gridAtual);
+        Debug.Log("Anterior = " + gridAnterior + "Atual = " + gridAtual);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

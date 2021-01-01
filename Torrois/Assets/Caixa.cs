@@ -39,7 +39,7 @@ public class Caixa : MonoBehaviour
         {
             if (podeMover == true)
             {
-                if (andaMax == false)
+                if (andaMax == true)
                 {
                     if (playerMoveGrid.gridAnterior == gridDoJogador + 1) //Veio da direita
                         pontoMov.position += new Vector3(-1f, 0f, 0f); //Caixa pra esquerda
@@ -53,7 +53,7 @@ public class Caixa : MonoBehaviour
                 }
                 else
                 {
-                    //Debug.Log("TODO: Limite da Sala.");
+                    Debug.Log("TODO: Limite da Sala.");
                 }
                 
             }
@@ -75,7 +75,7 @@ public class Caixa : MonoBehaviour
 
         if (collision.gameObject.tag == "Player")
         {
-            //Debug.Log("Esta colidindo com a caixa");
+            Debug.Log("Esta colidindo com a caixa");
             colidiu = true;
         }
     }
