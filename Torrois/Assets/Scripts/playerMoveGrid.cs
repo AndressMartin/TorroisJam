@@ -27,7 +27,7 @@ public class playerMoveGrid : MonoBehaviour
             Move();
         else
             Voltar();
-        Debug.Log("Anterior = " + gridAnterior + "Atual = " + gridAtual);
+        //Debug.Log("Anterior = " + gridAnterior + "Atual = " + gridAtual);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -53,7 +53,7 @@ public class playerMoveGrid : MonoBehaviour
         {
             if (Mathf.Abs(Input.GetAxisRaw("Horizontal")) == 1f)
             {
-                pontoMovPosAntes = pontoMov.position;
+                pontoMovPosAntes = pontoMov.position;   
                             if (Input.GetAxisRaw("Horizontal") == -1)
                                 gridAnterior = gridAtual;
                             if (Input.GetAxisRaw("Horizontal") == +1)

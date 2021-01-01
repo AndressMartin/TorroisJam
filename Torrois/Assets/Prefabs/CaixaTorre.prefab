@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 6846891206937330503}
   m_Layer: 0
   m_Name: CaixaTorre
-  m_TagString: Player
+  m_TagString: Torre
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -139,7 +139,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.26530638, y: 0.23152733}
+  m_Size: {x: 0.2, y: 0.2}
   m_EdgeRadius: 0
 --- !u!50 &6846891206937330504
 Rigidbody2D:
@@ -174,7 +174,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b27c157b932ee24e8cd6aff1602e0f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidade: 5
   pontoMov: {fileID: 6846891206342243977}
   gridCaixa: 0
   gridDoJogador: 0

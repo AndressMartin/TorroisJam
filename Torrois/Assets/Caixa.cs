@@ -9,16 +9,27 @@ public class Caixa : MonoBehaviour
     public int gridCaixa;
     public int gridDoJogador;
 
-    public bool colidiu = false;
+    public bool colidiuJogador = false;
     public bool podeMover;
     public bool andaMax;
 
-    //private BoxCollider2D boxCollider;
-    private BoxCollider2D boxMoveTriggerer;
+    //0 = esquerda, 1 = direita, 2 = cima, 3 = baixo
+    [SerializeField] public List<bool> direcoesMov = new List<bool>(){false, false, false, false};
+
+    private BoxCollider2D boxMoveColl;
+    private BoxCollider2D boxTriggerer;
+
+    ChecarMobilidade pontoMovScript;
 
     void Start()
     {
-        boxMoveTriggerer = GetComponent<BoxCollider2D>();
+        boxTriggerer = GetComponent<BoxCollider2D>();
+
+        pontoMov = transform.GetChild(0);
+        boxMoveColl = pontoMov.GetComponent<BoxCollider2D>();
+
+        pontoMovScript = gameObject.GetComponentInChildren<ChecarMobilidade>();
+
         pontoMov.parent = null;
         if (gameObject.tag == "Imovel")
             podeMover = false;
@@ -28,41 +39,85 @@ public class Caixa : MonoBehaviour
     void FixedUpdate()
     {
         gridDoJogador = playerMoveGrid.gridAtual;
-        Move();
+        if (pontoMovScript.ColidiuParede)
+            Voltar();
+        else
+            Move();
     }
 
     private void Move()
     {
 
         transform.position = Vector2.MoveTowards(transform.position, pontoMov.position, velocidade * Time.deltaTime);
-        if (colidiu)
+        if (colidiuJogador)
         {
             if (podeMover == true)
             {
-                if (andaMax == true)
+                if (andaMax == false)
                 {
+
                     if (playerMoveGrid.gridAnterior == gridDoJogador + 1) //Veio da direita
+                    {
                         pontoMov.position += new Vector3(-1f, 0f, 0f); //Caixa pra esquerda
+                        direcoesMov[0] = true;
+                    }
                     else if (playerMoveGrid.gridAnterior == gridDoJogador - 1) //Veio da esquerda
+                    {
                         pontoMov.position += new Vector3(+1f, 0f, 0f); //Caixa pra direita
+                        direcoesMov[1] = true;
+                    }
                     if (playerMoveGrid.gridAnterior == gridDoJogador - 16) //Veio de cima
+                    {
                         pontoMov.position += new Vector3(0f, -1f, 0f); //Caixa pra baixo
+                        direcoesMov[3] = true;
+                    }
                     else if (playerMoveGrid.gridAnterior == gridDoJogador + 16) //Veio de baixo
+                    {
                         pontoMov.position += new Vector3(0f, +1f, 0f); //Caixa pra cima
-                    colidiu = false;
+                        direcoesMov[2] = true;
+                    }
+                    colidiuJogador = false;
                 }
-                else
-                {
-                    Debug.Log("TODO: Limite da Sala.");
-                }
-                
             }
             if (podeMover == false)
             {
                 playerMoveGrid.voltando = true;
-                colidiu = false;
+                colidiuJogador = false;
             }
         }
+        if (Vector2.Distance(transform.position, pontoMov.position) == 0f) //PODE BUGAR SE COLISAO FOR MUITO RAPIDO
+        {
+            Debug.Log("Direcoes iguais");
+            direcoesMov[0] = false;
+            direcoesMov[1] = false;
+            direcoesMov[2] = false;
+            direcoesMov[3] = false; 
+        }
+    }
+    private void Voltar()
+    {
+        Debug.Log("tentando voltar");
+        if (direcoesMov[0] == true)
+        {
+            Debug.Log("tentando voltar " + "esquerda");
+            pontoMov.position += new Vector3(+1f, 0f, 0f);
+        }
+        if (direcoesMov[1] == true)
+        {
+            Debug.Log("tentando voltar " + "direita");
+            pontoMov.position += new Vector3(-1f, 0f, 0f);
+        }
+        if (direcoesMov[3] == true)
+        {
+            Debug.Log("tentando voltar " + "cima");
+            pontoMov.position += new Vector3(0f, +1f, 0f);
+        }
+        if (direcoesMov[2] == true)
+        {
+            Debug.Log("tentando voltar " + "baixo");
+            pontoMov.position += new Vector3(0f, -1f, 0f);
+        }
+        pontoMovScript.ColidiuParede = false;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -75,8 +130,8 @@ public class Caixa : MonoBehaviour
 
         if (collision.gameObject.tag == "Player")
         {
-            Debug.Log("Esta colidindo com a caixa");
-            colidiu = true;
+            //Debug.Log("Esta colidindo com a caixa");
+            colidiuJogador = true;
         }
     }
 }
