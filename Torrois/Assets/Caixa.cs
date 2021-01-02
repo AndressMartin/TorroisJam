@@ -24,26 +24,38 @@ public class Caixa : MonoBehaviour
     void Start()
     {
         boxTriggerer = GetComponent<BoxCollider2D>();
+        if (gameObject.tag == "Imovel")
+        {
+            Destroy(transform.GetChild(0));
+        }
+        else
+        {
+            pontoMov = transform.GetChild(0);
+            boxMoveColl = pontoMov.GetComponent<BoxCollider2D>();
+            pontoMovScript = gameObject.GetComponentInChildren<ChecarMobilidade>();
+            pontoMov.parent = null;
+        }
 
-        pontoMov = transform.GetChild(0);
-        boxMoveColl = pontoMov.GetComponent<BoxCollider2D>();
-
-        pontoMovScript = gameObject.GetComponentInChildren<ChecarMobilidade>();
-
-        pontoMov.parent = null;
         if (gameObject.tag == "Imovel")
             podeMover = false;
+
+        
     }
 
 
     void FixedUpdate()
     {
         gridDoJogador = playerMoveGrid.gridAtual;
-        if (pontoMovScript.ColidiuParede)
+        if (pontoMovScript.ColidiuParede && gameObject.tag != "Imovel")
+        {
+            Debug.Log("Caixa pode voltar");
             Voltar();
+            pontoMovScript.ColidiuParede = false;
+        }
         else
             Move();
     }
+
 
     private void Move()
     {
@@ -87,7 +99,7 @@ public class Caixa : MonoBehaviour
         }
         if (Vector2.Distance(transform.position, pontoMov.position) == 0f) //PODE BUGAR SE COLISAO FOR MUITO RAPIDO
         {
-            Debug.Log("Direcoes iguais");
+            //Debug.Log("Direcoes iguais");
             direcoesMov[0] = false;
             direcoesMov[1] = false;
             direcoesMov[2] = false;
@@ -96,28 +108,29 @@ public class Caixa : MonoBehaviour
     }
     private void Voltar()
     {
-        Debug.Log("tentando voltar");
+        //Debug.Log("tentando voltar");
         if (direcoesMov[0] == true)
         {
-            Debug.Log("tentando voltar " + "esquerda");
+            //Debug.Log("tentando voltar " + "esquerda");
             pontoMov.position += new Vector3(+1f, 0f, 0f);
         }
         if (direcoesMov[1] == true)
         {
-            Debug.Log("tentando voltar " + "direita");
+            //Debug.Log("tentando voltar " + "direita");
             pontoMov.position += new Vector3(-1f, 0f, 0f);
         }
         if (direcoesMov[3] == true)
         {
-            Debug.Log("tentando voltar " + "cima");
+            //Debug.Log("tentando voltar " + "cima");
             pontoMov.position += new Vector3(0f, +1f, 0f);
         }
         if (direcoesMov[2] == true)
         {
-            Debug.Log("tentando voltar " + "baixo");
+            //Debug.Log("tentando voltar " + "baixo");
             pontoMov.position += new Vector3(0f, -1f, 0f);
         }
-        pontoMovScript.ColidiuParede = false;
+        playerMoveGrid.voltando = true;
+        playerMoveGrid.colidiuCaixaImovel = true;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

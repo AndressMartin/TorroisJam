@@ -9,12 +9,15 @@ public class playerMoveGrid : MonoBehaviour
     public static int gridAtual;
 
     public static int gridAnterior = gridAtual;
+    int gridTemp;
 
     private bool gameStarted = true;
 
     public static bool voltando = false;
 
     private Vector2 pontoMovPosAntes;
+    private Vector3 pontoMovAntesTemp;
+    public static bool colidiuCaixaImovel;
 
     void Start()
     {
@@ -27,13 +30,14 @@ public class playerMoveGrid : MonoBehaviour
             Move();
         else
             Voltar();
-        //Debug.Log("Anterior = " + gridAnterior + "Atual = " + gridAtual);
+        Debug.Log("Anterior = " + gridAnterior + "Atual = " + gridAtual);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "GridTile")
         {
+            gridTemp = gridAnterior;
             GridIndice ThisIndice = collision.GetComponent<GridIndice>();
             gridAtual = ThisIndice.thisIndice;
             if (gameStarted)
@@ -41,33 +45,27 @@ public class playerMoveGrid : MonoBehaviour
                 gridAnterior = gridAtual;
                 gameStarted = false;
             }
-            //Debug.Log("Colidiu com " + gridAtual);
+            Debug.Log("Colidiu com " + gridAtual);
         }
     }
 
     private void Move()
     {
         transform.position = Vector2.MoveTowards(transform.position, pontoMov.position, velocidade * Time.deltaTime);
-
+        pontoMovAntesTemp = pontoMovPosAntes;
         if (Vector2.Distance(transform.position, pontoMov.position) == 0f)
         {
             if (Mathf.Abs(Input.GetAxisRaw("Horizontal")) == 1f)
             {
-                pontoMovPosAntes = pontoMov.position;   
-                            if (Input.GetAxisRaw("Horizontal") == -1)
-                                gridAnterior = gridAtual;
-                            if (Input.GetAxisRaw("Horizontal") == +1)
-                                gridAnterior = gridAtual;
+                pontoMovPosAntes = pontoMov.position;
+                gridAnterior = gridAtual;
                 pontoMov.position += new Vector3(Input.GetAxisRaw("Horizontal"), 0f, 0f);
             }
 
-            if (Mathf.Abs(Input.GetAxisRaw("Vertical")) == 1f)
+            if (Mathf.Abs(Input.GetAxisRaw("Vertical")) == 1f)  
             {
                 pontoMovPosAntes = pontoMov.position;
-                            if (Input.GetAxisRaw("Vertical") == -1)
-                                gridAnterior = gridAtual;
-                            if (Input.GetAxisRaw("Vertical") == +1)
-                                gridAnterior = gridAtual;
+                gridAnterior = gridAtual;
                 pontoMov.position += new Vector3(0f, Input.GetAxisRaw("Vertical"), 0f);
             }
         }
@@ -75,8 +73,19 @@ public class playerMoveGrid : MonoBehaviour
 
     private void Voltar()
     {
+        Debug.Log("Jogador Voltando");
+
+        gridAtual = gridAnterior;
+        gridAnterior = gridTemp;
         pontoMov.position = pontoMovPosAntes;
+        pontoMovPosAntes = pontoMovAntesTemp;
         if (Vector2.Distance(pontoMov.position, pontoMovPosAntes) == 0f)
             voltando = false;
+        if (colidiuCaixaImovel)
+        {
+            pontoMovPosAntes = pontoMovAntesTemp;
+            colidiuCaixaImovel = false;
+        }
+        //if ()
     }
 }
