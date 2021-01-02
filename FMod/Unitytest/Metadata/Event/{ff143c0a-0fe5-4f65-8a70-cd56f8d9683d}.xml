@@ -138,13 +138,13 @@
 			<value>-80</value>
 		</property>
 		<property name="attackTime">
-			<value>403.84613</value>
+			<value>0</value>
 		</property>
 		<property name="attackShape">
 			<value>-1.00000048</value>
 		</property>
 		<property name="releaseTime">
-			<value>2200</value>
+			<value>1400</value>
 		</property>
 		<property name="releaseShape">
 			<value>0.197351366</value>
