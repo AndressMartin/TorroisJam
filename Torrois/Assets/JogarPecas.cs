@@ -10,8 +10,11 @@ public class JogarPecas : MonoBehaviour
 
     [SerializeField] public List<GameObject> listaObjetosJogaveis = new List<GameObject>();
 
+    playerMoveGrid playerMoveLocal;
+
     void Start()
     {
+        playerMoveLocal = GameObject.FindGameObjectWithTag("Player").GetComponent<playerMoveGrid>();
         listaObjetosJogaveis.Add(GameObject.FindGameObjectWithTag("Player"));
         foreach (GameObject gObj in GameObject.FindGameObjectsWithTag("Torre"))
         {
@@ -22,9 +25,7 @@ public class JogarPecas : MonoBehaviour
 
     void Update()
     {
-        int direcaoEscolhida = Random.Range((int)DirecoesJogar.esquerda, (int)DirecoesJogar.baixo);
-        Debug.Log(direcaoEscolhida);
-        if (Cooldown.timerTime == 0)
+        if (Cooldown.timerTime <= 0)
         {
             JogarPecasFunc();
         }
@@ -32,8 +33,12 @@ public class JogarPecas : MonoBehaviour
 
     void JogarPecasFunc()
     {
-        int direcaoEscolhida = Random.Range((int)DirecoesJogar.esquerda, (int)DirecoesJogar.baixo);
-        qntdCasasJogar = Random.Range(1, 4);
-        playerMoveGrid.Jogado(qntdCasasJogar);
+        DirecoesJogar direcao = (DirecoesJogar)Random.Range(0, 1);
+        qntdCasasJogar = Random.Range(4, 9);
+        playerMoveLocal.qntQuadradosLocal = qntdCasasJogar;
+        playerMoveLocal.direcao = direcao.ToString();
+        playerMoveLocal.podeJogar = true;
+        Debug.Log(direcao.ToString());
+        Cooldown.ReiniciarTimer();
     }
 }

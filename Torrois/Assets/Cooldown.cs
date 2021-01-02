@@ -9,6 +9,7 @@ public class Cooldown : MonoBehaviour
     private TextMeshProUGUI timerText;
     [SerializeField] public static float timerTime = 120;
     public static bool ganhou = false;
+    public static float timerMax = 120f;
     void Awake()
     {
         ganhou = false;
@@ -19,21 +20,13 @@ public class Cooldown : MonoBehaviour
     private void Update()
     {
         UpdateTimer();
-        if (timerTime <= 0)
-        {
-            ganhou = true;
-        }
-        else
-        {
-            ganhou = false;
-        }
     }
 
     void StartCooldownTimer()
     {
         if (timerText != null)
         {
-            timerTime = 120;
+            timerTime = timerMax;
             timerText.text = "5:00";
             //InvokeRepeating("UpdateTimer", 0.0f, 0.01667f);
         }
@@ -48,11 +41,11 @@ public class Cooldown : MonoBehaviour
             string seconds = (timerTime % 60).ToString("00");
             //string fraction = ((timerTime * 100) % 100).ToString("000");
             timerText.text = minutes + ":" + seconds/* + "\n:" + fraction*/;
-            if (timerTime <= 0)
-            {
-                timerTime = 0;
-                timerText = null;
-            }
         }
+    }
+
+    public static void ReiniciarTimer() //TODO: ReiniciarTimer quando voltar a 0, não quando chamar
+    {
+        timerTime = timerMax;
     }
 }

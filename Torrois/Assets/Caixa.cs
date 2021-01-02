@@ -31,8 +31,6 @@ public class Caixa : MonoBehaviour
 
         if (gameObject.tag == "Imovel")
             podeMover = false;
-
-        
     }
 
 
@@ -41,7 +39,7 @@ public class Caixa : MonoBehaviour
         gridDoJogador = playerMoveGrid.gridAtual;
         if (pontoMovScript.ColidiuParede && gameObject.tag != "Imovel")
         {
-            Debug.Log("Caixa pode voltar");
+            //Debug.Log("Caixa pode voltar");
             Voltar();
             pontoMovScript.ColidiuParede = false;
         }
@@ -124,7 +122,6 @@ public class Caixa : MonoBehaviour
             pontoMov.position += new Vector3(0f, -1f, 0f);
         }
         playerMoveGrid.voltando = true;
-        playerMoveGrid.colidiuCaixaImovel = true;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
