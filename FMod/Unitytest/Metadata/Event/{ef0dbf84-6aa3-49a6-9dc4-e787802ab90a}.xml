@@ -59,12 +59,22 @@
 	<object class="EventAutomatableProperties" id="{17114715-a7e3-412d-880e-c9d1c1205771}" />
 	<object class="MarkerTrack" id="{5025fe76-2dae-4df9-8664-02ed9d12fd73}" />
 	<object class="GroupTrack" id="{b228a906-7fc7-4c4e-af94-dedc825877cb}">
+		<relationship name="modules">
+			<destination>{45ef6d4c-da82-4535-8b2d-bddcfb746890}</destination>
+		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{b92f417d-b410-4a5e-a66d-26e6f3d1d2e4}</destination>
 		</relationship>
 	</object>
-	<object class="Timeline" id="{9fd25675-7586-435c-8d71-ba76b6dcc153}" />
+	<object class="Timeline" id="{9fd25675-7586-435c-8d71-ba76b6dcc153}">
+		<relationship name="modules">
+			<destination>{45ef6d4c-da82-4535-8b2d-bddcfb746890}</destination>
+		</relationship>
+	</object>
 	<object class="EventMixerMaster" id="{70d7ed9e-9ccd-4c83-96fe-30819e180f07}">
+		<property name="volume">
+			<value>3</value>
+		</property>
 		<relationship name="effectChain">
 			<destination>{0e9524d8-1fcb-497c-8588-ed6220ef7fe1}</destination>
 		</relationship>
@@ -81,6 +91,17 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{905b646a-9516-42a1-b425-e4ad7c225e30}" />
+	<object class="SingleSound" id="{45ef6d4c-da82-4535-8b2d-bddcfb746890}">
+		<property name="length">
+			<value>1.1000000000000001</value>
+		</property>
+		<property name="timelockedOffset">
+			<value>0.10000000000000001</value>
+		</property>
+		<relationship name="audioFile">
+			<destination>{41eaaffb-168f-4a69-9ae6-13a7ce899dfa}</destination>
+		</relationship>
+	</object>
 	<object class="EventMixerGroup" id="{b92f417d-b410-4a5e-a66d-26e6f3d1d2e4}">
 		<property name="name">
 			<value>Audio 1</value>
@@ -98,6 +119,7 @@
 	<object class="MixerBusEffectChain" id="{0e9524d8-1fcb-497c-8588-ed6220ef7fe1}">
 		<relationship name="effects">
 			<destination>{32e21f79-275d-4928-b110-379e19e121d2}</destination>
+			<destination>{42f7db34-81bd-4161-88f0-6a67521c81a0}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{197a02a4-09d5-4ca7-91dd-c5fb7140fbc6}" />
@@ -109,5 +131,6 @@
 	</object>
 	<object class="MixerBusPanner" id="{b72f854b-d989-48e2-91aa-63d9acbcd682}" />
 	<object class="MixerBusFader" id="{32e21f79-275d-4928-b110-379e19e121d2}" />
+	<object class="LoudnessMeter" id="{42f7db34-81bd-4161-88f0-6a67521c81a0}" />
 	<object class="MixerBusFader" id="{78884585-a344-4c48-bf94-4e4c3942ff7f}" />
 </objects>
