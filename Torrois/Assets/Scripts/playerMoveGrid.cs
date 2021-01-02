@@ -22,7 +22,6 @@ public class playerMoveGrid : MonoBehaviour
     public bool podeJogar = false;
     public string direcao;
 
-    //[SerializeField] public List<bool> direcoesMov = new List<bool>() { false, false, false, false };
 
     void Start()
     {
@@ -40,7 +39,7 @@ public class playerMoveGrid : MonoBehaviour
         }
         if (podeJogar)
             Jogado();
-        Debug.Log("Anterior = " + gridAnterior + "Atual = " + gridAtual);
+        //Debug.Log("Anterior = " + gridAnterior + "Atual = " + gridAtual);
     }
 
     private void Move()
