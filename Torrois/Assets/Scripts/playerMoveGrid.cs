@@ -47,6 +47,12 @@ public class playerMoveGrid : MonoBehaviour
             }
             Debug.Log("Colidiu com " + gridAtual);
         }
+
+        if (collision.gameObject.tag == "Imovel")
+        {
+            if (!voltando)
+                voltando = true;
+        }
     }
 
     private void Move()
@@ -86,6 +92,16 @@ public class playerMoveGrid : MonoBehaviour
             pontoMovPosAntes = pontoMovAntesTemp;
             colidiuCaixaImovel = false;
         }
-        //if ()
+    }
+
+    public static void Jogado(int qntdQuadrados)
+    {
+        //for (int quadrado = 0; quadrado < qntdQuadrados; quadrado++)
+        //{
+        //    pontoMovPosAntes = pontoMov.position;
+        //    gridAnterior = gridAtual;
+
+        //    pontoMov.position += new Vector3(1f, 0f, 0f);
+        //}
     }
 }

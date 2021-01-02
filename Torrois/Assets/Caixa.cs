@@ -24,17 +24,10 @@ public class Caixa : MonoBehaviour
     void Start()
     {
         boxTriggerer = GetComponent<BoxCollider2D>();
-        if (gameObject.tag == "Imovel")
-        {
-            Destroy(transform.GetChild(0));
-        }
-        else
-        {
-            pontoMov = transform.GetChild(0);
-            boxMoveColl = pontoMov.GetComponent<BoxCollider2D>();
-            pontoMovScript = gameObject.GetComponentInChildren<ChecarMobilidade>();
-            pontoMov.parent = null;
-        }
+        pontoMov = transform.GetChild(0);
+        boxMoveColl = pontoMov.GetComponent<BoxCollider2D>();
+        pontoMovScript = gameObject.GetComponentInChildren<ChecarMobilidade>();
+        pontoMov.parent = null;
 
         if (gameObject.tag == "Imovel")
             podeMover = false;
@@ -88,14 +81,15 @@ public class Caixa : MonoBehaviour
                         pontoMov.position += new Vector3(0f, +1f, 0f); //Caixa pra cima
                         direcoesMov[2] = true;
                     }
-                    colidiuJogador = false;
+                    //colidiuJogador = false;
                 }
             }
-            if (podeMover == false)
-            {
-                playerMoveGrid.voltando = true;
-                colidiuJogador = false;
-            }
+            colidiuJogador = false; //APENAS SE DER CERTO O COLIDIU NO JOGADOR
+            //if (podeMover == false)
+            //{
+            //    playerMoveGrid.voltando = true;
+            //    colidiuJogador = false;
+            //}
         }
         if (Vector2.Distance(transform.position, pontoMov.position) == 0f) //PODE BUGAR SE COLISAO FOR MUITO RAPIDO
         {
