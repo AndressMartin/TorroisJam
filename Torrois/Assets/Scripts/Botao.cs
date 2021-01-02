@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Botao : MonoBehaviour
 {
-    public GameObject porta;
-    private Porta scriptDaPorta;
     public Transform pontoMov;
     public bool ativado;
     playerMoveGrid player = new playerMoveGrid();
@@ -14,8 +12,7 @@ public class Botao : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        scriptDaPorta = porta.GetComponent<Porta>();
-        scriptDaPorta.ativado = true;
+
     }
 
     // Update is called once per frame
