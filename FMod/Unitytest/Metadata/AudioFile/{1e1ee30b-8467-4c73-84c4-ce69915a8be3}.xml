@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{1e1ee30b-8467-4c73-84c4-ce69915a8be3}">
+		<property name="assetPath">
+			<value>sfx/Menu Over.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>0.10208333333333333</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{adf48b11-ee83-4b8f-b203-771a38b4537c}</destination>
+		</relationship>
+	</object>
+</objects>
