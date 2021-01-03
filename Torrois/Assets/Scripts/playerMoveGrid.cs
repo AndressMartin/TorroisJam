@@ -7,7 +7,6 @@ public class playerMoveGrid : MonoBehaviour
 {
     private float velocidade = 5f;
     public Transform pontoMov;
-    BoxCollider2D boxMoveColl;
     ChecarMobilidade pontoMovScript;
 
     public static int gridAtual;
@@ -34,7 +33,6 @@ public class playerMoveGrid : MonoBehaviour
         childSpriteHolder = transform.GetChild(1).gameObject;
         playerAnimator = childSpriteHolder.gameObject.GetComponent<Animator>();
         pontoMov = transform.GetChild(0);
-        boxMoveColl = pontoMov.GetComponent<BoxCollider2D>();
         pontoMovScript = gameObject.GetComponentInChildren<ChecarMobilidade>();
         pontoMov.parent = null;
     }
@@ -64,15 +62,13 @@ public class playerMoveGrid : MonoBehaviour
             if (Mathf.Abs(Input.GetAxisRaw("Horizontal")) == 1f)
             {
                 Virar();
-                //playerAnimator.SetTrigger("Empurrando");
                 pontoMovAntes = pontoMov.position;
                 gridAnterior = gridAtual;
                 pontoMov.position += new Vector3(Input.GetAxisRaw("Horizontal"), 0f, 0f);
             }
 
-            if (Mathf.Abs(Input.GetAxisRaw("Vertical")) == 1f)  
+            else if (Mathf.Abs(Input.GetAxisRaw("Vertical")) == 1f)  
             {
-                //playerAnimator.SetTrigger("Empurrando");
                 pontoMovAntes = pontoMov.position;
                 gridAnterior = gridAtual;
                 pontoMov.position += new Vector3(0f, Input.GetAxisRaw("Vertical"), 0f);
@@ -80,6 +76,7 @@ public class playerMoveGrid : MonoBehaviour
         }
         if (pontoMovScript.ColidiuParede)
         {
+
             playerAnimator.SetTrigger("Empurrando");
             pontoMovScript.ColidiuParede = false;
         }
