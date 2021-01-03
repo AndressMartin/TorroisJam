@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,8 +7,10 @@ public class playerMoveGrid : MonoBehaviour
 {
     private float velocidade = 5f;
     public Transform pontoMov;
-    public static int gridAtual;
+    BoxCollider2D boxMoveColl;
+    ChecarMobilidade pontoMovScript;
 
+    public static int gridAtual;
     public static int gridAnterior = gridAtual;
     int gridTemp;
 
@@ -18,19 +21,27 @@ public class playerMoveGrid : MonoBehaviour
     private Vector2 pontoMovAntes;
     private Vector3 pontoMovAntesTemp;
 
+    //Para o código de jogar longe
     public int qntQuadradosLocal;
     public bool podeJogar = false;
     public string direcao;
 
+    private GameObject childSpriteHolder;
+    private Animator playerAnimator;
 
     void Start()
     {
+        childSpriteHolder = transform.GetChild(1).gameObject;
+        playerAnimator = childSpriteHolder.gameObject.GetComponent<Animator>();
         pontoMov = transform.GetChild(0);
+        boxMoveColl = pontoMov.GetComponent<BoxCollider2D>();
+        pontoMovScript = gameObject.GetComponentInChildren<ChecarMobilidade>();
         pontoMov.parent = null;
     }
     
     void FixedUpdate()
     {
+        
         if (!voltando && !podeJogar)
             Move();
         if (voltando)
@@ -40,16 +51,20 @@ public class playerMoveGrid : MonoBehaviour
         if (podeJogar)
             Jogado();
         //Debug.Log("Anterior = " + gridAnterior + "Atual = " + gridAtual);
+
     }
 
     private void Move()
     {
+
         transform.position = Vector2.MoveTowards(transform.position, pontoMov.position, velocidade * Time.deltaTime);
         pontoMovAntesTemp = pontoMovAntes;   
         if (Vector2.Distance(transform.position, pontoMov.position) == 0f)
         {
             if (Mathf.Abs(Input.GetAxisRaw("Horizontal")) == 1f)
             {
+                Virar();
+                //playerAnimator.SetTrigger("Empurrando");
                 pontoMovAntes = pontoMov.position;
                 gridAnterior = gridAtual;
                 pontoMov.position += new Vector3(Input.GetAxisRaw("Horizontal"), 0f, 0f);
@@ -57,10 +72,28 @@ public class playerMoveGrid : MonoBehaviour
 
             if (Mathf.Abs(Input.GetAxisRaw("Vertical")) == 1f)  
             {
+                //playerAnimator.SetTrigger("Empurrando");
                 pontoMovAntes = pontoMov.position;
                 gridAnterior = gridAtual;
                 pontoMov.position += new Vector3(0f, Input.GetAxisRaw("Vertical"), 0f);
             }
+        }
+        if (pontoMovScript.ColidiuParede)
+        {
+            playerAnimator.SetTrigger("Empurrando");
+            pontoMovScript.ColidiuParede = false;
+        }
+    }
+
+    private void Virar()
+    {
+        if ((Input.GetAxisRaw("Horizontal")) == -1f)
+        {
+            childSpriteHolder.GetComponent<SpriteRenderer>().flipX = true;
+        }
+        if ((Input.GetAxisRaw("Horizontal")) == +1f)
+        {
+            childSpriteHolder.GetComponent<SpriteRenderer>().flipX = false;
         }
     }
 

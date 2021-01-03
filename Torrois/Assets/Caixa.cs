@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Caixa : MonoBehaviour
 {
+
     private float velocidade = 6f;
     public Transform pontoMov;
     public int gridCaixa;
@@ -16,16 +17,11 @@ public class Caixa : MonoBehaviour
     //0 = esquerda, 1 = direita, 2 = cima, 3 = baixo
     [SerializeField] public List<bool> direcoesMov = new List<bool>(){false, false, false, false};
 
-    private BoxCollider2D boxMoveColl;
-    private BoxCollider2D boxTriggerer;
-
     ChecarMobilidade pontoMovScript;
 
     void Start()
     {
-        boxTriggerer = GetComponent<BoxCollider2D>();
         pontoMov = transform.GetChild(0);
-        boxMoveColl = pontoMov.GetComponent<BoxCollider2D>();
         pontoMovScript = gameObject.GetComponentInChildren<ChecarMobilidade>();
         pontoMov.parent = null;
 
