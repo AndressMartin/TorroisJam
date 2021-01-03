@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Caixa : MonoBehaviour
 {
-
+    public bool ativado;
     private float velocidade = 6f;
     public Transform pontoMov;
     public int gridCaixa;
@@ -17,10 +17,15 @@ public class Caixa : MonoBehaviour
     //0 = esquerda, 1 = direita, 2 = cima, 3 = baixo
     [SerializeField] public List<bool> direcoesMov = new List<bool>(){false, false, false, false};
 
+    private SpriteRenderer sprite;
+    private BoxCollider2D boxTriggerer;
+
     ChecarMobilidade pontoMovScript;
 
     void Start()
     {
+        sprite = GetComponent<SpriteRenderer>();
+        boxTriggerer = GetComponent<BoxCollider2D>();
         pontoMov = transform.GetChild(0);
         pontoMovScript = gameObject.GetComponentInChildren<ChecarMobilidade>();
         pontoMov.parent = null;
@@ -32,6 +37,7 @@ public class Caixa : MonoBehaviour
 
     void FixedUpdate()
     {
+        verPorta();
         gridDoJogador = playerMoveGrid.gridAtual;
         if (pontoMovScript.ColidiuParede && gameObject.tag != "Imovel")
         {
@@ -133,5 +139,24 @@ public class Caixa : MonoBehaviour
             //Debug.Log("Esta colidindo com a caixa");
             colidiuJogador = true;
         }
+    }
+
+    public void verPorta()
+    {
+        if (ativado)
+        { 
+            boxTriggerer.isTrigger = false;
+            
+
+        }
+        else
+        { 
+            boxTriggerer.isTrigger = true;
+           
+
+        }
+        sprite.enabled = boxTriggerer.isTrigger;
+        boxTriggerer.enabled = sprite.enabled;
+        
     }
 }

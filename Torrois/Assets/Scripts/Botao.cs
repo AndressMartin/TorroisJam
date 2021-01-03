@@ -4,21 +4,32 @@ using UnityEngine;
 
 public class Botao : MonoBehaviour
 {
-    public Transform pontoMov;
+    public GameObject porta;
+    private Caixa scriptDaPorta;
     public bool ativado;
+
+    SpriteRenderer sprite = new SpriteRenderer();
     playerMoveGrid player = new playerMoveGrid();
+
     public BoxCollider2D hitbox;
-    public float tempo;
     // Start is called before the first frame update
     void Start()
     {
+
+        scriptDaPorta = porta.GetComponent<Caixa>();
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Debug.Log("Botao valor: " + ativado);
+        ativado = scriptDaPorta.ativado;
+
+        if (hitbox.gameObject.tag == "Player" || hitbox.gameObject.tag == "Torre")
+        {
+            scriptDaPorta.ativado = true;
+
+        }
     }
 
 
@@ -26,7 +37,8 @@ public class Botao : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "Torre")
         {
-            ativado = true;
+            scriptDaPorta.ativado = true;
+
         }
 
     }
@@ -34,7 +46,7 @@ public class Botao : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            ativado = false;
+            scriptDaPorta.ativado = false;
         }
 
     }
