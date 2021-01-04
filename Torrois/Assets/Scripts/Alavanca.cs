@@ -16,14 +16,11 @@ public class Alavanca : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
-
         if (tag == "AlavancaH")
             sentido = 0;
         else if (tag == "AlavancaV")
             sentido = 1;
         scriptDaPorta = porta.GetComponent<Caixa>();
-
     }
 
     // Update is called once per frame
