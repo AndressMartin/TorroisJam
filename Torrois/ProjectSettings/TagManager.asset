@@ -10,6 +10,7 @@ TagManager:
   - Torre
   - Impassavel
   - HolderTemporario
+  - Rainha
   layers:
   - Default
   - TransparentFX

@@ -246,6 +246,7 @@ MonoBehaviour:
   colidiuJogador: 0
   podeMover: 1
   andaMax: 0
+  andandoComoRainha: 0
   direcoesMov: 00000000
 --- !u!50 &38778643
 Rigidbody2D:
@@ -670,6 +671,7 @@ MonoBehaviour:
   colidiuJogador: 0
   podeMover: 1
   andaMax: 0
+  andandoComoRainha: 0
   direcoesMov: 00000000
 --- !u!50 &98322419
 Rigidbody2D:
@@ -1709,6 +1711,7 @@ MonoBehaviour:
   colidiuJogador: 0
   podeMover: 1
   andaMax: 0
+  andandoComoRainha: 0
   direcoesMov: 00000000
 --- !u!50 &322019926
 Rigidbody2D:
@@ -2390,6 +2393,7 @@ MonoBehaviour:
   colidiuJogador: 0
   podeMover: 1
   andaMax: 0
+  andandoComoRainha: 0
   direcoesMov: 00000000
 --- !u!50 &525833186
 Rigidbody2D:
@@ -2575,6 +2579,7 @@ MonoBehaviour:
   colidiuJogador: 0
   podeMover: 1
   andaMax: 0
+  andandoComoRainha: 0
   direcoesMov: 00000000
 --- !u!50 &579071871
 Rigidbody2D:
@@ -2778,6 +2783,7 @@ MonoBehaviour:
   colidiuJogador: 0
   podeMover: 1
   andaMax: 0
+  andandoComoRainha: 0
   direcoesMov: 00000000
 --- !u!50 &677607094
 Rigidbody2D:
@@ -3216,6 +3222,7 @@ MonoBehaviour:
   colidiuJogador: 0
   podeMover: 1
   andaMax: 0
+  andandoComoRainha: 0
   direcoesMov: 00000000
 --- !u!50 &731124594
 Rigidbody2D:
@@ -3314,41 +3321,12 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &756712027 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6846891206937330502, guid: e1eff329f3384c84491229590e4bd747,
-    type: 3}
-  m_PrefabInstance: {fileID: 55419173}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &756712028 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6846891206937330507, guid: e1eff329f3384c84491229590e4bd747,
     type: 3}
   m_PrefabInstance: {fileID: 55419173}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &756712029
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 756712027}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: Player
-  Event: event:/sfx/movimento_peao
-  PlayEvent: 5
-  StopEvent: 0
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 0
-  OverrideMaxDistance: 0
 --- !u!1 &802238481
 GameObject:
   m_ObjectHideFlags: 0
@@ -3403,6 +3381,7 @@ MonoBehaviour:
   colidiuJogador: 0
   podeMover: 1
   andaMax: 0
+  andandoComoRainha: 0
   direcoesMov: 00000000
 --- !u!50 &802238484
 Rigidbody2D:
@@ -3555,6 +3534,7 @@ MonoBehaviour:
   colidiuJogador: 0
   podeMover: 1
   andaMax: 0
+  andandoComoRainha: 0
   direcoesMov: 00000000
 --- !u!50 &888132802
 Rigidbody2D:
@@ -3707,6 +3687,7 @@ MonoBehaviour:
   colidiuJogador: 0
   podeMover: 1
   andaMax: 0
+  andandoComoRainha: 0
   direcoesMov: 00000000
 --- !u!50 &892412748
 Rigidbody2D:
@@ -4143,6 +4124,7 @@ MonoBehaviour:
   colidiuJogador: 0
   podeMover: 1
   andaMax: 0
+  andandoComoRainha: 0
   direcoesMov: 00000000
 --- !u!50 &1042161211
 Rigidbody2D:
@@ -4467,6 +4449,7 @@ MonoBehaviour:
   colidiuJogador: 0
   podeMover: 1
   andaMax: 0
+  andandoComoRainha: 0
   direcoesMov: 00000000
 --- !u!50 &1080563009
 Rigidbody2D:
@@ -4619,6 +4602,7 @@ MonoBehaviour:
   colidiuJogador: 0
   podeMover: 1
   andaMax: 0
+  andandoComoRainha: 0
   direcoesMov: 00000000
 --- !u!50 &1175504681
 Rigidbody2D:
@@ -4771,6 +4755,7 @@ MonoBehaviour:
   colidiuJogador: 0
   podeMover: 1
   andaMax: 0
+  andandoComoRainha: 0
   direcoesMov: 00000000
 --- !u!50 &1206462726
 Rigidbody2D:
@@ -4923,6 +4908,7 @@ MonoBehaviour:
   colidiuJogador: 0
   podeMover: 1
   andaMax: 0
+  andandoComoRainha: 0
   direcoesMov: 00000000
 --- !u!50 &1256227402
 Rigidbody2D:
@@ -5113,6 +5099,7 @@ MonoBehaviour:
   colidiuJogador: 0
   podeMover: 1
   andaMax: 0
+  andandoComoRainha: 0
   direcoesMov: 00000000
 --- !u!50 &1271044064
 Rigidbody2D:
@@ -5265,6 +5252,7 @@ MonoBehaviour:
   colidiuJogador: 0
   podeMover: 1
   andaMax: 0
+  andandoComoRainha: 0
   direcoesMov: 00000000
 --- !u!50 &1278241286
 Rigidbody2D:
@@ -5707,6 +5695,7 @@ MonoBehaviour:
   colidiuJogador: 0
   podeMover: 1
   andaMax: 0
+  andandoComoRainha: 0
   direcoesMov: 00000000
 --- !u!50 &1352045405
 Rigidbody2D:
@@ -5859,6 +5848,7 @@ MonoBehaviour:
   colidiuJogador: 0
   podeMover: 1
   andaMax: 0
+  andandoComoRainha: 0
   direcoesMov: 00000000
 --- !u!50 &1378907526
 Rigidbody2D:
@@ -6011,6 +6001,7 @@ MonoBehaviour:
   colidiuJogador: 0
   podeMover: 1
   andaMax: 0
+  andandoComoRainha: 0
   direcoesMov: 00000000
 --- !u!50 &1400382906
 Rigidbody2D:
@@ -6197,6 +6188,7 @@ MonoBehaviour:
   colidiuJogador: 0
   podeMover: 1
   andaMax: 0
+  andandoComoRainha: 0
   direcoesMov: 00000000
 --- !u!50 &1479459158
 Rigidbody2D:
@@ -6379,6 +6371,7 @@ MonoBehaviour:
   colidiuJogador: 0
   podeMover: 1
   andaMax: 0
+  andandoComoRainha: 0
   direcoesMov: 00000000
 --- !u!50 &1515240914
 Rigidbody2D:
@@ -6531,6 +6524,7 @@ MonoBehaviour:
   colidiuJogador: 0
   podeMover: 1
   andaMax: 0
+  andandoComoRainha: 0
   direcoesMov: 00000000
 --- !u!50 &1551425533
 Rigidbody2D:
@@ -6683,6 +6677,7 @@ MonoBehaviour:
   colidiuJogador: 0
   podeMover: 1
   andaMax: 0
+  andandoComoRainha: 0
   direcoesMov: 00000000
 --- !u!50 &1556816764
 Rigidbody2D:
@@ -6977,6 +6972,7 @@ MonoBehaviour:
   colidiuJogador: 0
   podeMover: 1
   andaMax: 0
+  andandoComoRainha: 0
   direcoesMov: 00000000
 --- !u!50 &1572543532
 Rigidbody2D:
@@ -7378,6 +7374,7 @@ MonoBehaviour:
   colidiuJogador: 0
   podeMover: 1
   andaMax: 0
+  andandoComoRainha: 0
   direcoesMov: 00000000
 --- !u!50 &1622739169
 Rigidbody2D:
@@ -7726,6 +7723,7 @@ MonoBehaviour:
   colidiuJogador: 0
   podeMover: 1
   andaMax: 0
+  andandoComoRainha: 0
   direcoesMov: 00000000
 --- !u!50 &1742468430
 Rigidbody2D:
@@ -8024,6 +8022,7 @@ MonoBehaviour:
   colidiuJogador: 0
   podeMover: 1
   andaMax: 0
+  andandoComoRainha: 0
   direcoesMov: 00000000
 --- !u!50 &1813875673
 Rigidbody2D:
@@ -8247,6 +8246,7 @@ MonoBehaviour:
   colidiuJogador: 0
   podeMover: 1
   andaMax: 0
+  andandoComoRainha: 0
   direcoesMov: 00000000
 --- !u!50 &1846176818
 Rigidbody2D:
@@ -8425,6 +8425,7 @@ Transform:
   - {fileID: 1256227400}
   - {fileID: 1742468428}
   - {fileID: 1400382904}
+  - {fileID: 6846891207838633411}
   m_Father: {fileID: 1264125473}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8482,6 +8483,7 @@ MonoBehaviour:
   colidiuJogador: 0
   podeMover: 1
   andaMax: 0
+  andandoComoRainha: 0
   direcoesMov: 00000000
 --- !u!50 &1879251620
 Rigidbody2D:
@@ -8705,6 +8707,7 @@ MonoBehaviour:
   colidiuJogador: 0
   podeMover: 1
   andaMax: 0
+  andandoComoRainha: 0
   direcoesMov: 00000000
 --- !u!50 &1915617514
 Rigidbody2D:
@@ -8857,6 +8860,7 @@ MonoBehaviour:
   colidiuJogador: 0
   podeMover: 1
   andaMax: 0
+  andandoComoRainha: 0
   direcoesMov: 00000000
 --- !u!50 &1925198896
 Rigidbody2D:
@@ -9080,6 +9084,7 @@ MonoBehaviour:
   colidiuJogador: 0
   podeMover: 1
   andaMax: 0
+  andandoComoRainha: 0
   direcoesMov: 00000000
 --- !u!50 &1967608602
 Rigidbody2D:
@@ -9232,6 +9237,7 @@ MonoBehaviour:
   colidiuJogador: 0
   podeMover: 1
   andaMax: 0
+  andandoComoRainha: 0
   direcoesMov: 00000000
 --- !u!50 &1987388649
 Rigidbody2D:
@@ -9603,6 +9609,7 @@ MonoBehaviour:
   colidiuJogador: 0
   podeMover: 1
   andaMax: 0
+  andandoComoRainha: 0
   direcoesMov: 00000000
 --- !u!50 &2032225111
 Rigidbody2D:
@@ -9874,6 +9881,81 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e53b05a74f4ca2a46a798fc2638fc192, type: 3}
+--- !u!4 &6846891207838633411 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3370066607875122922, guid: 131a95843b2d0ac469c70acef58fce24,
+    type: 3}
+  m_PrefabInstance: {fileID: 8197091179963804457}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8197091179963804457
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1856969486}
+    m_Modifications:
+    - target: {fileID: 3370066607875122919, guid: 131a95843b2d0ac469c70acef58fce24,
+        type: 3}
+      propertyPath: m_Name
+      value: CaixaRainha
+      objectReference: {fileID: 0}
+    - target: {fileID: 3370066607875122922, guid: 131a95843b2d0ac469c70acef58fce24,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 3370066607875122922, guid: 131a95843b2d0ac469c70acef58fce24,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3370066607875122922, guid: 131a95843b2d0ac469c70acef58fce24,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3370066607875122922, guid: 131a95843b2d0ac469c70acef58fce24,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3370066607875122922, guid: 131a95843b2d0ac469c70acef58fce24,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3370066607875122922, guid: 131a95843b2d0ac469c70acef58fce24,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3370066607875122922, guid: 131a95843b2d0ac469c70acef58fce24,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3370066607875122922, guid: 131a95843b2d0ac469c70acef58fce24,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3370066607875122922, guid: 131a95843b2d0ac469c70acef58fce24,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3370066607875122922, guid: 131a95843b2d0ac469c70acef58fce24,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3370066607875122922, guid: 131a95843b2d0ac469c70acef58fce24,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 131a95843b2d0ac469c70acef58fce24, type: 3}
 --- !u!1001 &8713510024515341869
 PrefabInstance:
   m_ObjectHideFlags: 0

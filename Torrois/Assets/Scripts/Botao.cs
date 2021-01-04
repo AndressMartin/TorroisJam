@@ -25,7 +25,7 @@ public class Botao : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "Torre")
+        if (collision.gameObject.tag != "GridTile")
         {
             scriptDaPorta.ativado = false;
         }
@@ -33,7 +33,7 @@ public class Botao : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "Torre")
+        if (collision.gameObject.tag != "GridTile")
         {
             scriptDaPorta.ativado = true;
         }

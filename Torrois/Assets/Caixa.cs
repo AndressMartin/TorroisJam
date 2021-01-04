@@ -13,6 +13,7 @@ public class Caixa : MonoBehaviour
     public bool colidiuJogador = false;
     public bool podeMover;
     public bool andaMax;
+    public bool andandoComoRainha;
 
     //0 = esquerda, 1 = direita, 2 = cima, 3 = baixo
     [SerializeField] public List<bool> direcoesMov = new List<bool>(){false, false, false, false};
@@ -32,6 +33,14 @@ public class Caixa : MonoBehaviour
 
         if (gameObject.tag == "Imovel")
             podeMover = false;
+        if (gameObject.tag == "Torre")
+        {
+            andaMax = false;
+        }
+        if (gameObject.tag == "Rainha")
+        {
+            andaMax = true;
+        }
     }
 
 
@@ -54,13 +63,12 @@ public class Caixa : MonoBehaviour
     {
 
         transform.position = Vector2.MoveTowards(transform.position, pontoMov.position, velocidade * Time.deltaTime);
-        if (colidiuJogador)
+        if (colidiuJogador || andandoComoRainha)
         {
             if (podeMover == true)
             {
                 if (andaMax == false)
                 {
-
                     if (playerMoveGrid.gridAnterior == gridDoJogador + 1) //Veio da direita
                     {
                         pontoMov.position += new Vector3(-1f, 0f, 0f); //Caixa pra esquerda
@@ -81,15 +89,39 @@ public class Caixa : MonoBehaviour
                         pontoMov.position += new Vector3(0f, +1f, 0f); //Caixa pra cima
                         direcoesMov[2] = true;
                     }
-                    //colidiuJogador = false;
+                }
+                if (andaMax == true)
+                {
+                    andandoComoRainha = true;
+                    if (playerMoveGrid.gridAnterior == gridDoJogador + 1) //Veio da direita
+                    {
+                        if (!pontoMovScript.ColidiuParede)
+                            pontoMov.position += new Vector3(-1f, 0f, 0f); //Caixa pra esquerda
+                        direcoesMov[0] = true;
+                    }
+                    else if (playerMoveGrid.gridAnterior == gridDoJogador - 1) //Veio da esquerda
+                    {
+                        if (!pontoMovScript.ColidiuParede)
+                            pontoMov.position += new Vector3(+1f, 0f, 0f); //Caixa pra direita
+                        direcoesMov[1] = true;
+                    }
+                    if (playerMoveGrid.gridAnterior == gridDoJogador - 16) //Veio de cima
+                    {
+                        if (!pontoMovScript.ColidiuParede)
+                            pontoMov.position += new Vector3(0f, -1f, 0f); //Caixa pra baixo
+                        direcoesMov[3] = true;
+                    }
+                    else if (playerMoveGrid.gridAnterior == gridDoJogador + 16) //Veio de baixo
+                    {
+                        if (!pontoMovScript.ColidiuParede)
+                            pontoMov.position += new Vector3(0f, +1f, 0f); //Caixa pra cima
+                        direcoesMov[2] = true;
+                    }
+                    if (pontoMovScript.ColidiuParede)
+                        andandoComoRainha = false;
                 }
             }
-            colidiuJogador = false; //APENAS SE DER CERTO O COLIDIU NO JOGADOR
-            //if (podeMover == false)
-            //{
-            //    playerMoveGrid.voltando = true;
-            //    colidiuJogador = false;
-            //}
+            colidiuJogador = false;
         }
         if (Vector2.Distance(transform.position, pontoMov.position) == 0f) //PODE BUGAR SE COLISAO FOR MUITO RAPIDO
         {
@@ -123,7 +155,11 @@ public class Caixa : MonoBehaviour
             //Debug.Log("tentando voltar " + "baixo");
             pontoMov.position += new Vector3(0f, -1f, 0f);
         }
-        playerMoveGrid.voltando = true;
+        if (Vector3.Distance(playerMoveGrid.pontoMov.position, pontoMov.position) == 0)
+        {
+            playerMoveGrid.voltando = true;
+        }
+        andandoComoRainha = false;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

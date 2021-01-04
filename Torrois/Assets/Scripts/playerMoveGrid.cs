@@ -6,7 +6,7 @@ using UnityEngine;
 public class playerMoveGrid : MonoBehaviour
 {
     private float velocidade = 5f;
-    public Transform pontoMov;
+    public static Transform pontoMov;
     ChecarMobilidade pontoMovScript;
 
     public static int gridAtual;
