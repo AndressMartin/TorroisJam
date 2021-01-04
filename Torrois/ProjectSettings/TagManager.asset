@@ -9,6 +9,7 @@ TagManager:
   - Imovel
   - Torre
   - Impassavel
+  - HolderTemporario
   layers:
   - Default
   - TransparentFX

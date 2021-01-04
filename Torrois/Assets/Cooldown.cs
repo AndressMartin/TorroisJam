@@ -9,7 +9,7 @@ public class Cooldown : MonoBehaviour
     private TextMeshProUGUI timerText;
     [SerializeField] public static float timerTime = 120;
     public static bool ganhou = false;
-    public static float timerMax = 120f;
+    public static float timerMax = 5f;
     void Awake()
     {
         ganhou = false;

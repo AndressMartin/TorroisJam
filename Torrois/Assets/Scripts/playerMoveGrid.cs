@@ -34,7 +34,8 @@ public class playerMoveGrid : MonoBehaviour
         playerAnimator = childSpriteHolder.gameObject.GetComponent<Animator>();
         pontoMov = transform.GetChild(0);
         pontoMovScript = gameObject.GetComponentInChildren<ChecarMobilidade>();
-        pontoMov.parent = null;
+        pontoMov.parent = GameObject.FindGameObjectWithTag("HolderTemporario").transform;
+        
     }
     
     void FixedUpdate()
@@ -65,6 +66,7 @@ public class playerMoveGrid : MonoBehaviour
                 pontoMovAntes = pontoMov.position;
                 gridAnterior = gridAtual;
                 pontoMov.position += new Vector3(Input.GetAxisRaw("Horizontal"), 0f, 0f);
+                playerAnimator.SetTrigger("Andando");
             }
 
             else if (Mathf.Abs(Input.GetAxisRaw("Vertical")) == 1f)  
@@ -72,11 +74,11 @@ public class playerMoveGrid : MonoBehaviour
                 pontoMovAntes = pontoMov.position;
                 gridAnterior = gridAtual;
                 pontoMov.position += new Vector3(0f, Input.GetAxisRaw("Vertical"), 0f);
+                playerAnimator.SetTrigger("Andando");
             }
         }
         if (pontoMovScript.ColidiuParede)
         {
-
             playerAnimator.SetTrigger("Empurrando");
             pontoMovScript.ColidiuParede = false;
         }

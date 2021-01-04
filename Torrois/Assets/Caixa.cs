@@ -28,7 +28,7 @@ public class Caixa : MonoBehaviour
         boxTriggerer = GetComponent<BoxCollider2D>();
         pontoMov = transform.GetChild(0);
         pontoMovScript = gameObject.GetComponentInChildren<ChecarMobilidade>();
-        pontoMov.parent = null;
+        pontoMov.parent = GameObject.FindGameObjectWithTag("HolderTemporario").transform;
 
         if (gameObject.tag == "Imovel")
             podeMover = false;
