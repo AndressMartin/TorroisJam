@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class Transitar : MonoBehaviour
 {
-    Transform Porta;
+    public Transform Porta;
     BoxCollider2D portaBoxColl;
     public bool portaOpen;
     // Start is called before the first frame update
     void Start()
     {
+        Porta = gameObject.transform.parent;
         portaBoxColl = Porta.GetComponent<BoxCollider2D>();
     }
 
@@ -27,6 +28,7 @@ public class Transitar : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             CameraMov.podeMover = true;
+            gameObject.SetActive(false);
         }
     }
 }

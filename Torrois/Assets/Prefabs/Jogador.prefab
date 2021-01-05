@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4658177698371160535}
   - component: {fileID: 4658177698371160532}
   m_Layer: 0
-  m_Name: pontoMov
+  m_Name: playerPontoMov
   m_TagString: Untagged
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -70,6 +70,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 162bab32e8578e743a7b19a1b2e6b5c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myParent: {fileID: 4658177698954067495}
   ColidiuParede: 0
 --- !u!1 &4658177698667768270
 GameObject:
@@ -298,10 +299,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1c9ad96a7dcf484aae684aa4a092b20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pontoMov: {fileID: 0}
   qntQuadradosLocal: 0
   podeJogar: 0
   direcao: 
+  transitandoEntreFases: 0
 --- !u!50 &4658177698954067491
 Rigidbody2D:
   serializedVersion: 4

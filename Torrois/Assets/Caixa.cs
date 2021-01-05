@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMODUnity;
 
 public class Caixa : MonoBehaviour
 {
@@ -25,17 +26,22 @@ public class Caixa : MonoBehaviour
 
     ChecarMobilidade pontoMovScript;
 
-    void Start()
+    void Awake()
     {
         sprite = GetComponent<SpriteRenderer>();
         boxTriggerer = GetComponent<BoxCollider2D>();
         pontoMov = transform.GetChild(0);
-        pontoMovScript = gameObject.GetComponentInChildren<ChecarMobilidade>();
-        pontoMov.parent = GameObject.FindGameObjectWithTag("HolderTemporario").transform;
-        sendParent();
-
         if (gameObject.tag == "Imovel")
+        {
             podeMover = false;
+            //Destroy(pontoMov.gameObject);
+        }
+        if (pontoMov != null)
+        {
+            pontoMovScript = gameObject.GetComponentInChildren<ChecarMobilidade>();
+            pontoMov.GetComponent<ChecarMobilidade>().myParent = transform;
+            pontoMov.parent = GameObject.FindGameObjectWithTag("HolderTemporario").transform;
+        }    
         if (gameObject.tag == "Torre")
         {
             andaMax = false;
@@ -49,16 +55,20 @@ public class Caixa : MonoBehaviour
 
     void FixedUpdate()
     {
-        verPorta();
-        gridDoJogador = playerMoveGrid.gridAtual;
-        if ((pontoMovScript.ColidiuParede && gameObject.tag != "Imovel") && !colidiuCaixa)
+        if (pontoMov != null)
         {
-            //Debug.Log("Caixa pode voltar");
-            Voltar();
-            pontoMovScript.ColidiuParede = false;
+            verPorta();
+            gridDoJogador = playerMoveGrid.gridAtual;
+            if ((pontoMovScript.ColidiuParede && gameObject.tag != "Imovel") && !colidiuCaixa)
+            {
+                //Debug.Log("Caixa pode voltar");
+                Voltar();
+                pontoMovScript.ColidiuParede = false;
+            }
+            else
+                Move();
         }
-        else
-            Move();
+        
     }
 
 
@@ -199,6 +209,7 @@ public class Caixa : MonoBehaviour
     }
     private void Voltar()
     {
+        
         //Debug.Log("tentando voltar");
         if (direcoesMov[0] == true)
         {

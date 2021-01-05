@@ -7,6 +7,14 @@ public class ChecarMobilidade : MonoBehaviour
     public Transform myParent;
 
     public bool ColidiuParede;
+
+    private void Update()
+    {
+        //if (myParent == null)
+        //{
+        //    Destroy(gameObject);
+        //}
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (myParent.tag == "Torre" || myParent.tag == "Rainha")

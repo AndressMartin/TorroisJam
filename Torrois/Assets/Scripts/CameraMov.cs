@@ -7,14 +7,13 @@ public class CameraMov : MonoBehaviour
     public static bool podeMover;
     private float velocidade = 20f;
     private GameObject player;
-    private GameObject movePoint;
+    public GameObject playerMovePoint;
     [SerializeField] public List<GameObject> listaSalas = new List<GameObject>();
     public int indice = 0;
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        movePoint = player.transform.GetChild(0).gameObject;
         transform.position = new Vector3(0f, 0f, -10f);
     }
 
@@ -34,14 +33,55 @@ public class CameraMov : MonoBehaviour
         {
             indice += 1;
             podeMover = false;
-            player.transform.position = transform.position;
-            movePoint.transform.position = transform.position;
-            trazerGrid();
+            TrazerGrid();
+            TrazerJogador();
+            StartCoroutine(EsperaParaDestruirSala());
         }
     }
 
-    public void trazerGrid()
+    public void TrazerGrid()
     {
         GameObject.FindGameObjectWithTag("GameController").transform.position = gameObject.transform.position;
+    }
+
+    public void TrazerJogador()
+    {
+        player.GetComponent<playerMoveGrid>().transitandoEntreFases = true;
+        playerMovePoint.transform.position = FindClosestWalkableGrid().transform.position;
+        //Debug.Log(FindClosestGrid().transform.position);
+    }
+
+    public GameObject FindClosestWalkableGrid()
+    {
+        GameObject[] gos;
+        gos = GameObject.FindGameObjectsWithTag("GridTile");
+        GameObject closest = null;
+        float distance = Mathf.Infinity;
+        Vector3 position = playerMovePoint.transform.position;
+        foreach (GameObject go in gos)
+        {
+            Vector3 diff = go.transform.position - position;
+            float curDistance = diff.sqrMagnitude;
+            if (curDistance < distance)
+            {
+                closest = go;
+                distance = curDistance;
+            }
+        }
+        closest.transform.position = new Vector3(closest.transform.position.x, closest.transform.position.y, 0f);
+        return closest;
+    }
+
+    IEnumerator EsperaParaDestruirSala()
+    {
+        //Print the time of when the function is first called.
+        Debug.Log("Started Coroutine at timestamp : " + Time.time);
+
+        //yield on a new YieldInstruction that waits for 5 seconds.
+        yield return new WaitForSeconds(3);
+
+        //After we have waited 5 seconds print the time again.
+        Debug.Log("Finished Coroutine at timestamp : " + Time.time);
+        DestruirSalaAnterior.DestruirSalaAnteriorFunc();
     }
 }

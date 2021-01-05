@@ -28,6 +28,8 @@ public class playerMoveGrid : MonoBehaviour
     private GameObject childSpriteHolder;
     private Animator playerAnimator;
 
+    public bool transitandoEntreFases;
+
     void Start()
     {
         childSpriteHolder = transform.GetChild(1).gameObject;
@@ -60,6 +62,7 @@ public class playerMoveGrid : MonoBehaviour
         pontoMovAntesTemp = pontoMovAntes;   
         if (Vector2.Distance(transform.position, pontoMov.position) == 0f)
         {
+            transitandoEntreFases = false; //Código da CameraMov
             if (Mathf.Abs(Input.GetAxisRaw("Horizontal")) == 1f)
             {
                 Virar();
@@ -209,13 +212,16 @@ public class playerMoveGrid : MonoBehaviour
             }
             //Debug.Log("Colidiu com " + gridAtual);
         }
-
-        if (collision.gameObject.tag == "Imovel")
+        if (!transitandoEntreFases)
         {
-            Debug.Log("Ai!");
-            pontoMovAntes = pontoMov.position;
-            if (!voltando)
-                voltando = true;
+            if (collision.gameObject.tag == "Imovel")
+            {
+                Debug.Log("Ai!");
+                pontoMovAntes = pontoMov.position;
+                if (!voltando)
+                    voltando = true;
+            }
         }
+        
     }
 }
