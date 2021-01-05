@@ -36,7 +36,12 @@ public class CameraMov : MonoBehaviour
             podeMover = false;
             player.transform.position = transform.position;
             movePoint.transform.position = transform.position;
-            
+            trazerGrid();
         }
+    }
+
+    public void trazerGrid()
+    {
+        GameObject.FindGameObjectWithTag("GameController").transform.position = gameObject.transform.position;
     }
 }

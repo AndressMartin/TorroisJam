@@ -10,13 +10,15 @@ public class Caixa : MonoBehaviour
     public int gridCaixa;
     public int gridDoJogador;
 
-    public bool colidiuJogador = false;
+    public bool colidiuJogador;
+    public bool colidiuCaixa;
     public bool podeMover;
     public bool andaMax;
     public bool andandoComoRainha;
 
     //0 = esquerda, 1 = direita, 2 = cima, 3 = baixo
     [SerializeField] public List<bool> direcoesMov = new List<bool>(){false, false, false, false};
+    [SerializeField] public List<bool> direcoesMovCxColl = new List<bool>() { false, false, false, false };
 
     private SpriteRenderer sprite;
     private BoxCollider2D boxTriggerer;
@@ -30,6 +32,7 @@ public class Caixa : MonoBehaviour
         pontoMov = transform.GetChild(0);
         pontoMovScript = gameObject.GetComponentInChildren<ChecarMobilidade>();
         pontoMov.parent = GameObject.FindGameObjectWithTag("HolderTemporario").transform;
+        sendParent();
 
         if (gameObject.tag == "Imovel")
             podeMover = false;
@@ -48,7 +51,7 @@ public class Caixa : MonoBehaviour
     {
         verPorta();
         gridDoJogador = playerMoveGrid.gridAtual;
-        if (pontoMovScript.ColidiuParede && gameObject.tag != "Imovel")
+        if ((pontoMovScript.ColidiuParede && gameObject.tag != "Imovel") && !colidiuCaixa)
         {
             //Debug.Log("Caixa pode voltar");
             Voltar();
@@ -63,65 +66,127 @@ public class Caixa : MonoBehaviour
     {
 
         transform.position = Vector2.MoveTowards(transform.position, pontoMov.position, velocidade * Time.deltaTime);
-        if (colidiuJogador || andandoComoRainha)
+        if (colidiuJogador || andandoComoRainha || colidiuCaixa)
         {
             if (podeMover == true)
             {
-                if (andaMax == false)
+                if (colidiuJogador)
                 {
-                    if (playerMoveGrid.gridAnterior == gridDoJogador + 1) //Veio da direita
+                    if (andaMax == false)
                     {
-                        pontoMov.position += new Vector3(-1f, 0f, 0f); //Caixa pra esquerda
-                        direcoesMov[0] = true;
+                        if (playerMoveGrid.gridAnterior == gridDoJogador + 1) //Veio da direita
+                        {
+                            pontoMov.position += new Vector3(-1f, 0f, 0f); //Caixa pra esquerda
+                            direcoesMov[0] = true;
+                        }
+                        else if (playerMoveGrid.gridAnterior == gridDoJogador - 1) //Veio da esquerda
+                        {
+                            pontoMov.position += new Vector3(+1f, 0f, 0f); //Caixa pra direita
+                            direcoesMov[1] = true;
+                        }
+                        if (playerMoveGrid.gridAnterior == gridDoJogador - 16) //Veio de cima
+                        {
+                            pontoMov.position += new Vector3(0f, -1f, 0f); //Caixa pra baixo
+                            direcoesMov[3] = true;
+                        }
+                        else if (playerMoveGrid.gridAnterior == gridDoJogador + 16) //Veio de baixo
+                        {
+                            pontoMov.position += new Vector3(0f, +1f, 0f); //Caixa pra cima
+                            direcoesMov[2] = true;
+                        }
                     }
-                    else if (playerMoveGrid.gridAnterior == gridDoJogador - 1) //Veio da esquerda
+                    if (andaMax == true)
                     {
-                        pontoMov.position += new Vector3(+1f, 0f, 0f); //Caixa pra direita
-                        direcoesMov[1] = true;
-                    }
-                    if (playerMoveGrid.gridAnterior == gridDoJogador - 16) //Veio de cima
-                    {
-                        pontoMov.position += new Vector3(0f, -1f, 0f); //Caixa pra baixo
-                        direcoesMov[3] = true;
-                    }
-                    else if (playerMoveGrid.gridAnterior == gridDoJogador + 16) //Veio de baixo
-                    {
-                        pontoMov.position += new Vector3(0f, +1f, 0f); //Caixa pra cima
-                        direcoesMov[2] = true;
+                        andandoComoRainha = true;
+                        if (playerMoveGrid.gridAnterior == gridDoJogador + 1) //Veio da direita
+                        {
+                            if (!pontoMovScript.ColidiuParede)
+                                pontoMov.position += new Vector3(-1f, 0f, 0f); //Caixa pra esquerda
+                            direcoesMov[0] = true;
+                        }
+                        else if (playerMoveGrid.gridAnterior == gridDoJogador - 1) //Veio da esquerda
+                        {
+                            if (!pontoMovScript.ColidiuParede)
+                                pontoMov.position += new Vector3(+1f, 0f, 0f); //Caixa pra direita
+                            direcoesMov[1] = true;
+                        }
+                        if (playerMoveGrid.gridAnterior == gridDoJogador - 16) //Veio de cima
+                        {
+                            if (!pontoMovScript.ColidiuParede)
+                                pontoMov.position += new Vector3(0f, -1f, 0f); //Caixa pra baixo
+                            direcoesMov[3] = true;
+                        }
+                        else if (playerMoveGrid.gridAnterior == gridDoJogador + 16) //Veio de baixo
+                        {
+                            if (!pontoMovScript.ColidiuParede)
+                                pontoMov.position += new Vector3(0f, +1f, 0f); //Caixa pra cima
+                            direcoesMov[2] = true;
+                        }
+                        if (pontoMovScript.ColidiuParede)
+                            andandoComoRainha = false;
                     }
                 }
-                if (andaMax == true)
+                if (colidiuCaixa) //SE FALHAR, TESTAR ELSE IF
                 {
-                    andandoComoRainha = true;
-                    if (playerMoveGrid.gridAnterior == gridDoJogador + 1) //Veio da direita
+                    if (andaMax == false)
                     {
-                        if (!pontoMovScript.ColidiuParede)
+                        if (direcoesMovCxColl[0] == true) //Veio da direita
+                        {
                             pontoMov.position += new Vector3(-1f, 0f, 0f); //Caixa pra esquerda
-                        direcoesMov[0] = true;
-                    }
-                    else if (playerMoveGrid.gridAnterior == gridDoJogador - 1) //Veio da esquerda
-                    {
-                        if (!pontoMovScript.ColidiuParede)
+                            direcoesMov[0] = true;
+                        }
+                        else if (direcoesMovCxColl[1] == true) //Veio da esquerda
+                        {
                             pontoMov.position += new Vector3(+1f, 0f, 0f); //Caixa pra direita
-                        direcoesMov[1] = true;
-                    }
-                    if (playerMoveGrid.gridAnterior == gridDoJogador - 16) //Veio de cima
-                    {
-                        if (!pontoMovScript.ColidiuParede)
+                            direcoesMov[1] = true;
+                        }
+                        if (direcoesMovCxColl[3] == true) //Veio de cima
+                        {
                             pontoMov.position += new Vector3(0f, -1f, 0f); //Caixa pra baixo
-                        direcoesMov[3] = true;
-                    }
-                    else if (playerMoveGrid.gridAnterior == gridDoJogador + 16) //Veio de baixo
-                    {
-                        if (!pontoMovScript.ColidiuParede)
+                            direcoesMov[3] = true;
+                        }
+                        else if (direcoesMovCxColl[2] == true) //Veio de baixo
+                        {
                             pontoMov.position += new Vector3(0f, +1f, 0f); //Caixa pra cima
-                        direcoesMov[2] = true;
+                            direcoesMov[2] = true;
+                        }
                     }
-                    if (pontoMovScript.ColidiuParede)
-                        andandoComoRainha = false;
+                    if (andaMax == true) //TODO: PROVAVELMENTE NAO FUNCIONA! PRECISA CONFERIR! 
+                    {
+                        andandoComoRainha = true;
+                        if (direcoesMovCxColl[0] == true) //Veio da direita
+                        {
+                            if (!pontoMovScript.ColidiuParede)
+                                pontoMov.position += new Vector3(-1f, 0f, 0f); //Caixa pra esquerda
+                            direcoesMov[0] = true;
+                        }
+                        else if (direcoesMovCxColl[1] == true) //Veio da esquerda
+                        {
+                            if (!pontoMovScript.ColidiuParede)
+                                pontoMov.position += new Vector3(+1f, 0f, 0f); //Caixa pra direita
+                            direcoesMov[1] = true;
+                        }
+                        if (direcoesMovCxColl[3] == true) //Veio de cima
+                        {
+                            if (!pontoMovScript.ColidiuParede)
+                                pontoMov.position += new Vector3(0f, -1f, 0f); //Caixa pra baixo
+                            direcoesMov[3] = true;
+                        }
+                        else if (direcoesMovCxColl[2] == true) //Veio de baixo
+                        {
+                            if (!pontoMovScript.ColidiuParede)
+                                pontoMov.position += new Vector3(0f, +1f, 0f); //Caixa pra cima
+                            direcoesMov[2] = true;
+                        }
+                        if (pontoMovScript.ColidiuParede)
+                            andandoComoRainha = false;
+                    }
                 }
             }
-            colidiuJogador = false;
+            if (!andandoComoRainha)
+                colidiuJogador = false;
+            if (!andandoComoRainha)
+                colidiuCaixa = false;
         }
         if (Vector2.Distance(transform.position, pontoMov.position) == 0f) //PODE BUGAR SE COLISAO FOR MUITO RAPIDO
         {
@@ -159,6 +224,8 @@ public class Caixa : MonoBehaviour
         {
             playerMoveGrid.voltando = true;
         }
+        if (gameObject.tag == "Rainha")
+            colidiuJogador = false;
         andandoComoRainha = false;
     }
 
@@ -195,4 +262,10 @@ public class Caixa : MonoBehaviour
         boxTriggerer.enabled = sprite.enabled;
         
     }
+
+    public void sendParent()
+    {
+        pontoMov.GetComponent<ChecarMobilidade>().myParent = transform;
+    }
 }
+

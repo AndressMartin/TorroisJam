@@ -70,6 +70,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 162bab32e8578e743a7b19a1b2e6b5c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myParent: {fileID: 0}
   ColidiuParede: 0
 --- !u!1 &8858336704853312202
 GameObject:
@@ -84,6 +85,7 @@ GameObject:
   - component: {fileID: 8858336704853312198}
   - component: {fileID: 8858336704853312197}
   - component: {fileID: 8858336704853312196}
+  - component: {fileID: -6905574491482686089}
   m_Layer: 0
   m_Name: CaixaImovel (2)
   m_TagString: Imovel
@@ -220,6 +222,21 @@ MonoBehaviour:
   gridCaixa: 0
   gridDoJogador: 0
   colidiuJogador: 0
+  colidiuCaixa: 0
   podeMover: 1
   andaMax: 0
+  andandoComoRainha: 0
   direcoesMov: 00000000
+  direcoesMovCxColl: 00000000
+--- !u!114 &-6905574491482686089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8858336704853312202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 543a1d2eb1d4b5b489d78689b4cbf1c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

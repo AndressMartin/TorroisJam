@@ -4,25 +4,29 @@ using UnityEngine;
 
 public class Transitar : MonoBehaviour
 {
-    public GameObject player;
+    Transform Porta;
+    BoxCollider2D portaBoxColl;
+    public bool portaOpen;
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
+        portaBoxColl = Porta.GetComponent<BoxCollider2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (portaOpen)
+        {
+            portaBoxColl.enabled = false;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject == player)
+        if (collision.gameObject.tag == "Player")
         {
             CameraMov.podeMover = true;
-            Debug.Log("Funcionou");
         }
     }
 }
