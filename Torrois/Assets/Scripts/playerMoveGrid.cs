@@ -2,11 +2,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMODUnity;
 
 public class playerMoveGrid : MonoBehaviour
 {
     private float velocidade = 5f;
-    public Transform pontoMov;
+    public static Transform pontoMov;
     ChecarMobilidade pontoMovScript;
 
     public static int gridAtual;
@@ -23,10 +24,13 @@ public class playerMoveGrid : MonoBehaviour
     //Para o código de jogar longe
     public int qntQuadradosLocal;
     public bool podeJogar = false;
-    public string direcao;
+    public string direcaoTorreJoga;
+    public int direcao;
 
     private GameObject childSpriteHolder;
     private Animator playerAnimator;
+
+    public bool transitandoEntreFases;
 
     void Start()
     {
@@ -34,7 +38,8 @@ public class playerMoveGrid : MonoBehaviour
         playerAnimator = childSpriteHolder.gameObject.GetComponent<Animator>();
         pontoMov = transform.GetChild(0);
         pontoMovScript = gameObject.GetComponentInChildren<ChecarMobilidade>();
-        pontoMov.parent = null;
+        pontoMov.parent = GameObject.FindGameObjectWithTag("HolderTemporario").transform;
+        
     }
     
     void FixedUpdate()
@@ -59,24 +64,32 @@ public class playerMoveGrid : MonoBehaviour
         pontoMovAntesTemp = pontoMovAntes;   
         if (Vector2.Distance(transform.position, pontoMov.position) == 0f)
         {
+            if (gameObject.GetComponent<StudioEventEmitter>().CollisionTag == "Torre")  //GAMBIARRA!!!!
+            {
+                gameObject.GetComponent<StudioEventEmitter>().CollisionTag = "Imovel";
+            }
+            transitandoEntreFases = false; //Código da CameraMov
             if (Mathf.Abs(Input.GetAxisRaw("Horizontal")) == 1f)
             {
                 Virar();
+                direcao = (int)Input.GetAxisRaw("Horizontal");
                 pontoMovAntes = pontoMov.position;
                 gridAnterior = gridAtual;
                 pontoMov.position += new Vector3(Input.GetAxisRaw("Horizontal"), 0f, 0f);
+                playerAnimator.SetTrigger("Andando");
             }
 
             else if (Mathf.Abs(Input.GetAxisRaw("Vertical")) == 1f)  
             {
+                direcao = (int)Input.GetAxisRaw("Vertical")*16;
                 pontoMovAntes = pontoMov.position;
                 gridAnterior = gridAtual;
                 pontoMov.position += new Vector3(0f, Input.GetAxisRaw("Vertical"), 0f);
+                playerAnimator.SetTrigger("Andando");
             }
         }
         if (pontoMovScript.ColidiuParede)
         {
-
             playerAnimator.SetTrigger("Empurrando");
             pontoMovScript.ColidiuParede = false;
         }
@@ -94,15 +107,19 @@ public class playerMoveGrid : MonoBehaviour
         }
     }
 
-    private void Voltar()
+    public void Voltar()
     {
         Debug.Log("Jogador Voltando");
-        gridAtual = gridAnterior;
-        gridAnterior = gridTemp;
         pontoMov.position = pontoMovAntes;
         pontoMovAntes = pontoMovAntesTemp;
         if (Vector2.Distance(pontoMov.position, pontoMovAntes) == 0f)
+        {
+
+            gridAtual = gridAnterior;
+            gridAnterior = gridTemp;
+
             voltando = false;
+        }
     }
 
     //public void Jogados()
@@ -172,23 +189,22 @@ public class playerMoveGrid : MonoBehaviour
         {
             gridAtual = gridAnterior;
             pontoMovAntesTemp = pontoMovAntes;
-            if (direcao == "esquerda")
+            if (direcaoTorreJoga == "esquerda")
             {
                 pontoMov.position += new Vector3(-1f, 0f, 0f);
             }
-            if (direcao == "direita")
+            if (direcaoTorreJoga == "direita")
             {
                 pontoMov.position += new Vector3(+1f, 0f, 0f);
             }
-            if (direcao == "cima")
+            if (direcaoTorreJoga == "cima")
             {
                 pontoMov.position += new Vector3(0f, +1f, 0f);
             }
-            if (direcao == "baixo")
+            if (direcaoTorreJoga == "baixo")
             {
                 pontoMov.position += new Vector3(0f, -1f, 0f);
             }
-
         }
         podeJogar = false;
     }
@@ -207,13 +223,29 @@ public class playerMoveGrid : MonoBehaviour
             }
             //Debug.Log("Colidiu com " + gridAtual);
         }
-
-        if (collision.gameObject.tag == "Imovel")
+        if (!transitandoEntreFases)
         {
-            Debug.Log("Ai!");
-            pontoMovAntes = pontoMov.position;
-            if (!voltando)
-                voltando = true;
+            if (collision.gameObject.tag == "Imovel")
+            {
+                //Debug.Log("Ai!");
+                pontoMovAntes = pontoMov.position;
+                if (!voltando)
+                    voltando = true;
+            }
         }
+
+        //TENTANDO RESOLVER Jogador entrando na caixa rapidamente dps da caixa colidir com a outra
+
+        //if (collision.gameObject.tag == "Torre" && collision.GetComponent<Caixa>().colidiuCaixa == true) 
+        //{
+        //    Debug.Log("Player entrando na caixa");
+        //    Voltar();
+        //}
+
     }
+
+    public void PegarInput(Input input)
+    {
+
+    } 
 }

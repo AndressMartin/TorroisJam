@@ -36,7 +36,7 @@ public class JogarPecas : MonoBehaviour
         DirecoesJogar direcao = (DirecoesJogar)Random.Range(0, 1);
         qntdCasasJogar = Random.Range(4, 9);
         playerMoveLocal.qntQuadradosLocal = qntdCasasJogar;
-        playerMoveLocal.direcao = direcao.ToString();
+        playerMoveLocal.direcaoTorreJoga = direcao.ToString();
         playerMoveLocal.podeJogar = true;
         Debug.Log(direcao.ToString());
         Cooldown.ReiniciarTimer();

@@ -9,6 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6846891206342243977}
+  - component: {fileID: 1496641877}
+  - component: {fileID: 1496641876}
   m_Layer: 0
   m_Name: pontoMov
   m_TagString: Untagged
@@ -30,6 +32,46 @@ Transform:
   m_Father: {fileID: 6846891206937330507}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1496641877
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6846891206342243976}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.3, y: 0.3}
+  m_EdgeRadius: 0
+--- !u!114 &1496641876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6846891206342243976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 162bab32e8578e743a7b19a1b2e6b5c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myParent: {fileID: 0}
+  ColidiuParede: 0
 --- !u!1 &6846891206937330502
 GameObject:
   m_ObjectHideFlags: 0
@@ -43,6 +85,7 @@ GameObject:
   - component: {fileID: 6846891206937330505}
   - component: {fileID: 6846891206937330504}
   - component: {fileID: 6846891206937330503}
+  - component: {fileID: 1593169509}
   m_Layer: 0
   m_Name: CaixaTorre
   m_TagString: Torre
@@ -101,11 +144,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1299684079
+  m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ae5a790a47dd3294686f660da4c63349, type: 3}
-  m_Color: {r: 0.19824673, g: 0.9339623, b: 0.42403296, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 1b35c92c69bb62048b32d8dc5f44e978, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -132,7 +175,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.96, y: 0.91}
     newSize: {x: 0.16, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -174,9 +217,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b27c157b932ee24e8cd6aff1602e0f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ativado: 0
   pontoMov: {fileID: 6846891206342243977}
   gridCaixa: 0
   gridDoJogador: 0
-  colidiu: 0
+  colidiuJogador: 0
+  colidiuCaixa: 0
   podeMover: 1
   andaMax: 0
+  andandoComoRainha: 0
+  direcoesMov: 00000000
+  podeDirecao: 00000000
+  direcoesMovCxColl: 00000000
+--- !u!114 &1593169509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6846891206937330502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Player
+  Event: event:/sfx/movimento_peao
+  PlayEvent: 5
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
