@@ -81,7 +81,7 @@ public class playerMoveGrid : MonoBehaviour
 
             else if (Mathf.Abs(Input.GetAxisRaw("Vertical")) == 1f)  
             {
-                direcao = (int)Input.GetAxisRaw("Horizontal")*16;
+                direcao = (int)Input.GetAxisRaw("Vertical")*16;
                 pontoMovAntes = pontoMov.position;
                 gridAnterior = gridAtual;
                 pontoMov.position += new Vector3(0f, Input.GetAxisRaw("Vertical"), 0f);
