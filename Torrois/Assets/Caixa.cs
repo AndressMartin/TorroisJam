@@ -212,7 +212,7 @@ public class Caixa : MonoBehaviour
             direcoesMov[3] = false; 
         }
     }
-    private void Voltar()
+    public void Voltar()
     {
         
         //Debug.Log("tentando voltar");

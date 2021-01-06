@@ -107,7 +107,7 @@ public class playerMoveGrid : MonoBehaviour
         }
     }
 
-    private void Voltar()
+    public void Voltar()
     {
         Debug.Log("Jogador Voltando");
         pontoMov.position = pontoMovAntes;
