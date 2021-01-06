@@ -24,7 +24,8 @@ public class playerMoveGrid : MonoBehaviour
     //Para o código de jogar longe
     public int qntQuadradosLocal;
     public bool podeJogar = false;
-    public string direcao;
+    public string direcaoTorreJoga;
+    public int direcao;
 
     private GameObject childSpriteHolder;
     private Animator playerAnimator;
@@ -71,6 +72,7 @@ public class playerMoveGrid : MonoBehaviour
             if (Mathf.Abs(Input.GetAxisRaw("Horizontal")) == 1f)
             {
                 Virar();
+                direcao = (int)Input.GetAxisRaw("Horizontal");
                 pontoMovAntes = pontoMov.position;
                 gridAnterior = gridAtual;
                 pontoMov.position += new Vector3(Input.GetAxisRaw("Horizontal"), 0f, 0f);
@@ -79,6 +81,7 @@ public class playerMoveGrid : MonoBehaviour
 
             else if (Mathf.Abs(Input.GetAxisRaw("Vertical")) == 1f)  
             {
+                direcao = (int)Input.GetAxisRaw("Horizontal")*16;
                 pontoMovAntes = pontoMov.position;
                 gridAnterior = gridAtual;
                 pontoMov.position += new Vector3(0f, Input.GetAxisRaw("Vertical"), 0f);
@@ -182,19 +185,19 @@ public class playerMoveGrid : MonoBehaviour
         {
             gridAtual = gridAnterior;
             pontoMovAntesTemp = pontoMovAntes;
-            if (direcao == "esquerda")
+            if (direcaoTorreJoga == "esquerda")
             {
                 pontoMov.position += new Vector3(-1f, 0f, 0f);
             }
-            if (direcao == "direita")
+            if (direcaoTorreJoga == "direita")
             {
                 pontoMov.position += new Vector3(+1f, 0f, 0f);
             }
-            if (direcao == "cima")
+            if (direcaoTorreJoga == "cima")
             {
                 pontoMov.position += new Vector3(0f, +1f, 0f);
             }
-            if (direcao == "baixo")
+            if (direcaoTorreJoga == "baixo")
             {
                 pontoMov.position += new Vector3(0f, -1f, 0f);
             }
@@ -228,4 +231,9 @@ public class playerMoveGrid : MonoBehaviour
         }
         
     }
+
+    public void PegarInput(Input input)
+    {
+
+    } 
 }

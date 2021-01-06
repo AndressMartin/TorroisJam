@@ -30,11 +30,12 @@ public class Caixa : MonoBehaviour
     {
         sprite = GetComponent<SpriteRenderer>();
         boxTriggerer = GetComponent<BoxCollider2D>();
-        pontoMov = transform.GetChild(0);
-        if (gameObject.tag == "Imovel")
+        if (gameObject.tag != "Imovel")
+            pontoMov = transform.GetChild(0);
+        else
         {
             podeMover = false;
-            Destroy(pontoMov.gameObject);
+            //Destroy(pontoMov.gameObject);
         }
         if (pontoMov != null)
         {
