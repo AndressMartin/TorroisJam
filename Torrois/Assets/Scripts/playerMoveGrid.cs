@@ -62,7 +62,7 @@ public class playerMoveGrid : MonoBehaviour
 
         transform.position = Vector2.MoveTowards(transform.position, pontoMov.position, velocidade * Time.deltaTime);
         pontoMovAntesTemp = pontoMovAntes;   
-        if (Vector2.Distance(transform.position, pontoMov.position) == 0f && !voltando)
+        if (Vector2.Distance(transform.position, pontoMov.position) == 0f)
         {
             if (gameObject.GetComponent<StudioEventEmitter>().CollisionTag == "Torre")  //GAMBIARRA!!!!
             {
@@ -233,7 +233,15 @@ public class playerMoveGrid : MonoBehaviour
                     voltando = true;
             }
         }
-        
+
+        //TENTANDO RESOLVER Jogador entrando na caixa rapidamente dps da caixa colidir com a outra
+
+        //if (collision.gameObject.tag == "Torre" && collision.GetComponent<Caixa>().colidiuCaixa == true) 
+        //{
+        //    Debug.Log("Player entrando na caixa");
+        //    Voltar();
+        //}
+
     }
 
     public void PegarInput(Input input)

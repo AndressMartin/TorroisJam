@@ -13,7 +13,6 @@ public class SalaManager : MonoBehaviour
     void Start()
     {
         MainCamera = GameObject.FindGameObjectWithTag("MainCamera");
-        Debug.Log(listaSalas);
     }
 
     // Update is called once per frame

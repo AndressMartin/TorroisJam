@@ -19,6 +19,7 @@ public class Caixa : MonoBehaviour
 
     //0 = esquerda, 1 = direita, 2 = cima, 3 = baixo
     [SerializeField] public List<bool> direcoesMov = new List<bool>(){false, false, false, false};
+    [SerializeField] public List<bool> podeDirecao = new List<bool>() { true, true, true, true };
     [SerializeField] public List<bool> direcoesMovCxColl = new List<bool>() { false, false, false, false };
 
     private SpriteRenderer sprite;
@@ -40,16 +41,24 @@ public class Caixa : MonoBehaviour
         if (pontoMov != null)
         {
             pontoMovScript = gameObject.GetComponentInChildren<ChecarMobilidade>();
-            pontoMov.GetComponent<ChecarMobilidade>().myParent = transform;
+            sendParent();
             pontoMov.parent = GameObject.FindGameObjectWithTag("HolderTemporario").transform;
         }    
         if (gameObject.tag == "Torre")
         {
             andaMax = false;
+            for (int i = 0; i < podeDirecao.Count; i++)
+            {
+                podeDirecao[i] = true;
+            }
         }
         if (gameObject.tag == "Rainha")
         {
             andaMax = true;
+            for (int i = 0; i < podeDirecao.Count; i++)
+            {
+                podeDirecao[i] = true;
+            }
         }
     }
 
@@ -67,7 +76,10 @@ public class Caixa : MonoBehaviour
                 pontoMovScript.ColidiuParede = false;
             }
             else
+            {
                 Move();
+            }
+
         }
         
     }
@@ -91,23 +103,54 @@ public class Caixa : MonoBehaviour
                     {
                         if (playerMoveGrid.gridAnterior == gridDoJogador + 1) //Veio da direita
                         {
-                            pontoMov.position += new Vector3(-1f, 0f, 0f); //Caixa pra esquerda
-                            direcoesMov[0] = true;
+                            if (podeDirecao[0]) //Pode ser falso no peão
+                            {
+                                pontoMov.position += new Vector3(-1f, 0f, 0f); //Caixa pra esquerda
+                                direcoesMov[0] = true;
+                            }
+                            else
+                            {
+                                Voltar();
+                            }
                         }
                         else if (playerMoveGrid.gridAnterior == gridDoJogador - 1) //Veio da esquerda
                         {
-                            pontoMov.position += new Vector3(+1f, 0f, 0f); //Caixa pra direita
-                            direcoesMov[1] = true;
+                            if (podeDirecao[1]) //Pode ser falso no peão
+                            {
+                                pontoMov.position += new Vector3(+1f, 0f, 0f); //Caixa pra direita
+                                direcoesMov[1] = true;
+
+                            }
+                            else
+                            {
+                                Voltar();
+                            }
                         }
                         if (playerMoveGrid.gridAnterior == gridDoJogador - 16) //Veio de cima
                         {
-                            pontoMov.position += new Vector3(0f, -1f, 0f); //Caixa pra baixo
-                            direcoesMov[3] = true;
+                            if (podeDirecao[3]) //Pode ser falso no peão
+                            {
+                                pontoMov.position += new Vector3(0f, -1f, 0f); //Caixa pra baixo
+                                direcoesMov[3] = true;
+                            }
+                            else
+                            {
+                                Voltar();
+                            }
+
                         }
                         else if (playerMoveGrid.gridAnterior == gridDoJogador + 16) //Veio de baixo
                         {
-                            pontoMov.position += new Vector3(0f, +1f, 0f); //Caixa pra cima
-                            direcoesMov[2] = true;
+                            if (podeDirecao[2]) //Pode ser falso no peão
+                            {
+                                pontoMov.position += new Vector3(0f, +1f, 0f); //Caixa pra cima
+                                direcoesMov[2] = true;
+                            }
+                            else
+                            {
+                                Voltar();
+                            }
+                            
                         }
                     }
                     if (andaMax == true)
@@ -145,22 +188,22 @@ public class Caixa : MonoBehaviour
                 {
                     if (andaMax == false)
                     {
-                        if (direcoesMovCxColl[0] == true) //Veio da direita
+                        if (direcoesMovCxColl[0] == true && podeDirecao[0]) //Veio da direita
                         {
                             pontoMov.position += new Vector3(-1f, 0f, 0f); //Caixa pra esquerda
                             direcoesMov[0] = true;
                         }
-                        else if (direcoesMovCxColl[1] == true) //Veio da esquerda
+                        else if (direcoesMovCxColl[1] == true && podeDirecao[1]) //Veio da esquerda
                         {
                             pontoMov.position += new Vector3(+1f, 0f, 0f); //Caixa pra direita
                             direcoesMov[1] = true;
                         }
-                        if (direcoesMovCxColl[3] == true) //Veio de cima
+                        if (direcoesMovCxColl[3] == true && podeDirecao[3]) //Veio de cima
                         {
                             pontoMov.position += new Vector3(0f, -1f, 0f); //Caixa pra baixo
                             direcoesMov[3] = true;
                         }
-                        else if (direcoesMovCxColl[2] == true) //Veio de baixo
+                        else if (direcoesMovCxColl[2] == true && podeDirecao[2]) //Veio de baixo
                         {
                             pontoMov.position += new Vector3(0f, +1f, 0f); //Caixa pra cima
                             direcoesMov[2] = true;
@@ -205,7 +248,7 @@ public class Caixa : MonoBehaviour
         }
         if (Vector2.Distance(transform.position, pontoMov.position) == 0f) //PODE BUGAR SE COLISAO FOR MUITO RAPIDO
         {
-            //Debug.Log("Direcoes iguais");
+            Debug.Log("Direcoes iguais");
             direcoesMov[0] = false;
             direcoesMov[1] = false;
             direcoesMov[2] = false;
@@ -214,7 +257,6 @@ public class Caixa : MonoBehaviour
     }
     public void Voltar()
     {
-        
         //Debug.Log("tentando voltar");
         if (direcoesMov[0] == true)
         {
@@ -258,6 +300,19 @@ public class Caixa : MonoBehaviour
             //Debug.Log("Esta colidindo com a caixa");
             colidiuJogador = true;
         }
+        if (collision.gameObject.tag == "Torre" || collision.gameObject.tag == "Rainha" || collision.gameObject.tag == "Peon")
+        {
+            Debug.Log("Caixa entrando na caixa");
+            pontoMovScript.ColidiuParede = true;
+        }
+    }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        //if (collision.gameObject.tag == "Player") //TENTANDO IMPEDIR BUG DO JOGADOR ENTRANDO RAPIDAMENTE NA CAIXA COLIDINDO COM OUTRA
+        //{
+        //    Debug.Log("Prevenindo colisão continua jogador e caixa");
+        //    playerMoveGrid.voltando = true;
+        //}
     }
 
     public void verPorta()
