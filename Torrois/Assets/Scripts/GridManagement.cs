@@ -46,7 +46,7 @@ public class GridManagement : MonoBehaviour
                 float posX = (coluna * tileSize) + 0.5f;
                 float posY = (linha * -tileSize) + 0.5f;
                 
-                GridTile.transform.position = new Vector2(posX-8, posY+5);
+                GridTile.transform.position = new Vector2(posX-8, posY+4);
                 DrawIcon(GridTile, 2);
                 indice++;
             }

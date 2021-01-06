@@ -11,6 +11,10 @@ TagManager:
   - Impassavel
   - HolderTemporario
   - Rainha
+  - Sala
+  - Peon
+  - AlavancaH
+  - AlavancaV
   layers:
   - Default
   - TransparentFX
@@ -50,4 +54,7 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 2995283217
+    locked: 0
+  - name: Parede
+    uniqueID: 2405501593
     locked: 0

@@ -30,8 +30,9 @@ public class Caixa : MonoBehaviour
     {
         sprite = GetComponent<SpriteRenderer>();
         boxTriggerer = GetComponent<BoxCollider2D>();
-        pontoMov = transform.GetChild(0);
-        if (gameObject.tag == "Imovel")
+        if (gameObject.tag != "Imovel")
+            pontoMov = transform.GetChild(0);
+        else
         {
             podeMover = false;
             //Destroy(pontoMov.gameObject);
@@ -55,9 +56,9 @@ public class Caixa : MonoBehaviour
 
     void FixedUpdate()
     {
+        verPorta();
         if (pontoMov != null)
         {
-            verPorta();
             gridDoJogador = playerMoveGrid.gridAtual;
             if ((pontoMovScript.ColidiuParede && gameObject.tag != "Imovel") && !colidiuCaixa)
             {
@@ -76,12 +77,16 @@ public class Caixa : MonoBehaviour
     {
 
         transform.position = Vector2.MoveTowards(transform.position, pontoMov.position, velocidade * Time.deltaTime);
-        if (colidiuJogador || andandoComoRainha || colidiuCaixa)
+        if ((colidiuJogador || andandoComoRainha || colidiuCaixa))
         {
             if (podeMover == true)
             {
                 if (colidiuJogador)
                 {
+                    //if (gameObject.tag == "Peon")
+                    //{
+
+                    //}
                     if (andaMax == false)
                     {
                         if (playerMoveGrid.gridAnterior == gridDoJogador + 1) //Veio da direita
@@ -207,7 +212,7 @@ public class Caixa : MonoBehaviour
             direcoesMov[3] = false; 
         }
     }
-    private void Voltar()
+    public void Voltar()
     {
         
         //Debug.Log("tentando voltar");

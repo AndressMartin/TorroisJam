@@ -8,18 +8,11 @@ public class ChecarMobilidade : MonoBehaviour
 
     public bool ColidiuParede;
 
-    private void Update()
-    {
-        //if (myParent == null)
-        //{
-        //    Destroy(gameObject);
-        //}
-    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (myParent.tag == "Torre" || myParent.tag == "Rainha")
         {
-            if (collision.gameObject.transform != myParent && 
+            if (collision.gameObject.transform != myParent &&
                 (collision.gameObject.tag == "Torre" || collision.gameObject.tag == "Rainha"))
             {
                 //Debug.Log(collision.gameObject.tag);
@@ -34,10 +27,12 @@ public class ChecarMobilidade : MonoBehaviour
                     }
                 }
             }
-            else if (collision.gameObject.transform != myParent && (collision.gameObject.tag == "Imovel"))
+            else if (collision.gameObject.transform != myParent && ((collision.gameObject.tag == "Imovel") || (collision.gameObject.tag == "AlavancaH") || (collision.gameObject.tag == "AlavancaV")))
             {
+                Debug.Log("Checar COLISA");
                 ColidiuParede = true;
             }
+
         }
         //if (collision.gameObject.tag == "Imovel")
         //{

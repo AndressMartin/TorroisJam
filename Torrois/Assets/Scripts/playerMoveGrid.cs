@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMODUnity;
 
 public class playerMoveGrid : MonoBehaviour
 {
@@ -23,7 +24,8 @@ public class playerMoveGrid : MonoBehaviour
     //Para o código de jogar longe
     public int qntQuadradosLocal;
     public bool podeJogar = false;
-    public string direcao;
+    public string direcaoTorreJoga;
+    public int direcao;
 
     private GameObject childSpriteHolder;
     private Animator playerAnimator;
@@ -60,12 +62,17 @@ public class playerMoveGrid : MonoBehaviour
 
         transform.position = Vector2.MoveTowards(transform.position, pontoMov.position, velocidade * Time.deltaTime);
         pontoMovAntesTemp = pontoMovAntes;   
-        if (Vector2.Distance(transform.position, pontoMov.position) == 0f)
+        if (Vector2.Distance(transform.position, pontoMov.position) == 0f && !voltando)
         {
+            if (gameObject.GetComponent<StudioEventEmitter>().CollisionTag == "Torre")  //GAMBIARRA!!!!
+            {
+                gameObject.GetComponent<StudioEventEmitter>().CollisionTag = "Imovel";
+            }
             transitandoEntreFases = false; //Código da CameraMov
             if (Mathf.Abs(Input.GetAxisRaw("Horizontal")) == 1f)
             {
                 Virar();
+                direcao = (int)Input.GetAxisRaw("Horizontal");
                 pontoMovAntes = pontoMov.position;
                 gridAnterior = gridAtual;
                 pontoMov.position += new Vector3(Input.GetAxisRaw("Horizontal"), 0f, 0f);
@@ -74,6 +81,7 @@ public class playerMoveGrid : MonoBehaviour
 
             else if (Mathf.Abs(Input.GetAxisRaw("Vertical")) == 1f)  
             {
+                direcao = (int)Input.GetAxisRaw("Vertical")*16;
                 pontoMovAntes = pontoMov.position;
                 gridAnterior = gridAtual;
                 pontoMov.position += new Vector3(0f, Input.GetAxisRaw("Vertical"), 0f);
@@ -99,15 +107,19 @@ public class playerMoveGrid : MonoBehaviour
         }
     }
 
-    private void Voltar()
+    public void Voltar()
     {
         Debug.Log("Jogador Voltando");
-        gridAtual = gridAnterior;
-        gridAnterior = gridTemp;
         pontoMov.position = pontoMovAntes;
         pontoMovAntes = pontoMovAntesTemp;
         if (Vector2.Distance(pontoMov.position, pontoMovAntes) == 0f)
+        {
+
+            gridAtual = gridAnterior;
+            gridAnterior = gridTemp;
+
             voltando = false;
+        }
     }
 
     //public void Jogados()
@@ -177,23 +189,22 @@ public class playerMoveGrid : MonoBehaviour
         {
             gridAtual = gridAnterior;
             pontoMovAntesTemp = pontoMovAntes;
-            if (direcao == "esquerda")
+            if (direcaoTorreJoga == "esquerda")
             {
                 pontoMov.position += new Vector3(-1f, 0f, 0f);
             }
-            if (direcao == "direita")
+            if (direcaoTorreJoga == "direita")
             {
                 pontoMov.position += new Vector3(+1f, 0f, 0f);
             }
-            if (direcao == "cima")
+            if (direcaoTorreJoga == "cima")
             {
                 pontoMov.position += new Vector3(0f, +1f, 0f);
             }
-            if (direcao == "baixo")
+            if (direcaoTorreJoga == "baixo")
             {
                 pontoMov.position += new Vector3(0f, -1f, 0f);
             }
-
         }
         podeJogar = false;
     }
@@ -216,7 +227,7 @@ public class playerMoveGrid : MonoBehaviour
         {
             if (collision.gameObject.tag == "Imovel")
             {
-                Debug.Log("Ai!");
+                //Debug.Log("Ai!");
                 pontoMovAntes = pontoMov.position;
                 if (!voltando)
                     voltando = true;
@@ -224,4 +235,9 @@ public class playerMoveGrid : MonoBehaviour
         }
         
     }
+
+    public void PegarInput(Input input)
+    {
+
+    } 
 }
