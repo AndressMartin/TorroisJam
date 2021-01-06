@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMODUnity;
 
 public class playerMoveGrid : MonoBehaviour
 {
@@ -62,6 +63,10 @@ public class playerMoveGrid : MonoBehaviour
         pontoMovAntesTemp = pontoMovAntes;   
         if (Vector2.Distance(transform.position, pontoMov.position) == 0f)
         {
+            if (gameObject.GetComponent<StudioEventEmitter>().CollisionTag == "Torre")  //GAMBIARRA!!!!
+            {
+                gameObject.GetComponent<StudioEventEmitter>().CollisionTag = "Imovel";
+            }
             transitandoEntreFases = false; //Código da CameraMov
             if (Mathf.Abs(Input.GetAxisRaw("Horizontal")) == 1f)
             {
@@ -193,7 +198,6 @@ public class playerMoveGrid : MonoBehaviour
             {
                 pontoMov.position += new Vector3(0f, -1f, 0f);
             }
-
         }
         podeJogar = false;
     }

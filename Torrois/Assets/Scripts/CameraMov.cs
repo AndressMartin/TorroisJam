@@ -8,12 +8,12 @@ public class CameraMov : MonoBehaviour
     private float velocidade = 20f;
     private GameObject player;
     public GameObject playerMovePoint;
-    [SerializeField] public List<GameObject> listaSalas = new List<GameObject>();
-    public int indice = 0;
+    public GameObject GameManager;
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        GameManager = GameObject.FindGameObjectWithTag("GameController");
         transform.position = new Vector3(0f, 0f, -10f);
     }
 
@@ -21,21 +21,23 @@ public class CameraMov : MonoBehaviour
     {
         if (podeMover)
         {
+            GameManager.GetComponent<SalaManager>().AtivarProxSala();
             FazerMovimento();
         }
     }
 
     public void FazerMovimento()
     {
-        transform.position = Vector3.MoveTowards(transform.position, listaSalas[indice+1].transform.position, velocidade * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, 
+            GameManager.GetComponent<SalaManager>().salasHolder[SalaManager.indice+1].transform.position, velocidade * Time.deltaTime);
         
-        if (Vector3.Distance(transform.position, listaSalas[indice+1].transform.position) == 0f)
+        if (Vector3.Distance(transform.position, GameManager.GetComponent<SalaManager>().salasHolder[SalaManager.indice+1].transform.position) == 0f)
         {
-            indice += 1;
+            SalaManager.indice += 1;
             podeMover = false;
             TrazerGrid();
             TrazerJogador();
-            StartCoroutine(EsperaParaDestruirSala());
+            StartCoroutine(EsperaParaDesativarSala());
         }
     }
 
@@ -46,6 +48,7 @@ public class CameraMov : MonoBehaviour
 
     public void TrazerJogador()
     {
+        player.GetComponent<FMODUnity.StudioEventEmitter>().CollisionTag = "Torre";  //GAMBIARRA!!!!
         player.GetComponent<playerMoveGrid>().transitandoEntreFases = true;
         playerMovePoint.transform.position = FindClosestWalkableGrid().transform.position;
         //Debug.Log(FindClosestGrid().transform.position);
@@ -72,16 +75,16 @@ public class CameraMov : MonoBehaviour
         return closest;
     }
 
-    IEnumerator EsperaParaDestruirSala()
+    IEnumerator EsperaParaDesativarSala()
     {
         //Print the time of when the function is first called.
         Debug.Log("Started Coroutine at timestamp : " + Time.time);
 
         //yield on a new YieldInstruction that waits for 5 seconds.
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(2);
 
         //After we have waited 5 seconds print the time again.
         Debug.Log("Finished Coroutine at timestamp : " + Time.time);
-        DestruirSalaAnterior.DestruirSalaAnteriorFunc();
+        GameManager.GetComponent<SalaManager>().DesativarSalaAnterior();
     }
 }

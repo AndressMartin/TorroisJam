@@ -34,7 +34,7 @@ public class Caixa : MonoBehaviour
         if (gameObject.tag == "Imovel")
         {
             podeMover = false;
-            //Destroy(pontoMov.gameObject);
+            Destroy(pontoMov.gameObject);
         }
         if (pontoMov != null)
         {
@@ -55,9 +55,9 @@ public class Caixa : MonoBehaviour
 
     void FixedUpdate()
     {
+        verPorta();
         if (pontoMov != null)
         {
-            verPorta();
             gridDoJogador = playerMoveGrid.gridAtual;
             if ((pontoMovScript.ColidiuParede && gameObject.tag != "Imovel") && !colidiuCaixa)
             {

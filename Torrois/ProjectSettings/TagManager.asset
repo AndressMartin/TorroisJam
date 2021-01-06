@@ -11,6 +11,8 @@ TagManager:
   - Impassavel
   - HolderTemporario
   - Rainha
+  - Sala
+  - Peon
   layers:
   - Default
   - TransparentFX
