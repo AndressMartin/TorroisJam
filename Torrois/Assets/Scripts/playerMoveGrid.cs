@@ -62,7 +62,7 @@ public class playerMoveGrid : MonoBehaviour
 
         transform.position = Vector2.MoveTowards(transform.position, pontoMov.position, velocidade * Time.deltaTime);
         pontoMovAntesTemp = pontoMovAntes;   
-        if (Vector2.Distance(transform.position, pontoMov.position) == 0f)
+        if (Vector2.Distance(transform.position, pontoMov.position) == 0f && !voltando)
         {
             if (gameObject.GetComponent<StudioEventEmitter>().CollisionTag == "Torre")  //GAMBIARRA!!!!
             {
@@ -110,12 +110,16 @@ public class playerMoveGrid : MonoBehaviour
     private void Voltar()
     {
         Debug.Log("Jogador Voltando");
-        gridAtual = gridAnterior;
-        gridAnterior = gridTemp;
         pontoMov.position = pontoMovAntes;
         pontoMovAntes = pontoMovAntesTemp;
         if (Vector2.Distance(pontoMov.position, pontoMovAntes) == 0f)
+        {
+
+            gridAtual = gridAnterior;
+            gridAnterior = gridTemp;
+
             voltando = false;
+        }
     }
 
     //public void Jogados()
@@ -223,7 +227,7 @@ public class playerMoveGrid : MonoBehaviour
         {
             if (collision.gameObject.tag == "Imovel")
             {
-                Debug.Log("Ai!");
+                //Debug.Log("Ai!");
                 pontoMovAntes = pontoMov.position;
                 if (!voltando)
                     voltando = true;

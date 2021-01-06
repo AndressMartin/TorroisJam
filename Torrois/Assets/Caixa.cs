@@ -77,12 +77,16 @@ public class Caixa : MonoBehaviour
     {
 
         transform.position = Vector2.MoveTowards(transform.position, pontoMov.position, velocidade * Time.deltaTime);
-        if (colidiuJogador || andandoComoRainha || colidiuCaixa)
+        if ((colidiuJogador || andandoComoRainha || colidiuCaixa))
         {
             if (podeMover == true)
             {
                 if (colidiuJogador)
                 {
+                    //if (gameObject.tag == "Peon")
+                    //{
+
+                    //}
                     if (andaMax == false)
                     {
                         if (playerMoveGrid.gridAnterior == gridDoJogador + 1) //Veio da direita

@@ -26,7 +26,7 @@ public class Alavanca : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(sentido);
+        //Debug.Log(sentido);
         ativado = scriptDaPorta.ativado;
     }
 
