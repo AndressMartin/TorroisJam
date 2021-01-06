@@ -13,6 +13,8 @@ TagManager:
   - Rainha
   - Sala
   - Peon
+  - AlavancaH
+  - AlavancaV
   layers:
   - Default
   - TransparentFX

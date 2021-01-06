@@ -3990,6 +3990,91 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &830624508
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1264125473}
+    m_Modifications:
+    - target: {fileID: 1352011033712047881, guid: 4a65fe150824f64439380dabbe737377,
+        type: 3}
+      propertyPath: m_Name
+      value: Alavanca (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1352011033712047881, guid: 4a65fe150824f64439380dabbe737377,
+        type: 3}
+      propertyPath: m_TagString
+      value: AlavancaV
+      objectReference: {fileID: 0}
+    - target: {fileID: 1352011033712047886, guid: 4a65fe150824f64439380dabbe737377,
+        type: 3}
+      propertyPath: porta
+      value: 
+      objectReference: {fileID: 731124591}
+    - target: {fileID: 1352011033712047890, guid: 4a65fe150824f64439380dabbe737377,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1352011033712047890, guid: 4a65fe150824f64439380dabbe737377,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1352011033712047890, guid: 4a65fe150824f64439380dabbe737377,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1352011033712047890, guid: 4a65fe150824f64439380dabbe737377,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1352011033712047890, guid: 4a65fe150824f64439380dabbe737377,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1352011033712047890, guid: 4a65fe150824f64439380dabbe737377,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1352011033712047890, guid: 4a65fe150824f64439380dabbe737377,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1352011033712047890, guid: 4a65fe150824f64439380dabbe737377,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1352011033712047890, guid: 4a65fe150824f64439380dabbe737377,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1352011033712047890, guid: 4a65fe150824f64439380dabbe737377,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1352011033712047890, guid: 4a65fe150824f64439380dabbe737377,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4a65fe150824f64439380dabbe737377, type: 3}
+--- !u!4 &830624509 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1352011033712047890, guid: 4a65fe150824f64439380dabbe737377,
+    type: 3}
+  m_PrefabInstance: {fileID: 830624508}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &831322233
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5725,6 +5810,7 @@ Transform:
   - {fileID: 655577641}
   - {fileID: 291256568}
   - {fileID: 2000633392}
+  - {fileID: 830624509}
   m_Father: {fileID: 2106016387}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6094,12 +6180,12 @@ Transform:
   - {fileID: 831322234}
   - {fileID: 3712554101468751855}
   - {fileID: 7162068031780613224}
-  - {fileID: 50835343}
   - {fileID: 1795665158}
+  - {fileID: 157696387}
   - {fileID: 57890359}
   - {fileID: 2007405236}
   - {fileID: 203409662}
-  - {fileID: 157696387}
+  - {fileID: 50835343}
   m_Father: {fileID: 191035201}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10345,6 +10431,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Alavanca
       objectReference: {fileID: 0}
+    - target: {fileID: 1352011033712047881, guid: 4a65fe150824f64439380dabbe737377,
+        type: 3}
+      propertyPath: m_TagString
+      value: AlavancaH
+      objectReference: {fileID: 0}
+    - target: {fileID: 1352011033712047886, guid: 4a65fe150824f64439380dabbe737377,
+        type: 3}
+      propertyPath: porta
+      value: 
+      objectReference: {fileID: 731124591}
     - target: {fileID: 1352011033712047890, guid: 4a65fe150824f64439380dabbe737377,
         type: 3}
       propertyPath: m_RootOrder

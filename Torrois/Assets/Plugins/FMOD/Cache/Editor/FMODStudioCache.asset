@@ -190,7 +190,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: ../FMod/Unitytest/Build/Desktop/Master.strings.bank
   Name: Master.strings
-  lastModified: 637452092852371977
+  lastModified: 637453741684418833
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -274,7 +274,7 @@ MonoBehaviour:
   - {fileID: 5771482823184150987}
   StringsBanks:
   - {fileID: -1217173434853341776}
-  stringsBankWriteTime: 637452092852371977
+  stringsBankWriteTime: 637453741684418833
   cacheVersion: 5
 --- !u!114 &2773466510247311192
 MonoBehaviour:
@@ -382,7 +382,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: ../FMod/Unitytest/Build/Desktop/Master.bank
   Name: Master
-  lastModified: 637452092852272078
+  lastModified: 637453741684179479
   LoadResult: 0
   FileSizes: []
   Exists: 1
