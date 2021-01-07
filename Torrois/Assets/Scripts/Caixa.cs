@@ -16,6 +16,7 @@ public class Caixa : MonoBehaviour
     public bool podeMover;
     public bool andaMax;
     public bool andandoComoRainha;
+    public bool estaNoCicloCaixa;
 
     //0 = esquerda, 1 = direita, 2 = cima, 3 = baixo
     [SerializeField] public List<bool> direcoesMov = new List<bool>(){false, false, false, false};
@@ -26,6 +27,8 @@ public class Caixa : MonoBehaviour
     private BoxCollider2D boxTriggerer;
 
     ChecarMobilidade pontoMovScript;
+
+    public Transform PontoColidiuComigo;
 
     void Awake()
     {
@@ -65,9 +68,16 @@ public class Caixa : MonoBehaviour
 
     void FixedUpdate()
     {
+        
         verPorta();
         if (pontoMov != null)
         {
+            if (PontoColidiuComigo != null && pontoMovScript.ColidiuParede == true)
+            {
+                Debug.Log("Centesimo debug " + pontoMovScript.ColidiuParede);
+                PontoColidiuComigo.GetComponent<ChecarMobilidade>().ColidiuParede = true;
+
+            }
             gridDoJogador = playerMoveGrid.gridAtual;
             if ((pontoMovScript.ColidiuParede && gameObject.tag != "Imovel") && !colidiuCaixa)
             {
@@ -78,6 +88,7 @@ public class Caixa : MonoBehaviour
             else
             {
                 Move();
+                pontoMov.GetComponent<ChecarMobilidade>().ChecarProx();
             }
 
         }
@@ -95,10 +106,6 @@ public class Caixa : MonoBehaviour
             {
                 if (colidiuJogador)
                 {
-                    //if (gameObject.tag == "Peon")
-                    //{
-
-                    //}
                     if (andaMax == false)
                     {
                         if (playerMoveGrid.gridAnterior == gridDoJogador + 1) //Veio da direita
@@ -186,6 +193,12 @@ public class Caixa : MonoBehaviour
                 }
                 if (colidiuCaixa) //SE FALHAR, TESTAR ELSE IF
                 {
+                    Debug.Log("Chegou na colisão");
+                    if (estaNoCicloCaixa)
+                    {
+                        colidiuCaixa = false;
+                        estaNoCicloCaixa = false;
+                    }
                     if (andaMax == false)
                     {
                         if (direcoesMovCxColl[0] == true && podeDirecao[0]) //Veio da direita
@@ -193,20 +206,53 @@ public class Caixa : MonoBehaviour
                             pontoMov.position += new Vector3(-1f, 0f, 0f); //Caixa pra esquerda
                             direcoesMov[0] = true;
                         }
-                        else if (direcoesMovCxColl[1] == true && podeDirecao[1]) //Veio da esquerda
+                        else if (direcoesMovCxColl[0] == true && podeDirecao[0] != true)
+                        {
+                            if (gameObject.tag == "Peon")
+                            {
+                                PontoColidiuComigo.GetComponent<ChecarMobilidade>().ColidiuParede = true;
+                                PontoColidiuComigo = null;
+                            }
+                        }
+
+                        if (direcoesMovCxColl[1] == true && podeDirecao[1]) //Veio da esquerda
                         {
                             pontoMov.position += new Vector3(+1f, 0f, 0f); //Caixa pra direita
                             direcoesMov[1] = true;
+                        }
+                        else if (direcoesMovCxColl[1] == true && podeDirecao[1] != true)
+                        {
+                            if (gameObject.tag == "Peon")
+                            {
+                                PontoColidiuComigo.GetComponent<ChecarMobilidade>().ColidiuParede = true;
+                                PontoColidiuComigo = null;
+                            }
                         }
                         if (direcoesMovCxColl[3] == true && podeDirecao[3]) //Veio de cima
                         {
                             pontoMov.position += new Vector3(0f, -1f, 0f); //Caixa pra baixo
                             direcoesMov[3] = true;
                         }
-                        else if (direcoesMovCxColl[2] == true && podeDirecao[2]) //Veio de baixo
+                        else if (direcoesMovCxColl[3] == true &&  podeDirecao[3] != true)
+                        {
+                            if (gameObject.tag == "Peon")
+                            {
+                                PontoColidiuComigo.GetComponent<ChecarMobilidade>().ColidiuParede = true;
+                                PontoColidiuComigo = null;
+                            }
+                        }
+                        if (direcoesMovCxColl[2] == true && podeDirecao[2]) //Veio de baixo
                         {
                             pontoMov.position += new Vector3(0f, +1f, 0f); //Caixa pra cima
                             direcoesMov[2] = true;
+                        }
+                        else if (direcoesMovCxColl[2] == true && podeDirecao[2] != true)
+                        {
+                            if (gameObject.tag == "Peon")
+                            {
+                                PontoColidiuComigo.GetComponent<ChecarMobilidade>().ColidiuParede = true;
+                                PontoColidiuComigo = null;
+                            }
                         }
                     }
                     if (andaMax == true) //TODO: PROVAVELMENTE NAO FUNCIONA! PRECISA CONFERIR! 
@@ -241,6 +287,7 @@ public class Caixa : MonoBehaviour
                     }
                 }
             }
+            
             if (!andandoComoRainha)
                 colidiuJogador = false;
             if (!andandoComoRainha)
@@ -248,7 +295,9 @@ public class Caixa : MonoBehaviour
         }
         if (Vector2.Distance(transform.position, pontoMov.position) == 0f) //PODE BUGAR SE COLISAO FOR MUITO RAPIDO
         {
-            Debug.Log("Direcoes iguais");
+            if (gameObject.tag != "Peon")
+                PontoColidiuComigo = null;
+            //Debug.Log("Direcoes iguais");
             direcoesMov[0] = false;
             direcoesMov[1] = false;
             direcoesMov[2] = false;
@@ -300,11 +349,11 @@ public class Caixa : MonoBehaviour
             //Debug.Log("Esta colidindo com a caixa");
             colidiuJogador = true;
         }
-        if (collision.gameObject.tag == "Torre" || collision.gameObject.tag == "Rainha" || collision.gameObject.tag == "Peon")
-        {
-            Debug.Log("Caixa entrando na caixa");
-            pontoMovScript.ColidiuParede = true;
-        }
+        //if (collision.gameObject.tag == "Torre" || collision.gameObject.tag == "Rainha" || collision.gameObject.tag == "Peon")
+        //{
+        //    Debug.Log("Caixa entrando na caixa");
+        //    pontoMovScript.ColidiuParede = true;
+        //}
     }
     private void OnTriggerStay2D(Collider2D collision)
     {

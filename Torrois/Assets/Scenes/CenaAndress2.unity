@@ -182,9 +182,11 @@ MonoBehaviour:
   podeMover: 1
   andaMax: 0
   andandoComoRainha: 0
+  estaNoCicloCaixa: 0
   direcoesMov: 00000000
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
+  PontoColidiuComigo: {fileID: 0}
 --- !u!50 &38778643
 Rigidbody2D:
   serializedVersion: 4
@@ -680,9 +682,11 @@ MonoBehaviour:
   podeMover: 1
   andaMax: 0
   andandoComoRainha: 0
+  estaNoCicloCaixa: 0
   direcoesMov: 00000000
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
+  PontoColidiuComigo: {fileID: 0}
 --- !u!50 &98322419
 Rigidbody2D:
   serializedVersion: 4
@@ -969,80 +973,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 157696386}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &158349820
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1856969486}
-    m_Modifications:
-    - target: {fileID: 4649187412896099348, guid: 9053c61bb12204f4891f7158c7722104,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 23
-      objectReference: {fileID: 0}
-    - target: {fileID: 4649187412896099348, guid: 9053c61bb12204f4891f7158c7722104,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 4.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4649187412896099348, guid: 9053c61bb12204f4891f7158c7722104,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4649187412896099348, guid: 9053c61bb12204f4891f7158c7722104,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4649187412896099348, guid: 9053c61bb12204f4891f7158c7722104,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4649187412896099348, guid: 9053c61bb12204f4891f7158c7722104,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4649187412896099348, guid: 9053c61bb12204f4891f7158c7722104,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4649187412896099348, guid: 9053c61bb12204f4891f7158c7722104,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4649187412896099348, guid: 9053c61bb12204f4891f7158c7722104,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4649187412896099348, guid: 9053c61bb12204f4891f7158c7722104,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4649187412896099348, guid: 9053c61bb12204f4891f7158c7722104,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4649187412896099353, guid: 9053c61bb12204f4891f7158c7722104,
-        type: 3}
-      propertyPath: m_Name
-      value: CxPeon_H
-      objectReference: {fileID: 0}
-    - target: {fileID: 4649187412896099353, guid: 9053c61bb12204f4891f7158c7722104,
-        type: 3}
-      propertyPath: m_TagString
-      value: Peon
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 9053c61bb12204f4891f7158c7722104, type: 3}
 --- !u!1 &191035200
 GameObject:
   m_ObjectHideFlags: 0
@@ -1780,9 +1710,11 @@ MonoBehaviour:
   podeMover: 1
   andaMax: 0
   andandoComoRainha: 0
+  estaNoCicloCaixa: 0
   direcoesMov: 00000000
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
+  PontoColidiuComigo: {fileID: 0}
 --- !u!50 &282924587
 Rigidbody2D:
   serializedVersion: 4
@@ -2145,9 +2077,11 @@ MonoBehaviour:
   podeMover: 1
   andaMax: 0
   andandoComoRainha: 0
+  estaNoCicloCaixa: 0
   direcoesMov: 00000000
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
+  PontoColidiuComigo: {fileID: 0}
 --- !u!50 &395179450
 Rigidbody2D:
   serializedVersion: 4
@@ -2681,9 +2615,11 @@ MonoBehaviour:
   podeMover: 1
   andaMax: 0
   andandoComoRainha: 0
+  estaNoCicloCaixa: 0
   direcoesMov: 00000000
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
+  PontoColidiuComigo: {fileID: 0}
 --- !u!50 &559697466
 Rigidbody2D:
   serializedVersion: 4
@@ -2836,9 +2772,11 @@ MonoBehaviour:
   podeMover: 1
   andaMax: 0
   andandoComoRainha: 0
+  estaNoCicloCaixa: 0
   direcoesMov: 00000000
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
+  PontoColidiuComigo: {fileID: 0}
 --- !u!50 &579071871
 Rigidbody2D:
   serializedVersion: 4
@@ -2936,12 +2874,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!4 &582162546 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4649187412896099348, guid: 9053c61bb12204f4891f7158c7722104,
-    type: 3}
-  m_PrefabInstance: {fileID: 158349820}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &605686318
 GameObject:
   m_ObjectHideFlags: 0
@@ -3519,9 +3451,11 @@ MonoBehaviour:
   podeMover: 1
   andaMax: 0
   andandoComoRainha: 0
+  estaNoCicloCaixa: 0
   direcoesMov: 00000000
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
+  PontoColidiuComigo: {fileID: 0}
 --- !u!50 &677607094
 Rigidbody2D:
   serializedVersion: 4
@@ -3842,9 +3776,11 @@ MonoBehaviour:
   podeMover: 1
   andaMax: 0
   andandoComoRainha: 0
+  estaNoCicloCaixa: 0
   direcoesMov: 00000000
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
+  PontoColidiuComigo: {fileID: 0}
 --- !u!50 &731124594
 Rigidbody2D:
   serializedVersion: 4
@@ -4183,9 +4119,11 @@ MonoBehaviour:
   podeMover: 1
   andaMax: 0
   andandoComoRainha: 0
+  estaNoCicloCaixa: 0
   direcoesMov: 00000000
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
+  PontoColidiuComigo: {fileID: 0}
 --- !u!50 &802238484
 Rigidbody2D:
   serializedVersion: 4
@@ -4338,9 +4276,11 @@ MonoBehaviour:
   podeMover: 1
   andaMax: 0
   andandoComoRainha: 0
+  estaNoCicloCaixa: 0
   direcoesMov: 00000000
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
+  PontoColidiuComigo: {fileID: 0}
 --- !u!50 &810892738
 Rigidbody2D:
   serializedVersion: 4
@@ -4679,9 +4619,11 @@ MonoBehaviour:
   podeMover: 1
   andaMax: 0
   andandoComoRainha: 0
+  estaNoCicloCaixa: 0
   direcoesMov: 00000000
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
+  PontoColidiuComigo: {fileID: 0}
 --- !u!50 &834831308
 Rigidbody2D:
   serializedVersion: 4
@@ -4834,9 +4776,11 @@ MonoBehaviour:
   podeMover: 1
   andaMax: 0
   andandoComoRainha: 0
+  estaNoCicloCaixa: 0
   direcoesMov: 00000000
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
+  PontoColidiuComigo: {fileID: 0}
 --- !u!50 &888132802
 Rigidbody2D:
   serializedVersion: 4
@@ -4989,9 +4933,11 @@ MonoBehaviour:
   podeMover: 1
   andaMax: 0
   andandoComoRainha: 0
+  estaNoCicloCaixa: 0
   direcoesMov: 00000000
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
+  PontoColidiuComigo: {fileID: 0}
 --- !u!50 &892412748
 Rigidbody2D:
   serializedVersion: 4
@@ -5144,9 +5090,11 @@ MonoBehaviour:
   podeMover: 1
   andaMax: 0
   andandoComoRainha: 0
+  estaNoCicloCaixa: 0
   direcoesMov: 00000000
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
+  PontoColidiuComigo: {fileID: 0}
 --- !u!50 &896707934
 Rigidbody2D:
   serializedVersion: 4
@@ -5557,9 +5505,11 @@ MonoBehaviour:
   podeMover: 1
   andaMax: 0
   andandoComoRainha: 0
+  estaNoCicloCaixa: 0
   direcoesMov: 00000000
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
+  PontoColidiuComigo: {fileID: 0}
 --- !u!50 &1017432647
 Rigidbody2D:
   serializedVersion: 4
@@ -5712,9 +5662,11 @@ MonoBehaviour:
   podeMover: 1
   andaMax: 0
   andandoComoRainha: 0
+  estaNoCicloCaixa: 0
   direcoesMov: 00000000
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
+  PontoColidiuComigo: {fileID: 0}
 --- !u!50 &1018326272
 Rigidbody2D:
   serializedVersion: 4
@@ -5986,9 +5938,11 @@ MonoBehaviour:
   podeMover: 1
   andaMax: 0
   andandoComoRainha: 0
+  estaNoCicloCaixa: 0
   direcoesMov: 00000000
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
+  PontoColidiuComigo: {fileID: 0}
 --- !u!50 &1042161211
 Rigidbody2D:
   serializedVersion: 4
@@ -6207,9 +6161,11 @@ MonoBehaviour:
   podeMover: 1
   andaMax: 0
   andandoComoRainha: 0
+  estaNoCicloCaixa: 0
   direcoesMov: 00000000
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
+  PontoColidiuComigo: {fileID: 0}
 --- !u!50 &1080563009
 Rigidbody2D:
   serializedVersion: 4
@@ -6374,9 +6330,11 @@ MonoBehaviour:
   podeMover: 1
   andaMax: 0
   andandoComoRainha: 0
+  estaNoCicloCaixa: 0
   direcoesMov: 00000000
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
+  PontoColidiuComigo: {fileID: 0}
 --- !u!50 &1175504681
 Rigidbody2D:
   serializedVersion: 4
@@ -6529,9 +6487,11 @@ MonoBehaviour:
   podeMover: 1
   andaMax: 0
   andandoComoRainha: 0
+  estaNoCicloCaixa: 0
   direcoesMov: 00000000
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
+  PontoColidiuComigo: {fileID: 0}
 --- !u!50 &1203350621
 Rigidbody2D:
   serializedVersion: 4
@@ -6684,9 +6644,11 @@ MonoBehaviour:
   podeMover: 1
   andaMax: 0
   andandoComoRainha: 0
+  estaNoCicloCaixa: 0
   direcoesMov: 00000000
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
+  PontoColidiuComigo: {fileID: 0}
 --- !u!50 &1206462726
 Rigidbody2D:
   serializedVersion: 4
@@ -6839,9 +6801,11 @@ MonoBehaviour:
   podeMover: 1
   andaMax: 0
   andandoComoRainha: 0
+  estaNoCicloCaixa: 0
   direcoesMov: 00000000
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
+  PontoColidiuComigo: {fileID: 0}
 --- !u!50 &1213448083
 Rigidbody2D:
   serializedVersion: 4
@@ -7069,9 +7033,11 @@ MonoBehaviour:
   podeMover: 1
   andaMax: 0
   andandoComoRainha: 0
+  estaNoCicloCaixa: 0
   direcoesMov: 00000000
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
+  PontoColidiuComigo: {fileID: 0}
 --- !u!50 &1243375848
 Rigidbody2D:
   serializedVersion: 4
@@ -7224,9 +7190,11 @@ MonoBehaviour:
   podeMover: 1
   andaMax: 0
   andandoComoRainha: 0
+  estaNoCicloCaixa: 0
   direcoesMov: 00000000
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
+  PontoColidiuComigo: {fileID: 0}
 --- !u!50 &1256227402
 Rigidbody2D:
   serializedVersion: 4
@@ -7655,9 +7623,11 @@ MonoBehaviour:
   podeMover: 1
   andaMax: 0
   andandoComoRainha: 0
+  estaNoCicloCaixa: 0
   direcoesMov: 00000000
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
+  PontoColidiuComigo: {fileID: 0}
 --- !u!50 &1352045405
 Rigidbody2D:
   serializedVersion: 4
@@ -7810,9 +7780,11 @@ MonoBehaviour:
   podeMover: 1
   andaMax: 0
   andandoComoRainha: 0
+  estaNoCicloCaixa: 0
   direcoesMov: 00000000
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
+  PontoColidiuComigo: {fileID: 0}
 --- !u!50 &1378907526
 Rigidbody2D:
   serializedVersion: 4
@@ -7965,9 +7937,11 @@ MonoBehaviour:
   podeMover: 1
   andaMax: 0
   andandoComoRainha: 0
+  estaNoCicloCaixa: 0
   direcoesMov: 00000000
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
+  PontoColidiuComigo: {fileID: 0}
 --- !u!50 &1400382906
 Rigidbody2D:
   serializedVersion: 4
@@ -8436,9 +8410,11 @@ MonoBehaviour:
   podeMover: 1
   andaMax: 0
   andandoComoRainha: 0
+  estaNoCicloCaixa: 0
   direcoesMov: 00000000
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
+  PontoColidiuComigo: {fileID: 0}
 --- !u!50 &1515240914
 Rigidbody2D:
   serializedVersion: 4
@@ -8591,9 +8567,11 @@ MonoBehaviour:
   podeMover: 1
   andaMax: 0
   andandoComoRainha: 0
+  estaNoCicloCaixa: 0
   direcoesMov: 00000000
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
+  PontoColidiuComigo: {fileID: 0}
 --- !u!50 &1556816764
 Rigidbody2D:
   serializedVersion: 4
@@ -8746,9 +8724,11 @@ MonoBehaviour:
   podeMover: 1
   andaMax: 0
   andandoComoRainha: 0
+  estaNoCicloCaixa: 0
   direcoesMov: 00000000
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
+  PontoColidiuComigo: {fileID: 0}
 --- !u!50 &1572543532
 Rigidbody2D:
   serializedVersion: 4
@@ -9021,9 +9001,11 @@ MonoBehaviour:
   podeMover: 1
   andaMax: 0
   andandoComoRainha: 0
+  estaNoCicloCaixa: 0
   direcoesMov: 00000000
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
+  PontoColidiuComigo: {fileID: 0}
 --- !u!50 &1622739169
 Rigidbody2D:
   serializedVersion: 4
@@ -9374,9 +9356,11 @@ MonoBehaviour:
   podeMover: 1
   andaMax: 0
   andandoComoRainha: 0
+  estaNoCicloCaixa: 0
   direcoesMov: 00000000
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
+  PontoColidiuComigo: {fileID: 0}
 --- !u!50 &1742468430
 Rigidbody2D:
   serializedVersion: 4
@@ -9900,9 +9884,11 @@ MonoBehaviour:
   podeMover: 1
   andaMax: 0
   andandoComoRainha: 0
+  estaNoCicloCaixa: 0
   direcoesMov: 00000000
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
+  PontoColidiuComigo: {fileID: 0}
 --- !u!50 &1813875673
 Rigidbody2D:
   serializedVersion: 4
@@ -10220,9 +10206,11 @@ MonoBehaviour:
   podeMover: 1
   andaMax: 0
   andandoComoRainha: 0
+  estaNoCicloCaixa: 0
   direcoesMov: 00000000
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
+  PontoColidiuComigo: {fileID: 0}
 --- !u!50 &1846176818
 Rigidbody2D:
   serializedVersion: 4
@@ -10559,7 +10547,6 @@ Transform:
   - {fileID: 1256227400}
   - {fileID: 1742468428}
   - {fileID: 1400382904}
-  - {fileID: 582162546}
   m_Father: {fileID: 1264125473}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10693,9 +10680,11 @@ MonoBehaviour:
   podeMover: 1
   andaMax: 0
   andandoComoRainha: 0
+  estaNoCicloCaixa: 0
   direcoesMov: 00000000
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
+  PontoColidiuComigo: {fileID: 0}
 --- !u!50 &1879251620
 Rigidbody2D:
   serializedVersion: 4
@@ -10923,9 +10912,11 @@ MonoBehaviour:
   podeMover: 1
   andaMax: 0
   andandoComoRainha: 0
+  estaNoCicloCaixa: 0
   direcoesMov: 00000000
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
+  PontoColidiuComigo: {fileID: 0}
 --- !u!50 &1915617514
 Rigidbody2D:
   serializedVersion: 4
@@ -11078,9 +11069,11 @@ MonoBehaviour:
   podeMover: 1
   andaMax: 0
   andandoComoRainha: 0
+  estaNoCicloCaixa: 0
   direcoesMov: 00000000
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
+  PontoColidiuComigo: {fileID: 0}
 --- !u!50 &1925198896
 Rigidbody2D:
   serializedVersion: 4
@@ -11320,9 +11313,11 @@ MonoBehaviour:
   podeMover: 1
   andaMax: 0
   andandoComoRainha: 0
+  estaNoCicloCaixa: 0
   direcoesMov: 00000000
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
+  PontoColidiuComigo: {fileID: 0}
 --- !u!50 &1967608602
 Rigidbody2D:
   serializedVersion: 4
