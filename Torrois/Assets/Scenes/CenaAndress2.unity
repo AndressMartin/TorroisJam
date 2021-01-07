@@ -187,6 +187,10 @@ MonoBehaviour:
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
   PontoColidiuComigo: {fileID: 0}
+  alavancaLista: []
+  portaAlavanca: 0
+  botaoLista: []
+  portaBotao: 0
 --- !u!50 &38778643
 Rigidbody2D:
   serializedVersion: 4
@@ -499,7 +503,7 @@ PrefabInstance:
     - target: {fileID: 5163385630069552722, guid: b3119570b1eab1a40a9cecfbc767f475,
         type: 3}
       propertyPath: m_Name
-      value: Botao (1)
+      value: Botao 2
       objectReference: {fileID: 0}
     - target: {fileID: 5163385630069552725, guid: b3119570b1eab1a40a9cecfbc767f475,
         type: 3}
@@ -509,7 +513,7 @@ PrefabInstance:
     - target: {fileID: 5163385630069552729, guid: b3119570b1eab1a40a9cecfbc767f475,
         type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5163385630069552729, guid: b3119570b1eab1a40a9cecfbc767f475,
         type: 3}
@@ -707,6 +711,10 @@ MonoBehaviour:
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
   PontoColidiuComigo: {fileID: 0}
+  alavancaLista: []
+  portaAlavanca: 0
+  botaoLista: []
+  portaBotao: 0
 --- !u!50 &98322419
 Rigidbody2D:
   serializedVersion: 4
@@ -1008,7 +1016,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &191035201
 Transform:
   m_ObjectHideFlags: 0
@@ -1537,7 +1545,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &262140784 stripped
 Transform:
@@ -1735,6 +1743,10 @@ MonoBehaviour:
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
   PontoColidiuComigo: {fileID: 0}
+  alavancaLista: []
+  portaAlavanca: 0
+  botaoLista: []
+  portaBotao: 0
 --- !u!50 &282924587
 Rigidbody2D:
   serializedVersion: 4
@@ -1842,7 +1854,7 @@ PrefabInstance:
     - target: {fileID: 5163385630069552722, guid: b3119570b1eab1a40a9cecfbc767f475,
         type: 3}
       propertyPath: m_Name
-      value: Botao (3)
+      value: Botao Sala2 (3)
       objectReference: {fileID: 0}
     - target: {fileID: 5163385630069552729, guid: b3119570b1eab1a40a9cecfbc767f475,
         type: 3}
@@ -2036,6 +2048,75 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   portaOpen: 1
   passou: 0
+--- !u!1001 &342796547
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1073323084390070250, guid: 454eec86410b9014d811c589cb5a2e16,
+        type: 3}
+      propertyPath: m_Name
+      value: porta01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1073323084390070261, guid: 454eec86410b9014d811c589cb5a2e16,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1073323084390070261, guid: 454eec86410b9014d811c589cb5a2e16,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1073323084390070261, guid: 454eec86410b9014d811c589cb5a2e16,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 18.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1073323084390070261, guid: 454eec86410b9014d811c589cb5a2e16,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1073323084390070261, guid: 454eec86410b9014d811c589cb5a2e16,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1073323084390070261, guid: 454eec86410b9014d811c589cb5a2e16,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1073323084390070261, guid: 454eec86410b9014d811c589cb5a2e16,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1073323084390070261, guid: 454eec86410b9014d811c589cb5a2e16,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1073323084390070261, guid: 454eec86410b9014d811c589cb5a2e16,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1073323084390070261, guid: 454eec86410b9014d811c589cb5a2e16,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1073323084390070261, guid: 454eec86410b9014d811c589cb5a2e16,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 454eec86410b9014d811c589cb5a2e16, type: 3}
 --- !u!1 &387816690 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4658177698371160530, guid: e53b05a74f4ca2a46a798fc2638fc192,
@@ -2102,6 +2183,10 @@ MonoBehaviour:
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
   PontoColidiuComigo: {fileID: 0}
+  alavancaLista: []
+  portaAlavanca: 0
+  botaoLista: []
+  portaBotao: 0
 --- !u!50 &395179450
 Rigidbody2D:
   serializedVersion: 4
@@ -2465,7 +2550,7 @@ RectTransform:
   m_Children:
   - {fileID: 194545469}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2640,6 +2725,10 @@ MonoBehaviour:
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
   PontoColidiuComigo: {fileID: 0}
+  alavancaLista: []
+  portaAlavanca: 0
+  botaoLista: []
+  portaBotao: 0
 --- !u!50 &559697466
 Rigidbody2D:
   serializedVersion: 4
@@ -2797,6 +2886,10 @@ MonoBehaviour:
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
   PontoColidiuComigo: {fileID: 0}
+  alavancaLista: []
+  portaAlavanca: 0
+  botaoLista: []
+  portaBotao: 0
 --- !u!50 &579071871
 Rigidbody2D:
   serializedVersion: 4
@@ -3476,6 +3569,10 @@ MonoBehaviour:
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
   PontoColidiuComigo: {fileID: 0}
+  alavancaLista: []
+  portaAlavanca: 0
+  botaoLista: []
+  portaBotao: 0
 --- !u!50 &677607094
 Rigidbody2D:
   serializedVersion: 4
@@ -3741,163 +3838,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad0e776d51fbc2d44b34cffc17daa738, type: 3}
---- !u!1 &731124591
+--- !u!1 &731124591 stripped
 GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 1073323084390070250, guid: 454eec86410b9014d811c589cb5a2e16,
+    type: 3}
+  m_PrefabInstance: {fileID: 1073323085054076037}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 731124592}
-  - component: {fileID: 731124596}
-  - component: {fileID: 731124595}
-  - component: {fileID: 731124594}
-  - component: {fileID: 731124593}
-  m_Layer: 0
-  m_Name: porta01
-  m_TagString: Imovel
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &731124592
+--- !u!4 &731124592 stripped
 Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 1073323084390070261, guid: 454eec86410b9014d811c589cb5a2e16,
+    type: 3}
+  m_PrefabInstance: {fileID: 1073323085054076037}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 731124591}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.495, y: -1.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 544421977}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &731124593
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 731124591}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b27c157b932ee24e8cd6aff1602e0f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ativado: 0
-  pontoMov: {fileID: 0}
-  gridCaixa: 0
-  gridDoJogador: 0
-  colidiuJogador: 0
-  colidiuCaixa: 0
-  podeMover: 1
-  andaMax: 0
-  andandoComoRainha: 0
-  estaNoCicloCaixa: 0
-  direcoesMov: 00000000
-  podeDirecao: 00000000
-  direcoesMovCxColl: 00000000
-  PontoColidiuComigo: {fileID: 0}
---- !u!50 &731124594
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 731124591}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
---- !u!61 &731124595
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 731124591}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.96, y: 0.91}
-    newSize: {x: 0.16, y: 0.16}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.2, y: 0.2}
-  m_EdgeRadius: 0
---- !u!212 &731124596
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 731124591}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1299684079
-  m_SortingLayer: 1
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1b35c92c69bb62048b32d8dc5f44e978, type: 3}
-  m_Color: {r: 0.6509804, g: 0.28627452, b: 0.054901965, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 0.16, y: 0.16}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
 --- !u!1001 &731778301
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4109,7 +4061,7 @@ PrefabInstance:
     - target: {fileID: 4658177698954067495, guid: e53b05a74f4ca2a46a798fc2638fc192,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4658177698954067495, guid: e53b05a74f4ca2a46a798fc2638fc192,
         type: 3}
@@ -4223,6 +4175,10 @@ MonoBehaviour:
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
   PontoColidiuComigo: {fileID: 0}
+  alavancaLista: []
+  portaAlavanca: 0
+  botaoLista: []
+  portaBotao: 0
 --- !u!50 &802238484
 Rigidbody2D:
   serializedVersion: 4
@@ -4380,6 +4336,10 @@ MonoBehaviour:
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
   PontoColidiuComigo: {fileID: 0}
+  alavancaLista: []
+  portaAlavanca: 0
+  botaoLista: []
+  portaBotao: 0
 --- !u!50 &810892738
 Rigidbody2D:
   serializedVersion: 4
@@ -4513,7 +4473,7 @@ PrefabInstance:
     - target: {fileID: 1352011033712047890, guid: 4a65fe150824f64439380dabbe737377,
         type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1352011033712047890, guid: 4a65fe150824f64439380dabbe737377,
         type: 3}
@@ -4723,6 +4683,10 @@ MonoBehaviour:
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
   PontoColidiuComigo: {fileID: 0}
+  alavancaLista: []
+  portaAlavanca: 0
+  botaoLista: []
+  portaBotao: 0
 --- !u!50 &834831308
 Rigidbody2D:
   serializedVersion: 4
@@ -4880,6 +4844,10 @@ MonoBehaviour:
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
   PontoColidiuComigo: {fileID: 0}
+  alavancaLista: []
+  portaAlavanca: 0
+  botaoLista: []
+  portaBotao: 0
 --- !u!50 &888132802
 Rigidbody2D:
   serializedVersion: 4
@@ -5037,6 +5005,10 @@ MonoBehaviour:
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
   PontoColidiuComigo: {fileID: 0}
+  alavancaLista: []
+  portaAlavanca: 0
+  botaoLista: []
+  portaBotao: 0
 --- !u!50 &892412748
 Rigidbody2D:
   serializedVersion: 4
@@ -5194,6 +5166,10 @@ MonoBehaviour:
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
   PontoColidiuComigo: {fileID: 0}
+  alavancaLista: []
+  portaAlavanca: 0
+  botaoLista: []
+  portaBotao: 0
 --- !u!50 &896707934
 Rigidbody2D:
   serializedVersion: 4
@@ -5609,6 +5585,10 @@ MonoBehaviour:
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
   PontoColidiuComigo: {fileID: 0}
+  alavancaLista: []
+  portaAlavanca: 0
+  botaoLista: []
+  portaBotao: 0
 --- !u!50 &1017432647
 Rigidbody2D:
   serializedVersion: 4
@@ -5766,6 +5746,10 @@ MonoBehaviour:
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
   PontoColidiuComigo: {fileID: 0}
+  alavancaLista: []
+  portaAlavanca: 0
+  botaoLista: []
+  portaBotao: 0
 --- !u!50 &1018326272
 Rigidbody2D:
   serializedVersion: 4
@@ -5873,7 +5857,7 @@ PrefabInstance:
     - target: {fileID: 5163385630069552722, guid: b3119570b1eab1a40a9cecfbc767f475,
         type: 3}
       propertyPath: m_Name
-      value: Botao (3)
+      value: Botao 3
       objectReference: {fileID: 0}
     - target: {fileID: 5163385630069552725, guid: b3119570b1eab1a40a9cecfbc767f475,
         type: 3}
@@ -5883,7 +5867,7 @@ PrefabInstance:
     - target: {fileID: 5163385630069552729, guid: b3119570b1eab1a40a9cecfbc767f475,
         type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5163385630069552729, guid: b3119570b1eab1a40a9cecfbc767f475,
         type: 3}
@@ -6042,6 +6026,11 @@ MonoBehaviour:
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
   PontoColidiuComigo: {fileID: 0}
+  alavancaLista: []
+  portaAlavanca: 0
+  botaoLista:
+  - {fileID: 1929982577}
+  portaBotao: 1
 --- !u!50 &1042161211
 Rigidbody2D:
   serializedVersion: 4
@@ -6265,6 +6254,10 @@ MonoBehaviour:
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
   PontoColidiuComigo: {fileID: 0}
+  alavancaLista: []
+  portaAlavanca: 0
+  botaoLista: []
+  portaBotao: 0
 --- !u!50 &1080563009
 Rigidbody2D:
   serializedVersion: 4
@@ -6434,6 +6427,10 @@ MonoBehaviour:
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
   PontoColidiuComigo: {fileID: 0}
+  alavancaLista: []
+  portaAlavanca: 0
+  botaoLista: []
+  portaBotao: 0
 --- !u!50 &1175504681
 Rigidbody2D:
   serializedVersion: 4
@@ -6531,6 +6528,85 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1198726058
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1073323084390070250, guid: 454eec86410b9014d811c589cb5a2e16,
+        type: 3}
+      propertyPath: m_Name
+      value: porta01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1073323084390070260, guid: 454eec86410b9014d811c589cb5a2e16,
+        type: 3}
+      propertyPath: portaBotao
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1073323084390070260, guid: 454eec86410b9014d811c589cb5a2e16,
+        type: 3}
+      propertyPath: botaoLista.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1073323084390070261, guid: 454eec86410b9014d811c589cb5a2e16,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1073323084390070261, guid: 454eec86410b9014d811c589cb5a2e16,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1073323084390070261, guid: 454eec86410b9014d811c589cb5a2e16,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 18.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1073323084390070261, guid: 454eec86410b9014d811c589cb5a2e16,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1073323084390070261, guid: 454eec86410b9014d811c589cb5a2e16,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1073323084390070261, guid: 454eec86410b9014d811c589cb5a2e16,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1073323084390070261, guid: 454eec86410b9014d811c589cb5a2e16,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1073323084390070261, guid: 454eec86410b9014d811c589cb5a2e16,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1073323084390070261, guid: 454eec86410b9014d811c589cb5a2e16,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1073323084390070261, guid: 454eec86410b9014d811c589cb5a2e16,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1073323084390070261, guid: 454eec86410b9014d811c589cb5a2e16,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 454eec86410b9014d811c589cb5a2e16, type: 3}
 --- !u!1 &1203350618
 GameObject:
   m_ObjectHideFlags: 0
@@ -6591,6 +6667,10 @@ MonoBehaviour:
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
   PontoColidiuComigo: {fileID: 0}
+  alavancaLista: []
+  portaAlavanca: 0
+  botaoLista: []
+  portaBotao: 0
 --- !u!50 &1203350621
 Rigidbody2D:
   serializedVersion: 4
@@ -6748,6 +6828,10 @@ MonoBehaviour:
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
   PontoColidiuComigo: {fileID: 0}
+  alavancaLista: []
+  portaAlavanca: 0
+  botaoLista: []
+  portaBotao: 0
 --- !u!50 &1206462726
 Rigidbody2D:
   serializedVersion: 4
@@ -6905,6 +6989,10 @@ MonoBehaviour:
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
   PontoColidiuComigo: {fileID: 0}
+  alavancaLista: []
+  portaAlavanca: 0
+  botaoLista: []
+  portaBotao: 0
 --- !u!50 &1213448083
 Rigidbody2D:
   serializedVersion: 4
@@ -7137,6 +7225,10 @@ MonoBehaviour:
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
   PontoColidiuComigo: {fileID: 0}
+  alavancaLista: []
+  portaAlavanca: 0
+  botaoLista: []
+  portaBotao: 0
 --- !u!50 &1243375848
 Rigidbody2D:
   serializedVersion: 4
@@ -7294,6 +7386,10 @@ MonoBehaviour:
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
   PontoColidiuComigo: {fileID: 0}
+  alavancaLista: []
+  portaAlavanca: 0
+  botaoLista: []
+  portaBotao: 0
 --- !u!50 &1256227402
 Rigidbody2D:
   serializedVersion: 4
@@ -7509,6 +7605,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9164593080529671068, guid: cbb3887e0acbe2f449d59e80c8b67b53,
     type: 3}
   m_PrefabInstance: {fileID: 1270858211}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1272224447 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5163385630069552722, guid: b3119570b1eab1a40a9cecfbc767f475,
+    type: 3}
+  m_PrefabInstance: {fileID: 1018354994}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1280771452
 GameObject:
@@ -7727,6 +7829,10 @@ MonoBehaviour:
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
   PontoColidiuComigo: {fileID: 0}
+  alavancaLista: []
+  portaAlavanca: 0
+  botaoLista: []
+  portaBotao: 0
 --- !u!50 &1352045405
 Rigidbody2D:
   serializedVersion: 4
@@ -7884,6 +7990,10 @@ MonoBehaviour:
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
   PontoColidiuComigo: {fileID: 0}
+  alavancaLista: []
+  portaAlavanca: 0
+  botaoLista: []
+  portaBotao: 0
 --- !u!50 &1378907526
 Rigidbody2D:
   serializedVersion: 4
@@ -8041,6 +8151,10 @@ MonoBehaviour:
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
   PontoColidiuComigo: {fileID: 0}
+  alavancaLista: []
+  portaAlavanca: 0
+  botaoLista: []
+  portaBotao: 0
 --- !u!50 &1400382906
 Rigidbody2D:
   serializedVersion: 4
@@ -8359,7 +8473,7 @@ PrefabInstance:
     - target: {fileID: 5163385630069552722, guid: b3119570b1eab1a40a9cecfbc767f475,
         type: 3}
       propertyPath: m_Name
-      value: Botao
+      value: Botao Sala2
       objectReference: {fileID: 0}
     - target: {fileID: 5163385630069552729, guid: b3119570b1eab1a40a9cecfbc767f475,
         type: 3}
@@ -8514,6 +8628,10 @@ MonoBehaviour:
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
   PontoColidiuComigo: {fileID: 0}
+  alavancaLista: []
+  portaAlavanca: 0
+  botaoLista: []
+  portaBotao: 0
 --- !u!50 &1515240914
 Rigidbody2D:
   serializedVersion: 4
@@ -8671,6 +8789,10 @@ MonoBehaviour:
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
   PontoColidiuComigo: {fileID: 0}
+  alavancaLista: []
+  portaAlavanca: 0
+  botaoLista: []
+  portaBotao: 0
 --- !u!50 &1556816764
 Rigidbody2D:
   serializedVersion: 4
@@ -8828,6 +8950,10 @@ MonoBehaviour:
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
   PontoColidiuComigo: {fileID: 0}
+  alavancaLista: []
+  portaAlavanca: 0
+  botaoLista: []
+  portaBotao: 0
 --- !u!50 &1572543532
 Rigidbody2D:
   serializedVersion: 4
@@ -9105,6 +9231,10 @@ MonoBehaviour:
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
   PontoColidiuComigo: {fileID: 0}
+  alavancaLista: []
+  portaAlavanca: 0
+  botaoLista: []
+  portaBotao: 0
 --- !u!50 &1622739169
 Rigidbody2D:
   serializedVersion: 4
@@ -9212,7 +9342,7 @@ PrefabInstance:
     - target: {fileID: 5163385630069552722, guid: b3119570b1eab1a40a9cecfbc767f475,
         type: 3}
       propertyPath: m_Name
-      value: Botao (2)
+      value: Botao Sala2 (2)
       objectReference: {fileID: 0}
     - target: {fileID: 5163385630069552729, guid: b3119570b1eab1a40a9cecfbc767f475,
         type: 3}
@@ -9460,6 +9590,10 @@ MonoBehaviour:
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
   PontoColidiuComigo: {fileID: 0}
+  alavancaLista: []
+  portaAlavanca: 0
+  botaoLista: []
+  portaBotao: 0
 --- !u!50 &1742468430
 Rigidbody2D:
   serializedVersion: 4
@@ -10003,6 +10137,10 @@ MonoBehaviour:
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
   PontoColidiuComigo: {fileID: 0}
+  alavancaLista: []
+  portaAlavanca: 0
+  botaoLista: []
+  portaBotao: 0
 --- !u!50 &1813875673
 Rigidbody2D:
   serializedVersion: 4
@@ -10200,7 +10338,7 @@ PrefabInstance:
     - target: {fileID: 5163385630069552722, guid: b3119570b1eab1a40a9cecfbc767f475,
         type: 3}
       propertyPath: m_Name
-      value: Botao (1)
+      value: Botao (1) Sala2
       objectReference: {fileID: 0}
     - target: {fileID: 5163385630069552729, guid: b3119570b1eab1a40a9cecfbc767f475,
         type: 3}
@@ -10325,6 +10463,10 @@ MonoBehaviour:
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
   PontoColidiuComigo: {fileID: 0}
+  alavancaLista: []
+  portaAlavanca: 0
+  botaoLista: []
+  portaBotao: 0
 --- !u!50 &1846176818
 Rigidbody2D:
   serializedVersion: 4
@@ -10525,7 +10667,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1856961370
 PrefabInstance:
@@ -10799,6 +10941,10 @@ MonoBehaviour:
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
   PontoColidiuComigo: {fileID: 0}
+  alavancaLista: []
+  portaAlavanca: 0
+  botaoLista: []
+  portaBotao: 0
 --- !u!50 &1879251620
 Rigidbody2D:
   serializedVersion: 4
@@ -11031,6 +11177,10 @@ MonoBehaviour:
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
   PontoColidiuComigo: {fileID: 0}
+  alavancaLista: []
+  portaAlavanca: 0
+  botaoLista: []
+  portaBotao: 0
 --- !u!50 &1915617514
 Rigidbody2D:
   serializedVersion: 4
@@ -11188,6 +11338,10 @@ MonoBehaviour:
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
   PontoColidiuComigo: {fileID: 0}
+  alavancaLista: []
+  portaAlavanca: 0
+  botaoLista: []
+  portaBotao: 0
 --- !u!50 &1925198896
 Rigidbody2D:
   serializedVersion: 4
@@ -11285,6 +11439,12 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1929982577 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5163385630069552722, guid: b3119570b1eab1a40a9cecfbc767f475,
+    type: 3}
+  m_PrefabInstance: {fileID: 5163385630480857809}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1940067318
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11432,6 +11592,10 @@ MonoBehaviour:
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
   PontoColidiuComigo: {fileID: 0}
+  alavancaLista: []
+  portaAlavanca: 0
+  botaoLista: []
+  portaBotao: 0
 --- !u!50 &1967608602
 Rigidbody2D:
   serializedVersion: 4
@@ -12000,7 +12164,7 @@ Transform:
   - {fileID: 191035201}
   - {fileID: 1459459158}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2124640423 stripped
 Transform:
@@ -12083,6 +12247,80 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2135047189}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1073323085054076037
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 544421977}
+    m_Modifications:
+    - target: {fileID: 1073323084390070250, guid: 454eec86410b9014d811c589cb5a2e16,
+        type: 3}
+      propertyPath: m_Name
+      value: porta01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1073323084390070260, guid: 454eec86410b9014d811c589cb5a2e16,
+        type: 3}
+      propertyPath: botaoLista.Array.data[0]
+      value: 
+      objectReference: {fileID: 1272224447}
+    - target: {fileID: 1073323084390070261, guid: 454eec86410b9014d811c589cb5a2e16,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1073323084390070261, guid: 454eec86410b9014d811c589cb5a2e16,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.495
+      objectReference: {fileID: 0}
+    - target: {fileID: 1073323084390070261, guid: 454eec86410b9014d811c589cb5a2e16,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1073323084390070261, guid: 454eec86410b9014d811c589cb5a2e16,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1073323084390070261, guid: 454eec86410b9014d811c589cb5a2e16,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1073323084390070261, guid: 454eec86410b9014d811c589cb5a2e16,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1073323084390070261, guid: 454eec86410b9014d811c589cb5a2e16,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1073323084390070261, guid: 454eec86410b9014d811c589cb5a2e16,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1073323084390070261, guid: 454eec86410b9014d811c589cb5a2e16,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1073323084390070261, guid: 454eec86410b9014d811c589cb5a2e16,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1073323084390070261, guid: 454eec86410b9014d811c589cb5a2e16,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 454eec86410b9014d811c589cb5a2e16, type: 3}
 --- !u!1001 &1352011033965725986
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12113,7 +12351,7 @@ PrefabInstance:
     - target: {fileID: 1352011033712047890, guid: 4a65fe150824f64439380dabbe737377,
         type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1352011033712047890, guid: 4a65fe150824f64439380dabbe737377,
         type: 3}
@@ -12282,7 +12520,7 @@ PrefabInstance:
     - target: {fileID: 4658177698954067495, guid: e53b05a74f4ca2a46a798fc2638fc192,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4658177698954067495, guid: e53b05a74f4ca2a46a798fc2638fc192,
         type: 3}
@@ -12346,7 +12584,7 @@ PrefabInstance:
     - target: {fileID: 5163385630069552722, guid: b3119570b1eab1a40a9cecfbc767f475,
         type: 3}
       propertyPath: m_Name
-      value: Botao
+      value: Botao 1
       objectReference: {fileID: 0}
     - target: {fileID: 5163385630069552725, guid: b3119570b1eab1a40a9cecfbc767f475,
         type: 3}
@@ -12356,7 +12594,7 @@ PrefabInstance:
     - target: {fileID: 5163385630069552729, guid: b3119570b1eab1a40a9cecfbc767f475,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5163385630069552729, guid: b3119570b1eab1a40a9cecfbc767f475,
         type: 3}
@@ -12552,7 +12790,7 @@ PrefabInstance:
     - target: {fileID: 8713510023912335100, guid: 60d48d2edd7f1074dba6434f3a73fb67,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8713510023912335100, guid: 60d48d2edd7f1074dba6434f3a73fb67,
         type: 3}
