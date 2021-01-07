@@ -5,17 +5,13 @@ using UnityEngine;
 public class Alavanca : MonoBehaviour
 {
 
-    public GameObject porta;
-    private Caixa scriptDaPorta;
     public bool ativado;
     public int diferencaPlayer;
     public int diferencaCaixa;
 
     public int sentido; //0=horizontal 1=vertical
-    public Transform pontoMov;
     public playerMoveGrid player;
-    public BoxCollider2D hitbox;
-    // Start is called before the first frame update
+
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<playerMoveGrid>();
@@ -24,7 +20,6 @@ public class Alavanca : MonoBehaviour
             sentido = 0;
         else if (tag == "AlavancaV")
             sentido = 1;
-        scriptDaPorta = porta.GetComponent<Caixa>();
     }
 
     // Update is called once per frame
@@ -55,7 +50,7 @@ public class Alavanca : MonoBehaviour
                     player.Voltar();
 
                 else if (diferencaPlayer == 1)
-                    scriptDaPorta.ativado = !scriptDaPorta.ativado;
+                    ativado = !ativado;
             }
 
             if (sentido == 1)
@@ -64,7 +59,7 @@ public class Alavanca : MonoBehaviour
                     player.Voltar();
 
                 else if (diferencaPlayer == 16)
-                    scriptDaPorta.ativado = !scriptDaPorta.ativado;
+                    ativado = !ativado;
             }
         }
 
@@ -89,7 +84,6 @@ public class Alavanca : MonoBehaviour
         //    //}
         //}
 
-        ativado = scriptDaPorta.ativado;
 
     }
 

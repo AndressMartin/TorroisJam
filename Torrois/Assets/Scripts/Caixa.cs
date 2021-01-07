@@ -25,10 +25,25 @@ public class Caixa : MonoBehaviour
 
     private SpriteRenderer sprite;
     private BoxCollider2D boxTriggerer;
-
     ChecarMobilidade pontoMovScript;
 
+<<<<<<< Updated upstream
     public Transform PontoColidiuComigo;
+=======
+
+    
+    [SerializeField]public List<GameObject> alavancaLista = new List<GameObject>() { };
+    public bool portaAlavanca;
+    
+    [SerializeField]public List<GameObject> botaoLista = new List<GameObject>() { };
+    public bool portaBotao;
+
+    void Start()
+    {
+         
+    }
+ 
+>>>>>>> Stashed changes
 
     void Awake()
     {
@@ -68,8 +83,13 @@ public class Caixa : MonoBehaviour
 
     void FixedUpdate()
     {
+<<<<<<< Updated upstream
         
         verPorta();
+=======
+        if(portaBotao || portaAlavanca)
+            verPorta();
+>>>>>>> Stashed changes
         if (pontoMov != null)
         {
             if (PontoColidiuComigo != null && pontoMovScript.ColidiuParede == true)
@@ -295,9 +315,13 @@ public class Caixa : MonoBehaviour
         }
         if (Vector2.Distance(transform.position, pontoMov.position) == 0f) //PODE BUGAR SE COLISAO FOR MUITO RAPIDO
         {
+<<<<<<< Updated upstream
             if (gameObject.tag != "Peon")
                 PontoColidiuComigo = null;
             //Debug.Log("Direcoes iguais");
+=======
+
+>>>>>>> Stashed changes
             direcoesMov[0] = false;
             direcoesMov[1] = false;
             direcoesMov[2] = false;
@@ -366,21 +390,34 @@ public class Caixa : MonoBehaviour
 
     public void verPorta()
     {
-        if (ativado)
-        { 
+
+        if (portaBotao)
+        {
             boxTriggerer.isTrigger = false;
-            
+            foreach (GameObject button in botaoLista)
+            {
 
+                if (!button.GetComponent<Botao>().ativado)
+                    boxTriggerer.isTrigger = true;
+            }
+            sprite.enabled = boxTriggerer.isTrigger;
+            boxTriggerer.enabled = sprite.enabled;
         }
-        else
-        { 
-            boxTriggerer.isTrigger = true;
-           
 
+        if (portaAlavanca)
+        {
+            boxTriggerer.isTrigger = false;
+            foreach (GameObject lever in alavancaLista)
+            {
+
+                if (!lever.GetComponent<Alavanca>().ativado)
+                    boxTriggerer.isTrigger = true;
+            }
+            sprite.enabled = boxTriggerer.isTrigger;
+            boxTriggerer.enabled = sprite.enabled;
         }
-        sprite.enabled = boxTriggerer.isTrigger;
-        boxTriggerer.enabled = sprite.enabled;
-        
+
+ 
     }
 
     public void sendParent()
