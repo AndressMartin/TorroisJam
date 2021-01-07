@@ -30,6 +30,14 @@ public class Caixa : MonoBehaviour
 
     public Transform PontoColidiuComigo;
 
+    [SerializeField]
+    public List<GameObject> alavancaLista = new List<GameObject>() { };
+    public bool portaAlavanca;
+
+    [SerializeField]
+    public List<GameObject> botaoLista = new List<GameObject>() { };
+    public bool portaBotao;
+
     void Awake()
     {
         sprite = GetComponent<SpriteRenderer>();
@@ -68,8 +76,9 @@ public class Caixa : MonoBehaviour
 
     void FixedUpdate()
     {
-        
-        verPorta();
+
+        if (portaBotao || portaAlavanca)
+            verPorta();
         if (pontoMov != null)
         {
             if (PontoColidiuComigo != null && pontoMovScript.ColidiuParede == true)
@@ -366,21 +375,35 @@ public class Caixa : MonoBehaviour
 
     public void verPorta()
     {
-        if (ativado)
-        { 
+
+        if (portaBotao)
+        {
             boxTriggerer.isTrigger = false;
-            
+            foreach (GameObject button in botaoLista)
+            {
 
+                if (!button.GetComponent<Botao>().ativado)
+                    boxTriggerer.isTrigger = true;
+            }
+            sprite.enabled = boxTriggerer.isTrigger;
+            boxTriggerer.enabled = sprite.enabled;
         }
-        else
-        { 
-            boxTriggerer.isTrigger = true;
-           
 
+        if (portaAlavanca)
+        {
+            boxTriggerer.isTrigger = false;
+            foreach (GameObject lever in alavancaLista)
+            {
+
+                if (!lever.GetComponent<Alavanca>().ativado)
+                    boxTriggerer.isTrigger = true;
+            }
+            sprite.enabled = boxTriggerer.isTrigger;
+            boxTriggerer.enabled = sprite.enabled;
         }
-        sprite.enabled = boxTriggerer.isTrigger;
-        boxTriggerer.enabled = sprite.enabled;
-        
+
+
+
     }
 
     public void sendParent()
