@@ -27,9 +27,7 @@ public class Caixa : MonoBehaviour
     private BoxCollider2D boxTriggerer;
     ChecarMobilidade pontoMovScript;
 
-<<<<<<< Updated upstream
     public Transform PontoColidiuComigo;
-=======
 
     
     [SerializeField]public List<GameObject> alavancaLista = new List<GameObject>() { };
@@ -43,7 +41,6 @@ public class Caixa : MonoBehaviour
          
     }
  
->>>>>>> Stashed changes
 
     void Awake()
     {
@@ -83,13 +80,10 @@ public class Caixa : MonoBehaviour
 
     void FixedUpdate()
     {
-<<<<<<< Updated upstream
         
         verPorta();
-=======
         if(portaBotao || portaAlavanca)
             verPorta();
->>>>>>> Stashed changes
         if (pontoMov != null)
         {
             if (PontoColidiuComigo != null && pontoMovScript.ColidiuParede == true)
@@ -315,13 +309,10 @@ public class Caixa : MonoBehaviour
         }
         if (Vector2.Distance(transform.position, pontoMov.position) == 0f) //PODE BUGAR SE COLISAO FOR MUITO RAPIDO
         {
-<<<<<<< Updated upstream
             if (gameObject.tag != "Peon")
                 PontoColidiuComigo = null;
             //Debug.Log("Direcoes iguais");
-=======
 
->>>>>>> Stashed changes
             direcoesMov[0] = false;
             direcoesMov[1] = false;
             direcoesMov[2] = false;

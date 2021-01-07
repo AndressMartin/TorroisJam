@@ -186,14 +186,7 @@ MonoBehaviour:
   direcoesMov: 00000000
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
-<<<<<<< Updated upstream
   PontoColidiuComigo: {fileID: 0}
-=======
-  botoesSelecionados: []
-  AlavancaSelecionados: []
-  portaBotao: 0
-  portaAlavanca: 0
->>>>>>> Stashed changes
 --- !u!50 &38778643
 Rigidbody2D:
   serializedVersion: 4
@@ -693,14 +686,7 @@ MonoBehaviour:
   direcoesMov: 00000000
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
-<<<<<<< Updated upstream
   PontoColidiuComigo: {fileID: 0}
-=======
-  botoesSelecionados: []
-  AlavancaSelecionados: []
-  portaBotao: 0
-  portaAlavanca: 0
->>>>>>> Stashed changes
 --- !u!50 &98322419
 Rigidbody2D:
   serializedVersion: 4
@@ -2095,16 +2081,8 @@ MonoBehaviour:
   direcoesMov: 00000000
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
-<<<<<<< Updated upstream
   PontoColidiuComigo: {fileID: 0}
 --- !u!50 &395179450
-=======
-  botoesSelecionados: []
-  AlavancaSelecionados: []
-  portaBotao: 0
-  portaAlavanca: 0
---- !u!50 &322019926
->>>>>>> Stashed changes
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -2641,16 +2619,8 @@ MonoBehaviour:
   direcoesMov: 00000000
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
-<<<<<<< Updated upstream
   PontoColidiuComigo: {fileID: 0}
 --- !u!50 &559697466
-=======
-  botoesSelecionados: []
-  AlavancaSelecionados: []
-  portaBotao: 0
-  portaAlavanca: 0
---- !u!50 &525833186
->>>>>>> Stashed changes
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -2747,40 +2717,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
-<<<<<<< Updated upstream
-=======
---- !u!1 &544421976
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 544421977}
-  m_Layer: 0
-  m_Name: Portas Interacao
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &544421977
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 544421976}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1915617512}
-  m_Father: {fileID: 1264125473}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
->>>>>>> Stashed changes
 --- !u!1 &579071868
 GameObject:
   m_ObjectHideFlags: 0
@@ -2840,14 +2776,7 @@ MonoBehaviour:
   direcoesMov: 00000000
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
-<<<<<<< Updated upstream
   PontoColidiuComigo: {fileID: 0}
-=======
-  botoesSelecionados: []
-  AlavancaSelecionados: []
-  portaBotao: 0
-  portaAlavanca: 0
->>>>>>> Stashed changes
 --- !u!50 &579071871
 Rigidbody2D:
   serializedVersion: 4
@@ -3526,14 +3455,7 @@ MonoBehaviour:
   direcoesMov: 00000000
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
-<<<<<<< Updated upstream
   PontoColidiuComigo: {fileID: 0}
-=======
-  botoesSelecionados: []
-  AlavancaSelecionados: []
-  portaBotao: 0
-  portaAlavanca: 0
->>>>>>> Stashed changes
 --- !u!50 &677607094
 Rigidbody2D:
   serializedVersion: 4
@@ -3799,7 +3721,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad0e776d51fbc2d44b34cffc17daa738, type: 3}
-<<<<<<< Updated upstream
 --- !u!1 &731124591
 GameObject:
   m_ObjectHideFlags: 0
@@ -3957,8 +3878,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
-=======
->>>>>>> Stashed changes
 --- !u!1001 &731778301
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4204,14 +4123,7 @@ MonoBehaviour:
   direcoesMov: 00000000
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
-<<<<<<< Updated upstream
   PontoColidiuComigo: {fileID: 0}
-=======
-  botoesSelecionados: []
-  AlavancaSelecionados: []
-  portaBotao: 0
-  portaAlavanca: 0
->>>>>>> Stashed changes
 --- !u!50 &802238484
 Rigidbody2D:
   serializedVersion: 4
@@ -4368,16 +4280,8 @@ MonoBehaviour:
   direcoesMov: 00000000
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
-<<<<<<< Updated upstream
   PontoColidiuComigo: {fileID: 0}
 --- !u!50 &810892738
-=======
-  botoesSelecionados: []
-  AlavancaSelecionados: []
-  portaBotao: 0
-  portaAlavanca: 0
---- !u!50 &828339069
->>>>>>> Stashed changes
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -4474,7 +4378,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
-<<<<<<< Updated upstream
 --- !u!4 &828279644 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6846891206937330507, guid: e1eff329f3384c84491229590e4bd747,
@@ -4571,8 +4474,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 830624508}
   m_PrefabAsset: {fileID: 0}
-=======
->>>>>>> Stashed changes
 --- !u!1001 &831322233
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4879,14 +4780,7 @@ MonoBehaviour:
   direcoesMov: 00000000
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
-<<<<<<< Updated upstream
   PontoColidiuComigo: {fileID: 0}
-=======
-  botoesSelecionados: []
-  AlavancaSelecionados: []
-  portaBotao: 0
-  portaAlavanca: 0
->>>>>>> Stashed changes
 --- !u!50 &888132802
 Rigidbody2D:
   serializedVersion: 4
@@ -5043,14 +4937,7 @@ MonoBehaviour:
   direcoesMov: 00000000
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
-<<<<<<< Updated upstream
   PontoColidiuComigo: {fileID: 0}
-=======
-  botoesSelecionados: []
-  AlavancaSelecionados: []
-  portaBotao: 0
-  portaAlavanca: 0
->>>>>>> Stashed changes
 --- !u!50 &892412748
 Rigidbody2D:
   serializedVersion: 4
@@ -5488,17 +5375,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8858336704853312199, guid: ad0e776d51fbc2d44b34cffc17daa738,
         type: 3}
-<<<<<<< Updated upstream
       propertyPath: m_SortingLayer
       value: 1
-=======
-      propertyPath: m_Name
-      value: Botao 51
->>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 8858336704853312199, guid: ad0e776d51fbc2d44b34cffc17daa738,
         type: 3}
-<<<<<<< Updated upstream
       propertyPath: m_SortingOrder
       value: 0
       objectReference: {fileID: 0}
@@ -5513,12 +5394,6 @@ PrefabInstance:
       value: CaixaImovel (14)
       objectReference: {fileID: 0}
     - target: {fileID: 8858336704853312203, guid: ad0e776d51fbc2d44b34cffc17daa738,
-=======
-      propertyPath: porta
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5163385630069552729, guid: b3119570b1eab1a40a9cecfbc767f475,
->>>>>>> Stashed changes
         type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -5574,7 +5449,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-<<<<<<< Updated upstream
   m_SourcePrefab: {fileID: 100100000, guid: ad0e776d51fbc2d44b34cffc17daa738, type: 3}
 --- !u!1 &1017432644
 GameObject:
@@ -5734,10 +5608,6 @@ SpriteRenderer:
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1018326269
-=======
-  m_SourcePrefab: {fileID: 100100000, guid: b3119570b1eab1a40a9cecfbc767f475, type: 3}
---- !u!1 &1043860296
->>>>>>> Stashed changes
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5796,16 +5666,8 @@ MonoBehaviour:
   direcoesMov: 00000000
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
-<<<<<<< Updated upstream
   PontoColidiuComigo: {fileID: 0}
 --- !u!50 &1018326272
-=======
-  botoesSelecionados: []
-  AlavancaSelecionados: []
-  portaBotao: 0
-  portaAlavanca: 0
---- !u!50 &1080563009
->>>>>>> Stashed changes
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -6080,16 +5942,8 @@ MonoBehaviour:
   direcoesMov: 00000000
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
-<<<<<<< Updated upstream
   PontoColidiuComigo: {fileID: 0}
 --- !u!50 &1042161211
-=======
-  botoesSelecionados: []
-  AlavancaSelecionados: []
-  portaBotao: 0
-  portaAlavanca: 0
---- !u!50 &1175504681
->>>>>>> Stashed changes
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -6311,16 +6165,8 @@ MonoBehaviour:
   direcoesMov: 00000000
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
-<<<<<<< Updated upstream
   PontoColidiuComigo: {fileID: 0}
 --- !u!50 &1080563009
-=======
-  botoesSelecionados: []
-  AlavancaSelecionados: []
-  portaBotao: 0
-  portaAlavanca: 0
---- !u!50 &1206462726
->>>>>>> Stashed changes
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -6488,16 +6334,8 @@ MonoBehaviour:
   direcoesMov: 00000000
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
-<<<<<<< Updated upstream
   PontoColidiuComigo: {fileID: 0}
 --- !u!50 &1175504681
-=======
-  botoesSelecionados: []
-  AlavancaSelecionados: []
-  portaBotao: 0
-  portaAlavanca: 0
---- !u!50 &1243375848
->>>>>>> Stashed changes
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -6653,16 +6491,8 @@ MonoBehaviour:
   direcoesMov: 00000000
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
-<<<<<<< Updated upstream
   PontoColidiuComigo: {fileID: 0}
 --- !u!50 &1203350621
-=======
-  botoesSelecionados: []
-  AlavancaSelecionados: []
-  portaBotao: 0
-  portaAlavanca: 0
---- !u!50 &1256227402
->>>>>>> Stashed changes
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -6789,61 +6619,6 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1.5, y: -4.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-<<<<<<< Updated upstream
-=======
-  m_Children:
-  - {fileID: 308290150}
-  - {fileID: 1813875671}
-  - {fileID: 1243375846}
-  - {fileID: 38778641}
-  - {fileID: 1556816762}
-  - {fileID: 1175504679}
-  - {fileID: 1856969486}
-  - {fileID: 544421977}
-  - {fileID: 1770785928}
-  - {fileID: 655577641}
-  - {fileID: 291256568}
-  - {fileID: 2000633392}
-  m_Father: {fileID: 2106016387}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1269058016 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8858336704853312203, guid: ad0e776d51fbc2d44b34cffc17daa738,
-    type: 3}
-  m_PrefabInstance: {fileID: 1462342517}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1271044061
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1271044062}
-  - component: {fileID: 1271044066}
-  - component: {fileID: 1271044065}
-  - component: {fileID: 1271044064}
-  - component: {fileID: 1271044063}
-  m_Layer: 0
-  m_Name: Parede
-  m_TagString: Imovel
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1271044062
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1271044061}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 7.5, z: 0}
-  m_LocalScale: {x: 16, y: 1, z: 1}
->>>>>>> Stashed changes
   m_Children: []
   m_Father: {fileID: 1856969486}
   m_RootOrder: 10
@@ -6873,16 +6648,8 @@ MonoBehaviour:
   direcoesMov: 00000000
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
-<<<<<<< Updated upstream
   PontoColidiuComigo: {fileID: 0}
 --- !u!50 &1206462726
-=======
-  botoesSelecionados: []
-  AlavancaSelecionados: []
-  portaBotao: 0
-  portaAlavanca: 0
---- !u!50 &1271044064
->>>>>>> Stashed changes
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -7038,16 +6805,8 @@ MonoBehaviour:
   direcoesMov: 00000000
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
-<<<<<<< Updated upstream
   PontoColidiuComigo: {fileID: 0}
 --- !u!50 &1213448083
-=======
-  botoesSelecionados: []
-  AlavancaSelecionados: []
-  portaBotao: 0
-  portaAlavanca: 0
---- !u!50 &1278241286
->>>>>>> Stashed changes
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -7278,16 +7037,8 @@ MonoBehaviour:
   direcoesMov: 00000000
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
-<<<<<<< Updated upstream
   PontoColidiuComigo: {fileID: 0}
 --- !u!50 &1243375848
-=======
-  botoesSelecionados: []
-  AlavancaSelecionados: []
-  portaBotao: 0
-  portaAlavanca: 0
---- !u!50 &1352045405
->>>>>>> Stashed changes
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -7443,16 +7194,8 @@ MonoBehaviour:
   direcoesMov: 00000000
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
-<<<<<<< Updated upstream
   PontoColidiuComigo: {fileID: 0}
 --- !u!50 &1256227402
-=======
-  botoesSelecionados: []
-  AlavancaSelecionados: []
-  portaBotao: 0
-  portaAlavanca: 0
---- !u!50 &1378907526
->>>>>>> Stashed changes
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -7587,94 +7330,11 @@ Transform:
   m_Father: {fileID: 2106016387}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< Updated upstream
 --- !u!4 &1269058016 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8858336704853312203, guid: ad0e776d51fbc2d44b34cffc17daa738,
     type: 3}
   m_PrefabInstance: {fileID: 1462342517}
-=======
---- !u!114 &1400382905
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1400382903}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b27c157b932ee24e8cd6aff1602e0f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ativado: 0
-  pontoMov: {fileID: 0}
-  gridCaixa: 0
-  gridDoJogador: 0
-  colidiuJogador: 0
-  colidiuCaixa: 0
-  podeMover: 1
-  andaMax: 0
-  andandoComoRainha: 0
-  direcoesMov: 00000000
-  podeDirecao: 00000000
-  direcoesMovCxColl: 00000000
-  botoesSelecionados: []
-  AlavancaSelecionados: []
-  portaBotao: 0
-  portaAlavanca: 0
---- !u!50 &1400382906
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1400382903}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
---- !u!61 &1400382907
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1400382903}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1.15625}
-    newSize: {x: 0.16, y: 0.16}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.2, y: 0.2}
-  m_EdgeRadius: 0
---- !u!212 &1400382908
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
->>>>>>> Stashed changes
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1270858211
 PrefabInstance:
@@ -7967,16 +7627,8 @@ MonoBehaviour:
   direcoesMov: 00000000
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
-<<<<<<< Updated upstream
   PontoColidiuComigo: {fileID: 0}
 --- !u!50 &1352045405
-=======
-  botoesSelecionados: []
-  AlavancaSelecionados: []
-  portaBotao: 0
-  portaAlavanca: 0
---- !u!50 &1479459158
->>>>>>> Stashed changes
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -8132,16 +7784,8 @@ MonoBehaviour:
   direcoesMov: 00000000
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
-<<<<<<< Updated upstream
   PontoColidiuComigo: {fileID: 0}
 --- !u!50 &1378907526
-=======
-  botoesSelecionados: []
-  AlavancaSelecionados: []
-  portaBotao: 0
-  portaAlavanca: 0
---- !u!50 &1515240914
->>>>>>> Stashed changes
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -8770,16 +8414,8 @@ MonoBehaviour:
   direcoesMov: 00000000
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
-<<<<<<< Updated upstream
   PontoColidiuComigo: {fileID: 0}
 --- !u!50 &1515240914
-=======
-  botoesSelecionados: []
-  AlavancaSelecionados: []
-  portaBotao: 0
-  portaAlavanca: 0
---- !u!50 &1551425533
->>>>>>> Stashed changes
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -8935,14 +8571,7 @@ MonoBehaviour:
   direcoesMov: 00000000
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
-<<<<<<< Updated upstream
   PontoColidiuComigo: {fileID: 0}
-=======
-  botoesSelecionados: []
-  AlavancaSelecionados: []
-  portaBotao: 0
-  portaAlavanca: 0
->>>>>>> Stashed changes
 --- !u!50 &1556816764
 Rigidbody2D:
   serializedVersion: 4
@@ -9099,14 +8728,7 @@ MonoBehaviour:
   direcoesMov: 00000000
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
-<<<<<<< Updated upstream
   PontoColidiuComigo: {fileID: 0}
-=======
-  botoesSelecionados: []
-  AlavancaSelecionados: []
-  portaBotao: 0
-  portaAlavanca: 0
->>>>>>> Stashed changes
 --- !u!50 &1572543532
 Rigidbody2D:
   serializedVersion: 4
@@ -9210,18 +8832,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 678029989}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1606792293 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1352011033712047886, guid: 4a65fe150824f64439380dabbe737377,
-    type: 3}
-  m_PrefabInstance: {fileID: 1352011033965725986}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54c3ef178c75eee4ea67e73636924912, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1613200550
 GameObject:
   m_ObjectHideFlags: 0
@@ -9395,14 +9005,7 @@ MonoBehaviour:
   direcoesMov: 00000000
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
-<<<<<<< Updated upstream
   PontoColidiuComigo: {fileID: 0}
-=======
-  botoesSelecionados: []
-  AlavancaSelecionados: []
-  portaBotao: 0
-  portaAlavanca: 0
->>>>>>> Stashed changes
 --- !u!50 &1622739169
 Rigidbody2D:
   serializedVersion: 4
@@ -9757,14 +9360,7 @@ MonoBehaviour:
   direcoesMov: 00000000
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
-<<<<<<< Updated upstream
   PontoColidiuComigo: {fileID: 0}
-=======
-  botoesSelecionados: []
-  AlavancaSelecionados: []
-  portaBotao: 0
-  portaAlavanca: 0
->>>>>>> Stashed changes
 --- !u!50 &1742468430
 Rigidbody2D:
   serializedVersion: 4
@@ -10292,14 +9888,7 @@ MonoBehaviour:
   direcoesMov: 00000000
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
-<<<<<<< Updated upstream
   PontoColidiuComigo: {fileID: 0}
-=======
-  botoesSelecionados: []
-  AlavancaSelecionados: []
-  portaBotao: 0
-  portaAlavanca: 0
->>>>>>> Stashed changes
 --- !u!50 &1813875673
 Rigidbody2D:
   serializedVersion: 4
@@ -10621,14 +10210,7 @@ MonoBehaviour:
   direcoesMov: 00000000
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
-<<<<<<< Updated upstream
   PontoColidiuComigo: {fileID: 0}
-=======
-  botoesSelecionados: []
-  AlavancaSelecionados: []
-  portaBotao: 0
-  portaAlavanca: 0
->>>>>>> Stashed changes
 --- !u!50 &1846176818
 Rigidbody2D:
   serializedVersion: 4
@@ -11102,14 +10684,7 @@ MonoBehaviour:
   direcoesMov: 00000000
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
-<<<<<<< Updated upstream
   PontoColidiuComigo: {fileID: 0}
-=======
-  botoesSelecionados: []
-  AlavancaSelecionados: []
-  portaBotao: 0
-  portaAlavanca: 0
->>>>>>> Stashed changes
 --- !u!50 &1879251620
 Rigidbody2D:
   serializedVersion: 4
@@ -11314,7 +10889,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 544421977}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1915617513
 MonoBehaviour:
@@ -11341,15 +10916,7 @@ MonoBehaviour:
   direcoesMov: 00000000
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
-<<<<<<< Updated upstream
   PontoColidiuComigo: {fileID: 0}
-=======
-  botoesSelecionados: []
-  AlavancaSelecionados:
-  - {fileID: 1606792293}
-  portaBotao: 1
-  portaAlavanca: 0
->>>>>>> Stashed changes
 --- !u!50 &1915617514
 Rigidbody2D:
   serializedVersion: 4
@@ -11506,14 +11073,7 @@ MonoBehaviour:
   direcoesMov: 00000000
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
-<<<<<<< Updated upstream
   PontoColidiuComigo: {fileID: 0}
-=======
-  botoesSelecionados: []
-  AlavancaSelecionados: []
-  portaBotao: 0
-  portaAlavanca: 0
->>>>>>> Stashed changes
 --- !u!50 &1925198896
 Rigidbody2D:
   serializedVersion: 4
@@ -11611,108 +11171,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
-<<<<<<< Updated upstream
 --- !u!1001 &1940067318
 PrefabInstance:
-=======
---- !u!4 &1946326505 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8858336704853312203, guid: ad0e776d51fbc2d44b34cffc17daa738,
-    type: 3}
-  m_PrefabInstance: {fileID: 913247219}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1951937257 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8858336704853312203, guid: ad0e776d51fbc2d44b34cffc17daa738,
-    type: 3}
-  m_PrefabInstance: {fileID: 644366873}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1967608599
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1967608600}
-  - component: {fileID: 1967608604}
-  - component: {fileID: 1967608603}
-  - component: {fileID: 1967608602}
-  - component: {fileID: 1967608601}
-  m_Layer: 0
-  m_Name: CaixaImovel (7)
-  m_TagString: Imovel
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1967608600
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1967608599}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.5, y: -2.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1856969486}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1967608601
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1967608599}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b27c157b932ee24e8cd6aff1602e0f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ativado: 0
-  pontoMov: {fileID: 0}
-  gridCaixa: 0
-  gridDoJogador: 0
-  colidiuJogador: 0
-  colidiuCaixa: 0
-  podeMover: 1
-  andaMax: 0
-  andandoComoRainha: 0
-  direcoesMov: 00000000
-  podeDirecao: 00000000
-  direcoesMovCxColl: 00000000
-  botoesSelecionados: []
-  AlavancaSelecionados: []
-  portaBotao: 0
-  portaAlavanca: 0
---- !u!50 &1967608602
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1967608599}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
---- !u!61 &1967608603
-BoxCollider2D:
->>>>>>> Stashed changes
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
@@ -11857,16 +11317,8 @@ MonoBehaviour:
   direcoesMov: 00000000
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
-<<<<<<< Updated upstream
   PontoColidiuComigo: {fileID: 0}
 --- !u!50 &1967608602
-=======
-  botoesSelecionados: []
-  AlavancaSelecionados: []
-  portaBotao: 0
-  portaAlavanca: 0
---- !u!50 &1987388649
->>>>>>> Stashed changes
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -12154,168 +11606,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad0e776d51fbc2d44b34cffc17daa738, type: 3}
-<<<<<<< Updated upstream
-=======
---- !u!1 &2032225108
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2032225109}
-  - component: {fileID: 2032225113}
-  - component: {fileID: 2032225112}
-  - component: {fileID: 2032225111}
-  - component: {fileID: 2032225110}
-  m_Layer: 0
-  m_Name: Parede
-  m_TagString: Imovel
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2032225109
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2032225108}
-  m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -7.5, y: 1, z: 0}
-  m_LocalScale: {x: 13, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 191035201}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
---- !u!114 &2032225110
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2032225108}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b27c157b932ee24e8cd6aff1602e0f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ativado: 0
-  pontoMov: {fileID: 0}
-  gridCaixa: 0
-  gridDoJogador: 0
-  colidiuJogador: 0
-  colidiuCaixa: 0
-  podeMover: 1
-  andaMax: 0
-  andandoComoRainha: 0
-  direcoesMov: 00000000
-  podeDirecao: 00000000
-  direcoesMovCxColl: 00000000
-  botoesSelecionados: []
-  AlavancaSelecionados: []
-  portaBotao: 0
-  portaAlavanca: 0
---- !u!50 &2032225111
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2032225108}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
---- !u!61 &2032225112
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2032225108}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 0.16, y: 0.16}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 0.2}
-  m_EdgeRadius: 0
---- !u!212 &2032225113
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2032225108}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1889465703
-  m_SortingLayer: 2
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ae5a790a47dd3294686f660da4c63349, type: 3}
-  m_Color: {r: 0.39607847, g: 0.39607847, b: 0.39607847, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 0.16, y: 0.16}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
->>>>>>> Stashed changes
 --- !u!4 &2053893557 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8858336704853312203, guid: ad0e776d51fbc2d44b34cffc17daa738,
@@ -12705,7 +11995,7 @@ PrefabInstance:
         type: 3}
       propertyPath: porta
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 731124591}
     - target: {fileID: 1352011033712047890, guid: 4a65fe150824f64439380dabbe737377,
         type: 3}
       propertyPath: m_RootOrder
@@ -12943,7 +12233,7 @@ PrefabInstance:
         type: 3}
       propertyPath: porta
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1042161208}
     - target: {fileID: 5163385630069552729, guid: b3119570b1eab1a40a9cecfbc767f475,
         type: 3}
       propertyPath: m_RootOrder
@@ -13085,7 +12375,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1717704924, guid: 60d48d2edd7f1074dba6434f3a73fb67, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2032338173, guid: 60d48d2edd7f1074dba6434f3a73fb67, type: 3}
       propertyPath: listaSalas.Array.size
