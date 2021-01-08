@@ -3287,7 +3287,7 @@ Transform:
   - {fileID: 2137047119}
   - {fileID: 977333961}
   m_Father: {fileID: 2106016387}
-  m_RootOrder: 8
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &147897284 stripped
 Transform:
@@ -4290,7 +4290,7 @@ Transform:
   - {fileID: 131024845}
   - {fileID: 1280771453}
   m_Father: {fileID: 2106016387}
-  m_RootOrder: 4
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &194545468
 GameObject:
@@ -5106,6 +5106,36 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 970231311}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &222207836
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 222207837}
+  m_Layer: 0
+  m_Name: 'Sala5_Indice '
+  m_TagString: Untagged
+  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &222207837
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 222207836}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 60, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2106016387}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &222300417
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16813,6 +16843,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad0e776d51fbc2d44b34cffc17daa738, type: 3}
+--- !u!1 &843244539
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 843244540}
+  m_Layer: 0
+  m_Name: Sala8_Indice
+  m_TagString: Untagged
+  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &843244540
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 843244539}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 115, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2106016387}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &843640056
 GameObject:
   m_ObjectHideFlags: 0
@@ -16993,7 +17053,7 @@ Transform:
   - {fileID: 787568421}
   - {fileID: 224360428}
   m_Father: {fileID: 2106016387}
-  m_RootOrder: 9
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &852816574 stripped
 Transform:
@@ -17751,7 +17811,7 @@ Transform:
   - {fileID: 649874616}
   - {fileID: 815890426}
   m_Father: {fileID: 2106016387}
-  m_RootOrder: 6
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &907345173
 PrefabInstance:
@@ -24343,6 +24403,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad0e776d51fbc2d44b34cffc17daa738, type: 3}
+--- !u!1 &1232881078
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1232881079}
+  m_Layer: 0
+  m_Name: Sala9_Indice
+  m_TagString: Untagged
+  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1232881079
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1232881078}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 130, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2106016387}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1235669174
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24944,7 +25034,7 @@ Transform:
   - {fileID: 2000633392}
   - {fileID: 830624509}
   m_Father: {fileID: 2106016387}
-  m_RootOrder: 3
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1265857497
 PrefabInstance:
@@ -25171,6 +25261,36 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1018354994}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1274400937
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1274400938}
+  m_Layer: 0
+  m_Name: Sala7_Indice
+  m_TagString: Untagged
+  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1274400938
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1274400937}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 90, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2106016387}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1276079870
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27181,7 +27301,7 @@ Transform:
   - {fileID: 591444113}
   - {fileID: 1742073928}
   m_Father: {fileID: 2106016387}
-  m_RootOrder: 10
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1407193764 stripped
 Transform:
@@ -28192,7 +28312,7 @@ Transform:
   - {fileID: 1801964308}
   - {fileID: 1028934415}
   m_Father: {fileID: 2106016387}
-  m_RootOrder: 5
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1462342517
 PrefabInstance:
@@ -31146,7 +31266,7 @@ Transform:
   - {fileID: 1044901869}
   - {fileID: 120872083}
   m_Father: {fileID: 2106016387}
-  m_RootOrder: 7
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1669543391 stripped
 Transform:
@@ -33500,7 +33620,7 @@ Transform:
   - {fileID: 346596040}
   - {fileID: 436906402}
   m_Father: {fileID: 2106016387}
-  m_RootOrder: 11
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1779688173 stripped
 Transform:
@@ -34030,6 +34150,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad0e776d51fbc2d44b34cffc17daa738, type: 3}
+--- !u!1 &1807769994
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1807769995}
+  m_Layer: 0
+  m_Name: Sala4_Indice
+  m_TagString: Untagged
+  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1807769995
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1807769994}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 45, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2106016387}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1807807438
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37748,6 +37898,36 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 959757474}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1945672924
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1945672925}
+  m_Layer: 0
+  m_Name: Sala6_Indice
+  m_TagString: Untagged
+  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1945672925
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1945672924}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 75, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2106016387}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1946326505 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8858336704853312203, guid: ad0e776d51fbc2d44b34cffc17daa738,
@@ -40658,6 +40838,12 @@ Transform:
   - {fileID: 1043860297}
   - {fileID: 1613200551}
   - {fileID: 1500540177}
+  - {fileID: 1807769995}
+  - {fileID: 222207837}
+  - {fileID: 1945672925}
+  - {fileID: 1274400938}
+  - {fileID: 843244540}
+  - {fileID: 1232881079}
   - {fileID: 1264125473}
   - {fileID: 191035201}
   - {fileID: 1459459158}
@@ -42080,7 +42266,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2032338173, guid: 60d48d2edd7f1074dba6434f3a73fb67, type: 3}
       propertyPath: listaSalas.Array.size
-      value: 3
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2032338173, guid: 60d48d2edd7f1074dba6434f3a73fb67, type: 3}
       propertyPath: salaHolder.Array.size
@@ -42088,7 +42274,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2032338173, guid: 60d48d2edd7f1074dba6434f3a73fb67, type: 3}
       propertyPath: salasHolder.Array.size
-      value: 3
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2032338173, guid: 60d48d2edd7f1074dba6434f3a73fb67, type: 3}
       propertyPath: listaSalas.Array.data[0]
@@ -42102,6 +42288,30 @@ PrefabInstance:
       propertyPath: listaSalas.Array.data[2]
       value: 
       objectReference: {fileID: 1459459157}
+    - target: {fileID: 2032338173, guid: 60d48d2edd7f1074dba6434f3a73fb67, type: 3}
+      propertyPath: listaSalas.Array.data[3]
+      value: 
+      objectReference: {fileID: 900867158}
+    - target: {fileID: 2032338173, guid: 60d48d2edd7f1074dba6434f3a73fb67, type: 3}
+      propertyPath: listaSalas.Array.data[4]
+      value: 
+      objectReference: {fileID: 1661982992}
+    - target: {fileID: 2032338173, guid: 60d48d2edd7f1074dba6434f3a73fb67, type: 3}
+      propertyPath: listaSalas.Array.data[5]
+      value: 
+      objectReference: {fileID: 145872323}
+    - target: {fileID: 2032338173, guid: 60d48d2edd7f1074dba6434f3a73fb67, type: 3}
+      propertyPath: listaSalas.Array.data[6]
+      value: 
+      objectReference: {fileID: 852727720}
+    - target: {fileID: 2032338173, guid: 60d48d2edd7f1074dba6434f3a73fb67, type: 3}
+      propertyPath: listaSalas.Array.data[7]
+      value: 
+      objectReference: {fileID: 1407115176}
+    - target: {fileID: 2032338173, guid: 60d48d2edd7f1074dba6434f3a73fb67, type: 3}
+      propertyPath: listaSalas.Array.data[8]
+      value: 
+      objectReference: {fileID: 1776363258}
     - target: {fileID: 2032338173, guid: 60d48d2edd7f1074dba6434f3a73fb67, type: 3}
       propertyPath: salaHolder.Array.data[0]
       value: 
@@ -42126,6 +42336,30 @@ PrefabInstance:
       propertyPath: salasHolder.Array.data[2]
       value: 
       objectReference: {fileID: 1500540176}
+    - target: {fileID: 2032338173, guid: 60d48d2edd7f1074dba6434f3a73fb67, type: 3}
+      propertyPath: salasHolder.Array.data[3]
+      value: 
+      objectReference: {fileID: 1807769994}
+    - target: {fileID: 2032338173, guid: 60d48d2edd7f1074dba6434f3a73fb67, type: 3}
+      propertyPath: salasHolder.Array.data[4]
+      value: 
+      objectReference: {fileID: 222207836}
+    - target: {fileID: 2032338173, guid: 60d48d2edd7f1074dba6434f3a73fb67, type: 3}
+      propertyPath: salasHolder.Array.data[5]
+      value: 
+      objectReference: {fileID: 1945672924}
+    - target: {fileID: 2032338173, guid: 60d48d2edd7f1074dba6434f3a73fb67, type: 3}
+      propertyPath: salasHolder.Array.data[6]
+      value: 
+      objectReference: {fileID: 1274400937}
+    - target: {fileID: 2032338173, guid: 60d48d2edd7f1074dba6434f3a73fb67, type: 3}
+      propertyPath: salasHolder.Array.data[7]
+      value: 
+      objectReference: {fileID: 843244539}
+    - target: {fileID: 2032338173, guid: 60d48d2edd7f1074dba6434f3a73fb67, type: 3}
+      propertyPath: salasHolder.Array.data[8]
+      value: 
+      objectReference: {fileID: 1232881078}
     - target: {fileID: 8713510023912335074, guid: 60d48d2edd7f1074dba6434f3a73fb67,
         type: 3}
       propertyPath: m_Name
