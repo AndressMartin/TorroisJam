@@ -11,15 +11,17 @@ public class Alavanca : MonoBehaviour
 
     public int sentido; //0=horizontal 1=vertical
     public playerMoveGrid player;
-
+    
     void Start()
     {
+
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<playerMoveGrid>();
 
         if (tag == "AlavancaH")
             sentido = 0;
         else if (tag == "AlavancaV")
             sentido = 1;
+
     }
 
     // Update is called once per frame
@@ -47,42 +49,54 @@ public class Alavanca : MonoBehaviour
             {
 
                 if (diferencaPlayer == 16)//se player veio na vertical
+                {
                     player.Voltar();
-
+                }
                 else if (diferencaPlayer == 1)
+                {
                     ativado = !ativado;
+                    player.Voltar();
+                }
             }
 
             if (sentido == 1)
             {
-                if (diferencaPlayer == 1)
-                    player.Voltar();
-
-                else if (diferencaPlayer == 16)
+                if (diferencaPlayer == 16)//se player veio na vertical
+                {
                     ativado = !ativado;
+                    player.Voltar();
+                }
+                else if (diferencaPlayer == 1)
+                {
+                    player.Voltar();
+                }
             }
         }
 
-        //if (collision.gameObject.tag == "Torre")
-        //{ Debug.Log("Entrou primeiro if");
-        //    if (sentido == 0)//alavanca horiznotal
-        //    {Debug.Log("entrou segundo if");
-        //        if (Caixa.direcoesCaixa[1] == true)//se caixa veio na vertical   
-        //            Debug.Log("entrou terceiro if");
-        //        //scriptDaPorta.Voltar();
-        //        else
-        //            scriptDaPorta.ativado = !scriptDaPorta.ativado;
+        if (collision.gameObject.GetComponent<ChecarMobilidade>().myParent.tag == "Torre")
+        {
+ 
 
-        //    }
-        //    //else
-        //    //{
-        //    //    if (diferencaCaixa == 1)
-        //    //        scriptDaPorta.Voltar();
-        //    //    else
-        //    //        scriptDaPorta.ativado = !scriptDaPorta.ativado;
+            if (sentido == 0)//alavanca horiznotal
+            {
+                    if (collision.gameObject.GetComponent<ChecarMobilidade>().myParent.GetComponent<Caixa>().direcoesMov[0]
+                    || collision.gameObject.GetComponent<ChecarMobilidade>().myParent.GetComponent<Caixa>().direcoesMov[1])
+                
+                    ativado = !ativado;
+                
+            }
 
-        //    //}
-        //}
+            if (sentido == 1)//alavanca horiznotal
+            {
+                if (collision.gameObject.GetComponent<ChecarMobilidade>().myParent.GetComponent<Caixa>().direcoesMov[2]
+                || collision.gameObject.GetComponent<ChecarMobilidade>().myParent.GetComponent<Caixa>().direcoesMov[3])
+
+                    ativado = !ativado;
+
+            }
+        }
+
+        
 
 
     }

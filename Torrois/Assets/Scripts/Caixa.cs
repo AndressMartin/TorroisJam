@@ -35,11 +35,9 @@ public class Caixa : MonoBehaviour
 
     [SerializeField]
     public List<GameObject> alavancaLista = new List<GameObject>() { };
-    public bool portaAlavanca;
 
     [SerializeField]
     public List<GameObject> botaoLista = new List<GameObject>() { };
-    public bool portaBotao;
 
 
     //Variaveis testes especiais para colisao da rainha
@@ -85,8 +83,12 @@ public class Caixa : MonoBehaviour
     void FixedUpdate()
     {
 
-        if (portaBotao || portaAlavanca)
-            verPorta();
+        if (alavancaLista.Count !=0)
+            verPorta("alavanca");
+
+        if (botaoLista.Count !=0)
+            verPorta("botao");
+
         if (pontoMov != null)
         {
             if (PontoColidiuComigo != null && pontoMovScript.ColidiuParede == true)
@@ -130,8 +132,8 @@ public class Caixa : MonoBehaviour
                         {
                             if (podeDirecao[0]) //Pode ser falso no peão
                             {
-                                pontoMov.position += new Vector3(-1f, 0f, 0f); //Caixa pra esquerda
                                 direcoesMov[0] = true;
+                                pontoMov.position += new Vector3(-1f, 0f, 0f); //Caixa pra esquerda
                             }
                             else
                             {
@@ -142,9 +144,9 @@ public class Caixa : MonoBehaviour
                         {
                             if (podeDirecao[1]) //Pode ser falso no peão
                             {
-                                pontoMov.position += new Vector3(+1f, 0f, 0f); //Caixa pra direita
                                 direcoesMov[1] = true;
-
+                                pontoMov.position += new Vector3(+1f, 0f, 0f); //Caixa pra direita
+                             
                             }
                             else
                             {
@@ -155,8 +157,8 @@ public class Caixa : MonoBehaviour
                         {
                             if (podeDirecao[3]) //Pode ser falso no peão
                             {
-                                pontoMov.position += new Vector3(0f, -1f, 0f); //Caixa pra baixo
                                 direcoesMov[3] = true;
+                                pontoMov.position += new Vector3(0f, -1f, 0f); //Caixa pra baixo
                             }
                             else
                             {
@@ -168,8 +170,8 @@ public class Caixa : MonoBehaviour
                         {
                             if (podeDirecao[2]) //Pode ser falso no peão
                             {
-                                pontoMov.position += new Vector3(0f, +1f, 0f); //Caixa pra cima
                                 direcoesMov[2] = true;
+                                pontoMov.position += new Vector3(0f, +1f, 0f); //Caixa pra cima
                             }
                             else
                             {
@@ -221,8 +223,8 @@ public class Caixa : MonoBehaviour
                     {
                         if (direcoesMovCxColl[0] == true && podeDirecao[0]) //Veio da direita
                         {
-                            pontoMov.position += new Vector3(-1f, 0f, 0f); //Caixa pra esquerda
                             direcoesMov[0] = true;
+                            pontoMov.position += new Vector3(-1f, 0f, 0f); //Caixa pra esquerda
                         }
                         else if (direcoesMovCxColl[0] == true && podeDirecao[0] != true)
                         {
@@ -235,8 +237,8 @@ public class Caixa : MonoBehaviour
 
                         if (direcoesMovCxColl[1] == true && podeDirecao[1]) //Veio da esquerda
                         {
-                            pontoMov.position += new Vector3(+1f, 0f, 0f); //Caixa pra direita
                             direcoesMov[1] = true;
+                            pontoMov.position += new Vector3(+1f, 0f, 0f); //Caixa pra direita
                         }
                         else if (direcoesMovCxColl[1] == true && podeDirecao[1] != true)
                         {
@@ -248,8 +250,8 @@ public class Caixa : MonoBehaviour
                         }
                         if (direcoesMovCxColl[3] == true && podeDirecao[3]) //Veio de cima
                         {
-                            pontoMov.position += new Vector3(0f, -1f, 0f); //Caixa pra baixo
                             direcoesMov[3] = true;
+                            pontoMov.position += new Vector3(0f, -1f, 0f); //Caixa pra baixo
                         }
                         else if (direcoesMovCxColl[3] == true &&  podeDirecao[3] != true)
                         {
@@ -261,8 +263,8 @@ public class Caixa : MonoBehaviour
                         }
                         if (direcoesMovCxColl[2] == true && podeDirecao[2]) //Veio de baixo
                         {
-                            pontoMov.position += new Vector3(0f, +1f, 0f); //Caixa pra cima
                             direcoesMov[2] = true;
+                            pontoMov.position += new Vector3(0f, +1f, 0f); //Caixa pra cima
                         }
                         else if (direcoesMovCxColl[2] == true && podeDirecao[2] != true)
                         {
@@ -382,10 +384,10 @@ public class Caixa : MonoBehaviour
         //}
     }
 
-    public void verPorta()
+    public void verPorta(string texto)
     {
 
-        if (portaBotao)
+        if (texto=="botao")
         {
             boxTriggerer.isTrigger = false;
             foreach (GameObject button in botaoLista)
@@ -398,7 +400,7 @@ public class Caixa : MonoBehaviour
             boxTriggerer.enabled = sprite.enabled;
         }
 
-        if (portaAlavanca)
+        if (texto == "alavanca")
         {
             boxTriggerer.isTrigger = false;
             foreach (GameObject lever in alavancaLista)

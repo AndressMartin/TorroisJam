@@ -8,19 +8,23 @@ public class ChecarMobilidade : MonoBehaviour
 
     public bool ColidiuParede;
 
+    [SerializeField]public List<bool> direcoesMov = new List<bool>() { false, false, false, false };
+
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (myParent.tag == "Torre" || myParent.tag == "Rainha" || myParent.tag == "Peon")
         {
             if (collision.gameObject.transform != myParent && ((collision.gameObject.tag == "Imovel") || (collision.gameObject.tag == "AlavancaH") || (collision.gameObject.tag == "AlavancaV")))
             {
-                Debug.Log(myParent.GetComponent<Caixa>().colidiuCaixa);
+
                 //if (myParent.GetComponent<Caixa>().colidiuCaixa == true) //PARA FUTURO, PRIMEIRO ARRUMAR COLISAO DAS CAIXAS
                 //{
                 //    Debug.Log("Mudei o pontoMov da caixa que colidiu comigo");
                 //    myParent.GetComponent<Caixa>().PontoColidiuComigo.GetComponent<ChecarMobilidade>().ColidiuParede = true;
                 //}
                 Debug.Log("Checar COLISA");
+
                 ColidiuParede = true;
             }
             else if (collision.gameObject.transform != myParent && (collision.gameObject.tag == "Torre" || collision.gameObject.tag == "Rainha" || collision.gameObject.tag == "Peon"))
