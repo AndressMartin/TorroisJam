@@ -25,39 +25,30 @@ public class ChecarMobilidade : MonoBehaviour
             }
             else if (collision.gameObject.transform != myParent && (collision.gameObject.tag == "Torre" || collision.gameObject.tag == "Rainha" || collision.gameObject.tag == "Peon"))
             {
-                //Debug.Log(collision.gameObject.tag);
-                //if (collision.tag == myParent.tag)
-                //    Debug.Log("oporra");
-                //Debug.Log("Deu certo? ;~;");
+                if (myParent.tag == "Rainha")
+                {
+                    //myParent.GetComponent<Caixa>().andandoComoRainha = false;
+                    myParent.GetComponent<Caixa>().colidiuJogador = false;
+                }
                 collision.gameObject.GetComponent<Caixa>().PontoColidiuComigo = gameObject.transform;
-                Debug.Log(collision.gameObject + " " + collision.gameObject.GetComponent<Caixa>().PontoColidiuComigo);
+                //Debug.Log(collision.gameObject + " " + collision.gameObject.GetComponent<Caixa>().PontoColidiuComigo);
 
                 if (collision.GetComponent<Caixa>().pontoMov.GetComponent<ChecarMobilidade>().ColidiuParede == false) //Se a outra caixa não tiver pra onde ir
                 {
                     Debug.Log("Colidiu com o Peão");
-                    collision.GetComponent<Caixa>().colidiuCaixa = true;
+                    
+                    if (myParent.tag == "Rainha" && Vector2.Distance(transform.position, myParent.position) == 0f)
+                    {
+                        collision.GetComponent<Caixa>().colidiuCaixa = true;
+                    }
+                    else
+                        collision.GetComponent<Caixa>().colidiuCaixa = true;
                     for (int direcao = 0; direcao < myParent.GetComponent<Caixa>().direcoesMov.Count; direcao++)
                     {
                         collision.GetComponent<Caixa>().direcoesMovCxColl[direcao] = myParent.GetComponent<Caixa>().direcoesMov[direcao];
                     }
                 }
-                //else //TENTANDO PREVENIR O BUG DAS CAIXAS JUNTAS
-                //{
-                //    ColidiuParede = true;
-                //}
             }
-            //collision.GetComponent<Caixa>().colidiuCaixa = false;
         }
-        //if (collision.gameObject.tag == "Imovel")
-        //{
-        //    //Debug.Log("Deu certo? ;~;");
-        //    ColidiuParede = true;
-        //}
-
-    }
-
-    public void ChecarProx()
-    {
-
     }
 }

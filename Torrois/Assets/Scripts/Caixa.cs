@@ -26,6 +26,9 @@ public class Caixa : MonoBehaviour
     private SpriteRenderer sprite;
     private BoxCollider2D boxTriggerer;
 
+    public Transform CircleCollHolder = null;
+    private CircleCollider2D circleColl = null;
+
     ChecarMobilidade pontoMovScript;
 
     public Transform PontoColidiuComigo;
@@ -37,6 +40,10 @@ public class Caixa : MonoBehaviour
     [SerializeField]
     public List<GameObject> botaoLista = new List<GameObject>() { };
     public bool portaBotao;
+
+
+    //Variaveis testes especiais para colisao da rainha
+    public bool rainhaProcurandoColl;
 
     void Awake()
     {
@@ -66,6 +73,7 @@ public class Caixa : MonoBehaviour
         if (gameObject.tag == "Rainha")
         {
             andaMax = true;
+            circleColl = CircleCollHolder.GetComponent<CircleCollider2D>();
             for (int i = 0; i < podeDirecao.Count; i++)
             {
                 podeDirecao[i] = true;
@@ -84,8 +92,10 @@ public class Caixa : MonoBehaviour
             if (PontoColidiuComigo != null && pontoMovScript.ColidiuParede == true)
             {
                 Debug.Log("Centesimo debug " + pontoMovScript.ColidiuParede);
-                PontoColidiuComigo.GetComponent<ChecarMobilidade>().ColidiuParede = true;
-
+                if (gameObject.tag == "Rainha")
+                    ProcurarPontoColidiu(transform.position, circleColl.radius, PontoColidiuComigo);
+                else
+                    PontoColidiuComigo.GetComponent<ChecarMobilidade>().ColidiuParede = true;
             }
             gridDoJogador = playerMoveGrid.gridAtual;
             if ((pontoMovScript.ColidiuParede && gameObject.tag != "Imovel") && !colidiuCaixa)
@@ -97,7 +107,6 @@ public class Caixa : MonoBehaviour
             else
             {
                 Move();
-                pontoMov.GetComponent<ChecarMobilidade>().ChecarProx();
             }
 
         }
@@ -169,7 +178,7 @@ public class Caixa : MonoBehaviour
                             
                         }
                     }
-                    if (andaMax == true)
+                    if (andaMax == true && Vector2.Distance(transform.position, pontoMov.position) <= 0.1f)
                     {
                         andandoComoRainha = true;
                         if (playerMoveGrid.gridAnterior == gridDoJogador + 1) //Veio da direita
@@ -264,7 +273,7 @@ public class Caixa : MonoBehaviour
                             }
                         }
                     }
-                    if (andaMax == true) //TODO: PROVAVELMENTE NAO FUNCIONA! PRECISA CONFERIR! 
+                    if (andaMax == true && Vector2.Distance(transform.position, pontoMov.position) <= 0.5f) //TODO: PROVAVELMENTE NAO FUNCIONA! PRECISA CONFERIR! 
                     {
                         andandoComoRainha = true;
                         if (direcoesMovCxColl[0] == true) //Veio da direita
@@ -409,6 +418,20 @@ public class Caixa : MonoBehaviour
     public void sendParent()
     {
         pontoMov.GetComponent<ChecarMobilidade>().myParent = transform;
+    }
+
+    void ProcurarPontoColidiu(Vector2 center, float radius, Transform pontoColisor) 
+    {
+         Collider2D[] hitColliders = Physics2D.OverlapCircleAll(center, radius);
+         int i = 0;
+         while (i < hitColliders.Length) 
+         {
+             if(hitColliders[i].gameObject == pontoColisor)
+             {
+                  pontoColisor.GetComponent<ChecarMobilidade>().ColidiuParede = true;
+             }
+             i++;
+         }
     }
 }
 
