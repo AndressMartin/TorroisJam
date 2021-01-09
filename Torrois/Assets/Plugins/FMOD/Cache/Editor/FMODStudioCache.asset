@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: ../FMod/Unitytest/Build/Desktop/Master.bank
   Name: Master
-  lastModified: 637455751352207130
+  lastModified: 637452092852272078
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -32,11 +32,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: ../FMod/Unitytest/Build/Desktop/Master.strings.bank
   Name: Master.strings
-  lastModified: 637455751352286884
+  lastModified: 637452092852371977
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1510
+    Value: 1420
   Exists: 1
 --- !u!114 &-6660776989999620961
 MonoBehaviour:
@@ -351,7 +351,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 1116
+  Length: 1000
 --- !u!114 &-1807729933961152599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -537,14 +537,12 @@ MonoBehaviour:
   - {fileID: -5722102150807819703}
   - {fileID: -161769159216074216}
   - {fileID: -2826651684034601231}
-  - {fileID: 3297954787232619677}
-  - {fileID: -3328441386182863387}
   EditorParameters: []
   MasterBanks:
   - {fileID: -8626163553006133261}
   StringsBanks:
   - {fileID: -7812789740167254952}
-  stringsBankWriteTime: 637455751352286884
+  stringsBankWriteTime: 637452092852371977
   cacheVersion: 5
 --- !u!114 &77658626284580340
 MonoBehaviour:

@@ -72,6 +72,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myParent: {fileID: 0}
   ColidiuParede: 0
+  direcoesMov: 00000000
 --- !u!1 &6846891206937330502
 GameObject:
   m_ObjectHideFlags: 0
@@ -230,7 +231,12 @@ MonoBehaviour:
   direcoesMov: 00000000
   podeDirecao: 00000000
   direcoesMovCxColl: 00000000
+  CircleCollHolder: {fileID: 0}
   PontoColidiuComigo: {fileID: 0}
+  alavancaLista: []
+  botaoLista: []
+  portaSprite: {fileID: 0}
+  rainhaProcurandoColl: 0
 --- !u!114 &1593169509
 MonoBehaviour:
   m_ObjectHideFlags: 0

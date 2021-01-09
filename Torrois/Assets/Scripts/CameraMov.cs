@@ -22,6 +22,7 @@ public class CameraMov : MonoBehaviour
         if (podeMover)
         {
             GameManager.GetComponent<SalaManager>().AtivarProxSala();
+            GameManager.GetComponent<SalaManager>().DesativarNome();
             FazerMovimento();
         }
     }
@@ -86,5 +87,6 @@ public class CameraMov : MonoBehaviour
         //After we have waited 5 seconds print the time again.
         Debug.Log("Finished Coroutine at timestamp : " + Time.time);
         GameManager.GetComponent<SalaManager>().DesativarSalaAnterior();
+        GameManager.GetComponent<SalaManager>().AtivarNome();
     }
 }

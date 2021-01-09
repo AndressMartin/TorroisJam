@@ -158,7 +158,12 @@ MonoBehaviour:
   direcoesMov: 00000000
   podeDirecao: 00000001
   direcoesMovCxColl: 00000000
+  CircleCollHolder: {fileID: 0}
   PontoColidiuComigo: {fileID: 0}
+  alavancaLista: []
+  botaoLista: []
+  portaSprite: {fileID: 0}
+  rainhaProcurandoColl: 0
 --- !u!114 &2317708522628990642
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -254,3 +259,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myParent: {fileID: 0}
   ColidiuParede: 0
+  direcoesMov: 00000000

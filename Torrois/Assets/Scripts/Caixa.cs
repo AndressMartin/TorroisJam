@@ -39,6 +39,8 @@ public class Caixa : MonoBehaviour
     [SerializeField]
     public List<GameObject> botaoLista = new List<GameObject>() { };
 
+    public GameObject portaSprite;
+
 
     //Variaveis testes especiais para colisao da rainha
     public bool rainhaProcurandoColl;
@@ -396,8 +398,16 @@ public class Caixa : MonoBehaviour
                 if (!button.GetComponent<Botao>().ativado)
                     boxTriggerer.isTrigger = true;
             }
-            sprite.enabled = boxTriggerer.isTrigger;
-            boxTriggerer.enabled = sprite.enabled;
+            if (portaSprite == null)
+                sprite.enabled = boxTriggerer.isTrigger;
+            else
+            {
+                if (!boxTriggerer.enabled)
+                    AnimPorta(2.9f);
+                else
+                    AnimPorta(0.84f);
+            }
+            boxTriggerer.enabled = boxTriggerer.isTrigger;
         }
 
         if (texto == "alavanca")
@@ -409,12 +419,30 @@ public class Caixa : MonoBehaviour
                 if (!lever.GetComponent<Alavanca>().ativado)
                     boxTriggerer.isTrigger = true;
             }
-            sprite.enabled = boxTriggerer.isTrigger;
-            boxTriggerer.enabled = sprite.enabled;
+            if (portaSprite == null)
+                sprite.enabled = boxTriggerer.isTrigger;
+            else
+            {
+                if (!boxTriggerer.enabled)
+                    AnimPorta(2.9f);
+                else
+                    AnimPorta(0.84f);
+            }
+            boxTriggerer.enabled = boxTriggerer.isTrigger;
         }
 
 
 
+    }
+
+    void AnimPorta(float quantidade)
+    {
+        if (portaSprite != null && quantidade > 0)
+            portaSprite.transform.position = Vector2.MoveTowards
+                (portaSprite.transform.position, new Vector2(portaSprite.transform.position.x, transform.position.y + quantidade), velocidade * Time.deltaTime);
+        else if (portaSprite != null && quantidade < 0)
+            portaSprite.transform.position = Vector2.MoveTowards
+                (portaSprite.transform.position, new Vector2(portaSprite.transform.position.x, transform.position.y + quantidade), velocidade * Time.deltaTime);
     }
 
     public void sendParent()
