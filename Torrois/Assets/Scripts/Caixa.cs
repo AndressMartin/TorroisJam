@@ -434,23 +434,45 @@ public class Caixa : MonoBehaviour
 
         if (texto == "alavanca")
         {
-            boxTriggerer.isTrigger = false;
-            foreach (GameObject lever in alavancaLista)
+            if (boxTriggerer.isTrigger)
             {
+                boxTriggerer.isTrigger = false;
+                foreach (GameObject lever in alavancaLista)
+                {
 
-                if (!lever.GetComponent<Alavanca>().ativado)
-                    boxTriggerer.isTrigger = true;
-            }
-            if (portaSprite == null)
-                sprite.enabled = boxTriggerer.isTrigger;
-            else
-            {
-                if (!boxTriggerer.enabled)
-                    AnimPorta(2.9f);
+                    if (!lever.GetComponent<Alavanca>().ativado)
+                        boxTriggerer.isTrigger = true;
+                }
+                if (portaSprite == null)
+                    sprite.enabled = boxTriggerer.isTrigger;
                 else
-                    AnimPorta(0.84f);
+                {
+                    if (!boxTriggerer.enabled)
+                        AnimPorta(2.9f);
+                    else
+                        AnimPorta(0.84f);
+                }
+                boxTriggerer.enabled = boxTriggerer.isTrigger;
             }
-            boxTriggerer.enabled = boxTriggerer.isTrigger;
+            if (!boxTriggerer.isTrigger)
+            {
+                boxTriggerer.isTrigger = true;
+                foreach (GameObject lever in alavancaLista)
+                {
+
+                    if (lever.GetComponent<Alavanca>().ativado)
+                        boxTriggerer.isTrigger = false;
+                }
+                if (portaSprite == null)
+                    sprite.enabled = boxTriggerer.isTrigger;
+                else
+                {
+                    if (!boxTriggerer.enabled)
+                        AnimPorta(2.9f);
+                    else
+                        AnimPorta(0.84f);
+                }
+            }
         }
 
 

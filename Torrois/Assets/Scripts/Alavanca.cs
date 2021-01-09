@@ -47,7 +47,7 @@ public class Alavanca : MonoBehaviour
 
         diferencaPlayer = Mathf.Abs(player.direcao);
 
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player" && collision.gameObject.tag != "GridTile")
         {
 
             if (sentido == 0)//alavanca horiznotal
@@ -82,9 +82,10 @@ public class Alavanca : MonoBehaviour
             }
         }
 
-        if (collision.gameObject.GetComponent<ChecarMobilidade>().myParent.tag == "Torre" || 
+        if ((collision.gameObject.GetComponent<ChecarMobilidade>().myParent.tag == "Torre" || 
             collision.gameObject.GetComponent<ChecarMobilidade>().myParent.tag == "Rainha" ||
-                collision.gameObject.GetComponent<ChecarMobilidade>().myParent.tag == "Peon")
+                collision.gameObject.GetComponent<ChecarMobilidade>().myParent.tag == "Peon") &&
+                collision.gameObject.tag !="GridTile") 
         {
  
 
