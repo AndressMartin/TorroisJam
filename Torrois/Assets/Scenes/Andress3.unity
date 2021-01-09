@@ -8873,11 +8873,11 @@ Transform:
   - {fileID: 619923747}
   - {fileID: 1169339721}
   - {fileID: 630226859}
-  - {fileID: 1733818792}
-  - {fileID: 1235521067}
   - {fileID: 1109279505}
   - {fileID: 146373199}
   - {fileID: 1656206324}
+  - {fileID: 1733818792}
+  - {fileID: 1235521067}
   - {fileID: 834227278}
   - {fileID: 2016025557}
   - {fileID: 2026881682}
@@ -42871,7 +42871,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2120775316
 MonoBehaviour:
   m_ObjectHideFlags: 0
