@@ -9,6 +9,7 @@ public class Fader : MonoBehaviour
     public GameObject player;
     public bool fadingOut;
     public bool fadingIn;
+
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
