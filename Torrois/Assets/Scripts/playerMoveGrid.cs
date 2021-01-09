@@ -59,7 +59,7 @@ public class playerMoveGrid : MonoBehaviour
 
     private void Move()
     {
-
+        
         transform.position = Vector2.MoveTowards(transform.position, pontoMov.position, velocidade * Time.deltaTime);
         pontoMovAntesTemp = pontoMovAntes;   
         if (Vector2.Distance(transform.position, pontoMov.position) == 0f)

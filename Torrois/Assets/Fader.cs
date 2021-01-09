@@ -25,14 +25,16 @@ public class Fader : MonoBehaviour
         }
         if (fadingOut)
             fadeOut();
-        if (fadingIn)
+        else if (fadingIn)
             fadeIn();
+        else
+            thisImage.canvasRenderer.SetAlpha(0f);
 
     }
 
     public void fadeOut()
     {
-        thisImage.CrossFadeAlpha(1, .5f, false);
+        thisImage.CrossFadeAlpha(1, .5f, true);
         Debug.Log("Alpha: " + thisImage.canvasRenderer.GetAlpha());
         if (thisImage.canvasRenderer.GetAlpha() >= 0.9f)
         {
@@ -44,7 +46,7 @@ public class Fader : MonoBehaviour
 
     public void fadeIn()
     {
-        thisImage.CrossFadeAlpha(0, .5f, false);
+        thisImage.CrossFadeAlpha(0, .5f, true);
         if (thisImage.canvasRenderer.GetAlpha() <= 0.1f)
         {
             thisImage.canvasRenderer.SetAlpha(0f);

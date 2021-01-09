@@ -6,8 +6,8 @@ public class Rewinder : MonoBehaviour
 {
     public bool isRewinding;
     public bool tempoExpirado;
-    private int velocidade = 60;
-    public float recordTime = 10f;
+    private int velocidade = 100;
+    private float recordTime = 7f;
     public List<Vector3> positions;
     public Vector3 firstPosition;
 
@@ -19,6 +19,11 @@ public class Rewinder : MonoBehaviour
 
     void Update()
     {
+       
+    }
+
+    private void FixedUpdate()
+    {
         if (Input.GetKeyDown(KeyCode.Return))
             StartRewind();
         if (isRewinding && !tempoExpirado)
@@ -27,10 +32,6 @@ public class Rewinder : MonoBehaviour
         {
             StartCoroutine(EsperaRewind());
         }
-    }
-
-    private void FixedUpdate()
-    {
         if (!isRewinding)
             Record();
     }
@@ -41,9 +42,7 @@ public class Rewinder : MonoBehaviour
     {
         if (positions.Count > 0)
         {
-            transform.position = Vector2.MoveTowards(transform.position, positions[0], velocidade * Time.deltaTime);
-            if (Vector2.Distance(transform.position, positions[0]) == 0f)
-                transform.position = positions[0];
+            transform.position = positions[0];
             positions.RemoveAt(0);
         }
         else
