@@ -8,7 +8,7 @@ public class Rewinder : MonoBehaviour
     public bool tempoExpirado;
     private int velocidade = 60;
     public float recordTime = 10f;
-    List<Vector3> positions;
+    public List<Vector3> positions;
     public Vector3 firstPosition;
 
     void Start()
@@ -56,7 +56,7 @@ public class Rewinder : MonoBehaviour
     {
         if (positions.Count > Mathf.Round(recordTime / Time.fixedDeltaTime))
         {
-            Debug.Log("Expirou!");
+            //Debug.Log("Expirou!");
             tempoExpirado = true;
             positions.RemoveAt(positions.Count - 1);
         }

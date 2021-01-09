@@ -9,6 +9,7 @@ public class CameraMov : MonoBehaviour
     private GameObject player;
     public GameObject playerMovePoint;
     public GameObject GameManager;
+    bool chmaouJogador;
 
     void Start()
     {
@@ -25,6 +26,8 @@ public class CameraMov : MonoBehaviour
             GameManager.GetComponent<SalaManager>().DesativarNome();
             FazerMovimento();
         }
+        if (chmaouJogador)
+            ResetRewind();
     }
 
     public void FazerMovimento()
@@ -46,13 +49,23 @@ public class CameraMov : MonoBehaviour
     {
         GameObject.FindGameObjectWithTag("GameController").transform.position = gameObject.transform.position;
     }
+    void ResetRewind()
+    {
+        if (Vector2.Distance(player.transform.position, playerMovePoint.transform.position) == 0)
+        {
+            player.GetComponent<Rewinder>().positions.Clear();
+            chmaouJogador = false;
+        }
+    }
 
     public void TrazerJogador()
     {
         player.GetComponent<FMODUnity.StudioEventEmitter>().CollisionTag = "Torre";  //GAMBIARRA!!!!
+        player.GetComponent<BoxCollider2D>().enabled = false;
         player.GetComponent<playerMoveGrid>().transitandoEntreFases = true;
         playerMovePoint.transform.position = FindClosestWalkableGrid().transform.position;
         player.GetComponent<Rewinder>().firstPosition = FindClosestWalkableGrid().transform.position;
+        chmaouJogador = true;
         //Debug.Log(FindClosestGrid().transform.position);
     }
 

@@ -67,6 +67,7 @@ public class playerMoveGrid : MonoBehaviour
             if (gameObject.GetComponent<StudioEventEmitter>().CollisionTag == "Torre")  //GAMBIARRA!!!!
             {
                 gameObject.GetComponent<StudioEventEmitter>().CollisionTag = "Imovel";
+                gameObject.GetComponent<BoxCollider2D>().enabled = true;
             }
             transitandoEntreFases = false; //Código da CameraMov
             if (Mathf.Abs(Input.GetAxisRaw("Horizontal")) == 1f)
