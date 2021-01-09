@@ -99,9 +99,12 @@ public class Caixa : MonoBehaviour
         {
             if (PontoColidiuComigo != null && pontoMovScript.ColidiuParede == true)
             {
-                Debug.Log("Centesimo debug " + pontoMovScript.ColidiuParede);
+                //Debug.Log("Centesimo debug " + pontoMovScript.ColidiuParede);
                 if (gameObject.tag == "Rainha")
+                {
                     ProcurarPontoColidiu(transform.position, circleColl.radius, PontoColidiuComigo);
+                    PontoColidiuComigo.GetComponent<ChecarMobilidade>().ColidiuParede = true;
+                }
                 else
                     PontoColidiuComigo.GetComponent<ChecarMobilidade>().ColidiuParede = true;
             }
@@ -114,7 +117,7 @@ public class Caixa : MonoBehaviour
             {
                 if (direcoesMov[0] != true && direcoesMov[1] != true && direcoesMov[2] != true && direcoesMov[3] != true)
                 {
-                    Debug.Log(direcoesMov);
+                    //Debug.Log(direcoesMov);
                     gridAnteriorDoJogador = playerMoveGrid.gridAnterior;
                     gridDoJogador = playerMoveGrid.gridAtual;
                 }
@@ -295,7 +298,7 @@ public class Caixa : MonoBehaviour
                             }
                         }
                     }
-                    if (andaMax == true && Vector2.Distance(transform.position, pontoMov.position) <= 0.7f && !pontoMovScript.ColidiuParede) //TODO: PROVAVELMENTE NAO FUNCIONA! PRECISA CONFERIR! 
+                    if (andaMax == true && Vector2.Distance(transform.position, pontoMov.position) <= 0.7f) //TODO: PROVAVELMENTE NAO FUNCIONA! PRECISA CONFERIR! 
                     {
                         andandoComoRainha = true;
                         if (direcoesMovCxColl[0] == true) //Veio da direita
@@ -474,7 +477,7 @@ public class Caixa : MonoBehaviour
         else if (portaSprite != null && quantidade < 1)
         {
             playPorta = true;
-            Debug.Log("Porta fechando?");
+            //Debug.Log("Porta fechando?");
             portaSprite.transform.position = Vector2.MoveTowards
                 (portaSprite.transform.position, new Vector2(portaSprite.transform.position.x, transform.position.y + quantidade), velocidade * Time.deltaTime);
         }

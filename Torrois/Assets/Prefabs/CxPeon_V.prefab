@@ -150,7 +150,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 544eaa100f465754998c0626b410c636, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.990566, g: 0.8129435, b: 0.55602527, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -223,6 +223,7 @@ MonoBehaviour:
   pontoMov: {fileID: 7162068031245334336}
   gridCaixa: 0
   gridDoJogador: 0
+  gridAnteriorDoJogador: 0
   colidiuJogador: 0
   colidiuCaixa: 0
   podeMover: 1
@@ -230,7 +231,7 @@ MonoBehaviour:
   andandoComoRainha: 0
   estaNoCicloCaixa: 0
   direcoesMov: 00000000
-  podeDirecao: 01010101
+  podeDirecao: 00000100
   direcoesMovCxColl: 00000000
   CircleCollHolder: {fileID: 0}
   PontoColidiuComigo: {fileID: 0}
@@ -274,6 +275,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isRewinding: 0
-  tempoExpirado: 0
-  recordTime: 10
+  positions: []
   firstPosition: {x: 0, y: 0, z: 0}

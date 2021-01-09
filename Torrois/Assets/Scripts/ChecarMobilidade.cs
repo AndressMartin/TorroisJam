@@ -35,7 +35,7 @@ public class ChecarMobilidade : MonoBehaviour
             {
                 if (myParent.tag == "Rainha")
                 {
-                    //myParent.GetComponent<Caixa>().andandoComoRainha = false;
+
                     myParent.GetComponent<Caixa>().colidiuJogador = false;
                 }
                 collision.gameObject.GetComponent<Caixa>().PontoColidiuComigo = gameObject.transform;
@@ -44,13 +44,17 @@ public class ChecarMobilidade : MonoBehaviour
                 if (collision.GetComponent<Caixa>().pontoMov.GetComponent<ChecarMobilidade>().ColidiuParede == false) //Se a outra caixa não tiver pra onde ir
                 {
                     Debug.Log("Colidiu com o Peão");
-                    
+
                     if (myParent.tag == "Rainha" && Vector2.Distance(transform.position, myParent.position) == 0f)
                     {
                         collision.GetComponent<Caixa>().colidiuCaixa = true;
                     }
                     else
                         collision.GetComponent<Caixa>().colidiuCaixa = true;
+                    if (collision.tag == "Rainha")
+                    {
+                        collision.GetComponent<Caixa>().pontoMov.GetComponent<ChecarMobilidade>().ColidiuParede = true;
+                    }
                     for (int direcao = 0; direcao < myParent.GetComponent<Caixa>().direcoesMov.Count; direcao++)
                     {
                         collision.GetComponent<Caixa>().direcoesMovCxColl[direcao] = myParent.GetComponent<Caixa>().direcoesMov[direcao];
