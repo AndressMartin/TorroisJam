@@ -57,6 +57,7 @@ public class Ending : MonoBehaviour
 
     public void CallCredits()
     {
+        imagens[3].canvasRenderer.SetAlpha(0f);
         Panel.SetActive(false);
         PanelCredits.SetActive(true);
         indice++;
