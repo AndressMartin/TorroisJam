@@ -52,6 +52,7 @@ public class CameraMov : MonoBehaviour
         player.GetComponent<FMODUnity.StudioEventEmitter>().CollisionTag = "Torre";  //GAMBIARRA!!!!
         player.GetComponent<playerMoveGrid>().transitandoEntreFases = true;
         playerMovePoint.transform.position = FindClosestWalkableGrid().transform.position;
+        player.GetComponent<Rewinder>().firstPosition = FindClosestWalkableGrid().transform.position;
         //Debug.Log(FindClosestGrid().transform.position);
     }
 

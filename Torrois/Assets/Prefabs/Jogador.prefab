@@ -72,6 +72,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myParent: {fileID: 4658177698954067495}
   ColidiuParede: 0
+  direcoesMov: 00000000
 --- !u!1 &4658177698667768270
 GameObject:
   m_ObjectHideFlags: 0
@@ -188,6 +189,7 @@ GameObject:
   - component: {fileID: 4658177698954067491}
   - component: {fileID: 4658177698954067488}
   - component: {fileID: 4658177698954067494}
+  - component: {fileID: -8818589229919215741}
   m_Layer: 0
   m_Name: Jogador
   m_TagString: Player
@@ -301,7 +303,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   qntQuadradosLocal: 0
   podeJogar: 0
-  direcao: 
+  direcaoTorreJoga: 
+  direcao: 0
   transitandoEntreFases: 0
 --- !u!50 &4658177698954067491
 Rigidbody2D:
@@ -359,3 +362,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 543a1d2eb1d4b5b489d78689b4cbf1c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-8818589229919215741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4658177698954067489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9d263561b164d0438b96ddfda0aa84a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isRewinding: 0

@@ -45,7 +45,7 @@ public class playerMoveGrid : MonoBehaviour
     void FixedUpdate()
     {
         
-        if (!voltando && !podeJogar)
+        if (!voltando && !podeJogar && !gameObject.GetComponent<Rewinder>().isRewinding)
             Move();
         if (voltando)
         {

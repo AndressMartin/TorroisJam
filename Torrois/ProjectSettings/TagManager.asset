@@ -15,6 +15,7 @@ TagManager:
   - Peon
   - AlavancaH
   - AlavancaV
+  - Fader
   layers:
   - Default
   - TransparentFX

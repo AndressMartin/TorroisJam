@@ -87,6 +87,7 @@ GameObject:
   - component: {fileID: 6846891206937330504}
   - component: {fileID: 6846891206937330503}
   - component: {fileID: 1593169509}
+  - component: {fileID: 333255196935834480}
   m_Layer: 0
   m_Name: CaixaTorre
   m_TagString: Torre
@@ -260,3 +261,16 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 0
   OverrideMaxDistance: 0
+--- !u!114 &333255196935834480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6846891206937330502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9d263561b164d0438b96ddfda0aa84a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isRewinding: 0

@@ -110,7 +110,8 @@ public class Caixa : MonoBehaviour
             }
             else
             {
-                Move();
+                if (!gameObject.GetComponent<Rewinder>().isRewinding)
+                    Move();
             }
 
         }

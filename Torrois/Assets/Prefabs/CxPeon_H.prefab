@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4649187412896099351}
   - component: {fileID: 4649187412896099352}
   - component: {fileID: 2269867088277977402}
+  - component: {fileID: 4550457812526482288}
   m_Layer: 0
   m_Name: CxPeon_H
   m_TagString: Peon
@@ -187,6 +188,22 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 0
   OverrideMaxDistance: 0
+--- !u!114 &4550457812526482288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4649187412896099353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9d263561b164d0438b96ddfda0aa84a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isRewinding: 0
+  tempoExpirado: 0
+  recordTime: 10
+  firstPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &4649187413352716759
 GameObject:
   m_ObjectHideFlags: 0

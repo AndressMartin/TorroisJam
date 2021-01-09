@@ -9,7 +9,11 @@ public class ChecarMobilidade : MonoBehaviour
     public bool ColidiuParede;
 
     [SerializeField]public List<bool> direcoesMov = new List<bool>() { false, false, false, false };
-
+    private void Update()
+    {
+        if (myParent.GetComponent<Rewinder>().isRewinding)
+            transform.position = myParent.GetComponent<Rewinder>().firstPosition;
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

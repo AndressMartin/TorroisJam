@@ -88,6 +88,7 @@ GameObject:
   - component: {fileID: 3370066607875122918}
   - component: {fileID: 8197091180212024260}
   - component: {fileID: -7820882217034193552}
+  - component: {fileID: 788478395624378516}
   m_Layer: 0
   m_Name: CaixaRainha
   m_TagString: Rainha
@@ -226,7 +227,7 @@ MonoBehaviour:
   colidiuJogador: 0
   colidiuCaixa: 0
   podeMover: 1
-  andaMax: 0
+  andaMax: 1
   andandoComoRainha: 0
   estaNoCicloCaixa: 0
   direcoesMov: 00000000
@@ -273,3 +274,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 543a1d2eb1d4b5b489d78689b4cbf1c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &788478395624378516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3370066607875122919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9d263561b164d0438b96ddfda0aa84a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isRewinding: 0
+  tempoExpirado: 0
+  recordTime: 10
+  firstPosition: {x: 0, y: 0, z: 0}
