@@ -1415,7 +1415,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &98322417
 Transform:
   m_ObjectHideFlags: 0
@@ -1446,6 +1446,7 @@ MonoBehaviour:
   pontoMov: {fileID: 0}
   gridCaixa: 0
   gridDoJogador: 0
+  gridAnteriorDoJogador: 0
   colidiuJogador: 0
   colidiuCaixa: 0
   podeMover: 1
@@ -1991,7 +1992,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &145872324
 Transform:
   m_ObjectHideFlags: 0
@@ -2671,7 +2672,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &191035201
 Transform:
   m_ObjectHideFlags: 0
@@ -3911,7 +3912,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &260451609 stripped
 Transform:
@@ -6528,7 +6529,7 @@ RectTransform:
   - {fileID: 1628065917}
   - {fileID: 1021823880}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -7080,6 +7081,7 @@ MonoBehaviour:
   pontoMov: {fileID: 0}
   gridCaixa: 0
   gridDoJogador: 0
+  gridAnteriorDoJogador: 0
   colidiuJogador: 0
   colidiuCaixa: 0
   podeMover: 1
@@ -8622,6 +8624,7 @@ MonoBehaviour:
   pontoMov: {fileID: 0}
   gridCaixa: 0
   gridDoJogador: 0
+  gridAnteriorDoJogador: 0
   colidiuJogador: 0
   colidiuCaixa: 0
   podeMover: 1
@@ -9302,7 +9305,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &731124592
 Transform:
   m_ObjectHideFlags: 0
@@ -9333,6 +9336,7 @@ MonoBehaviour:
   pontoMov: {fileID: 0}
   gridCaixa: 0
   gridDoJogador: 0
+  gridAnteriorDoJogador: 0
   colidiuJogador: 0
   colidiuCaixa: 0
   podeMover: 1
@@ -10043,6 +10047,75 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad0e776d51fbc2d44b34cffc17daa738, type: 3}
+--- !u!1001 &780388498
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3370066607875122919, guid: 131a95843b2d0ac469c70acef58fce24,
+        type: 3}
+      propertyPath: m_Name
+      value: CaixaRainha (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3370066607875122922, guid: 131a95843b2d0ac469c70acef58fce24,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3370066607875122922, guid: 131a95843b2d0ac469c70acef58fce24,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3370066607875122922, guid: 131a95843b2d0ac469c70acef58fce24,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3370066607875122922, guid: 131a95843b2d0ac469c70acef58fce24,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3370066607875122922, guid: 131a95843b2d0ac469c70acef58fce24,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3370066607875122922, guid: 131a95843b2d0ac469c70acef58fce24,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3370066607875122922, guid: 131a95843b2d0ac469c70acef58fce24,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3370066607875122922, guid: 131a95843b2d0ac469c70acef58fce24,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3370066607875122922, guid: 131a95843b2d0ac469c70acef58fce24,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3370066607875122922, guid: 131a95843b2d0ac469c70acef58fce24,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3370066607875122922, guid: 131a95843b2d0ac469c70acef58fce24,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 131a95843b2d0ac469c70acef58fce24, type: 3}
 --- !u!1001 &781155978
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10269,7 +10342,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &802238482
 Transform:
   m_ObjectHideFlags: 0
@@ -10300,6 +10373,7 @@ MonoBehaviour:
   pontoMov: {fileID: 0}
   gridCaixa: 0
   gridDoJogador: 0
+  gridAnteriorDoJogador: 0
   colidiuJogador: 0
   colidiuCaixa: 0
   podeMover: 1
@@ -11317,7 +11391,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &852727721
 Transform:
   m_ObjectHideFlags: 0
@@ -11534,7 +11608,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &888132800
 Transform:
   m_ObjectHideFlags: 0
@@ -11565,6 +11639,7 @@ MonoBehaviour:
   pontoMov: {fileID: 0}
   gridCaixa: 0
   gridDoJogador: 0
+  gridAnteriorDoJogador: 0
   colidiuJogador: 0
   colidiuCaixa: 0
   podeMover: 1
@@ -11696,7 +11771,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &892412746
 Transform:
   m_ObjectHideFlags: 0
@@ -11727,6 +11802,7 @@ MonoBehaviour:
   pontoMov: {fileID: 0}
   gridCaixa: 0
   gridDoJogador: 0
+  gridAnteriorDoJogador: 0
   colidiuJogador: 0
   colidiuCaixa: 0
   podeMover: 1
@@ -11929,7 +12005,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &900867159
 Transform:
   m_ObjectHideFlags: 0
@@ -14370,7 +14446,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1042161209
 Transform:
   m_ObjectHideFlags: 0
@@ -14401,6 +14477,7 @@ MonoBehaviour:
   pontoMov: {fileID: 0}
   gridCaixa: 0
   gridDoJogador: 0
+  gridAnteriorDoJogador: 0
   colidiuJogador: 0
   colidiuCaixa: 0
   podeMover: 1
@@ -14806,7 +14883,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1080563007
 Transform:
   m_ObjectHideFlags: 0
@@ -14837,6 +14914,7 @@ MonoBehaviour:
   pontoMov: {fileID: 0}
   gridCaixa: 0
   gridDoJogador: 0
+  gridAnteriorDoJogador: 0
   colidiuJogador: 0
   colidiuCaixa: 0
   podeMover: 1
@@ -16364,7 +16442,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1206462724
 Transform:
   m_ObjectHideFlags: 0
@@ -16395,6 +16473,7 @@ MonoBehaviour:
   pontoMov: {fileID: 0}
   gridCaixa: 0
   gridDoJogador: 0
+  gridAnteriorDoJogador: 0
   colidiuJogador: 0
   colidiuCaixa: 0
   podeMover: 1
@@ -17162,7 +17241,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1256227400
 Transform:
   m_ObjectHideFlags: 0
@@ -17193,6 +17272,7 @@ MonoBehaviour:
   pontoMov: {fileID: 0}
   gridCaixa: 0
   gridDoJogador: 0
+  gridAnteriorDoJogador: 0
   colidiuJogador: 0
   colidiuCaixa: 0
   podeMover: 1
@@ -18619,7 +18699,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1352045403
 Transform:
   m_ObjectHideFlags: 0
@@ -18650,6 +18730,7 @@ MonoBehaviour:
   pontoMov: {fileID: 0}
   gridCaixa: 0
   gridDoJogador: 0
+  gridAnteriorDoJogador: 0
   colidiuJogador: 0
   colidiuCaixa: 0
   podeMover: 1
@@ -18950,6 +19031,7 @@ MonoBehaviour:
   pontoMov: {fileID: 0}
   gridCaixa: 0
   gridDoJogador: 0
+  gridAnteriorDoJogador: 0
   colidiuJogador: 0
   colidiuCaixa: 0
   podeMover: 1
@@ -19432,7 +19514,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1400382904
 Transform:
   m_ObjectHideFlags: 0
@@ -19463,6 +19545,7 @@ MonoBehaviour:
   pontoMov: {fileID: 0}
   gridCaixa: 0
   gridDoJogador: 0
+  gridAnteriorDoJogador: 0
   colidiuJogador: 0
   colidiuCaixa: 0
   podeMover: 1
@@ -19602,7 +19685,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1407115177
 Transform:
   m_ObjectHideFlags: 0
@@ -20073,7 +20156,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1459459158
 Transform:
   m_ObjectHideFlags: 0
@@ -20604,7 +20687,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1515240912
 Transform:
   m_ObjectHideFlags: 0
@@ -20635,6 +20718,7 @@ MonoBehaviour:
   pontoMov: {fileID: 0}
   gridCaixa: 0
   gridDoJogador: 0
+  gridAnteriorDoJogador: 0
   colidiuJogador: 0
   colidiuCaixa: 0
   podeMover: 1
@@ -21229,6 +21313,7 @@ MonoBehaviour:
   pontoMov: {fileID: 0}
   gridCaixa: 0
   gridDoJogador: 0
+  gridAnteriorDoJogador: 0
   colidiuJogador: 0
   colidiuCaixa: 0
   podeMover: 1
@@ -21780,7 +21865,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1622739167
 Transform:
   m_ObjectHideFlags: 0
@@ -21811,6 +21896,7 @@ MonoBehaviour:
   pontoMov: {fileID: 0}
   gridCaixa: 0
   gridDoJogador: 0
+  gridAnteriorDoJogador: 0
   colidiuJogador: 0
   colidiuCaixa: 0
   podeMover: 1
@@ -22535,7 +22621,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1661982993
 Transform:
   m_ObjectHideFlags: 0
@@ -23708,7 +23794,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1742468428
 Transform:
   m_ObjectHideFlags: 0
@@ -23739,6 +23825,7 @@ MonoBehaviour:
   pontoMov: {fileID: 0}
   gridCaixa: 0
   gridDoJogador: 0
+  gridAnteriorDoJogador: 0
   colidiuJogador: 0
   colidiuCaixa: 0
   podeMover: 1
@@ -24262,7 +24349,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1776363259
 Transform:
   m_ObjectHideFlags: 0
@@ -25806,7 +25893,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1846176816
 Transform:
   m_ObjectHideFlags: 0
@@ -25837,6 +25924,7 @@ MonoBehaviour:
   pontoMov: {fileID: 0}
   gridCaixa: 0
   gridDoJogador: 0
+  gridAnteriorDoJogador: 0
   colidiuJogador: 0
   colidiuCaixa: 0
   podeMover: 1
@@ -26070,7 +26158,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1855945433 stripped
 Transform:
@@ -26490,6 +26578,7 @@ MonoBehaviour:
   pontoMov: {fileID: 0}
   gridCaixa: 0
   gridDoJogador: 0
+  gridAnteriorDoJogador: 0
   colidiuJogador: 0
   colidiuCaixa: 0
   podeMover: 1
@@ -26957,7 +27046,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1915617512
 Transform:
   m_ObjectHideFlags: 0
@@ -26988,6 +27077,7 @@ MonoBehaviour:
   pontoMov: {fileID: 0}
   gridCaixa: 0
   gridDoJogador: 0
+  gridAnteriorDoJogador: 0
   colidiuJogador: 0
   colidiuCaixa: 0
   podeMover: 1
@@ -27189,7 +27279,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1925198894
 Transform:
   m_ObjectHideFlags: 0
@@ -27220,6 +27310,7 @@ MonoBehaviour:
   pontoMov: {fileID: 0}
   gridCaixa: 0
   gridDoJogador: 0
+  gridAnteriorDoJogador: 0
   colidiuJogador: 0
   colidiuCaixa: 0
   podeMover: 1
@@ -27984,6 +28075,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1953689767}
   - component: {fileID: 1953689766}
+  - component: {fileID: 1953689768}
   m_Layer: 0
   m_Name: Persister
   m_TagString: Untagged
@@ -28025,8 +28117,20 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1953689768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1953689765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f0431962a96d6c4981306df98aa42ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1954718345 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8858336704853312203, guid: ad0e776d51fbc2d44b34cffc17daa738,
@@ -28164,6 +28268,7 @@ MonoBehaviour:
   pontoMov: {fileID: 0}
   gridCaixa: 0
   gridDoJogador: 0
+  gridAnteriorDoJogador: 0
   colidiuJogador: 0
   colidiuCaixa: 0
   podeMover: 1
@@ -30125,7 +30230,7 @@ Transform:
   - {fileID: 1407115177}
   - {fileID: 1776363259}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2106660998 stripped
 Transform:
@@ -30139,6 +30244,75 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2073675996}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2115736278
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3370066607875122919, guid: 131a95843b2d0ac469c70acef58fce24,
+        type: 3}
+      propertyPath: m_Name
+      value: CaixaRainha
+      objectReference: {fileID: 0}
+    - target: {fileID: 3370066607875122922, guid: 131a95843b2d0ac469c70acef58fce24,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3370066607875122922, guid: 131a95843b2d0ac469c70acef58fce24,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3370066607875122922, guid: 131a95843b2d0ac469c70acef58fce24,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3370066607875122922, guid: 131a95843b2d0ac469c70acef58fce24,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3370066607875122922, guid: 131a95843b2d0ac469c70acef58fce24,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3370066607875122922, guid: 131a95843b2d0ac469c70acef58fce24,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3370066607875122922, guid: 131a95843b2d0ac469c70acef58fce24,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3370066607875122922, guid: 131a95843b2d0ac469c70acef58fce24,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3370066607875122922, guid: 131a95843b2d0ac469c70acef58fce24,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3370066607875122922, guid: 131a95843b2d0ac469c70acef58fce24,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3370066607875122922, guid: 131a95843b2d0ac469c70acef58fce24,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 131a95843b2d0ac469c70acef58fce24, type: 3}
 --- !u!1001 &2116686555
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30790,6 +30964,75 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad0e776d51fbc2d44b34cffc17daa738, type: 3}
+--- !u!1001 &2141244496
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6846891206937330502, guid: e1eff329f3384c84491229590e4bd747,
+        type: 3}
+      propertyPath: m_Name
+      value: CaixaTorre
+      objectReference: {fileID: 0}
+    - target: {fileID: 6846891206937330507, guid: e1eff329f3384c84491229590e4bd747,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6846891206937330507, guid: e1eff329f3384c84491229590e4bd747,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6846891206937330507, guid: e1eff329f3384c84491229590e4bd747,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6846891206937330507, guid: e1eff329f3384c84491229590e4bd747,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6846891206937330507, guid: e1eff329f3384c84491229590e4bd747,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6846891206937330507, guid: e1eff329f3384c84491229590e4bd747,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6846891206937330507, guid: e1eff329f3384c84491229590e4bd747,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6846891206937330507, guid: e1eff329f3384c84491229590e4bd747,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6846891206937330507, guid: e1eff329f3384c84491229590e4bd747,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6846891206937330507, guid: e1eff329f3384c84491229590e4bd747,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6846891206937330507, guid: e1eff329f3384c84491229590e4bd747,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e1eff329f3384c84491229590e4bd747, type: 3}
 --- !u!4 &2144302978 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6846891206937330507, guid: e1eff329f3384c84491229590e4bd747,
@@ -31655,6 +31898,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CaixaImovel
+      objectReference: {fileID: 0}
+    - target: {fileID: 8858336704853312202, guid: ad0e776d51fbc2d44b34cffc17daa738,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8858336704853312203, guid: ad0e776d51fbc2d44b34cffc17daa738,
         type: 3}
