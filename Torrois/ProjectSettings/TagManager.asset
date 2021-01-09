@@ -16,6 +16,7 @@ TagManager:
   - AlavancaH
   - AlavancaV
   - Fader
+  - Persister
   layers:
   - Default
   - TransparentFX

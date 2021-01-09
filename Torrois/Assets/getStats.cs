@@ -5,12 +5,12 @@ using UnityEngine;
 public class getStats : MonoBehaviour
 {
     public string[] timerStats;
+    public string[] salaNames;
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         

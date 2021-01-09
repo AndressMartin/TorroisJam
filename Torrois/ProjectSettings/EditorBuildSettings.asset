@@ -15,6 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/CenaAndress2.unity
     guid: 131c32568bcd7a64097d317ec6ef930c
   - enabled: 1
-    path: Assets/Scenes/Stats.unity
+    path: Assets/Scenes/Ending.unity
     guid: de8706fb140948b4b991cb3e24a14bf9
   m_configObjects: {}
