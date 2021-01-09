@@ -31,9 +31,12 @@ public class playerMoveGrid : MonoBehaviour
     private Animator playerAnimator;
 
     public bool transitandoEntreFases;
-
+    FMOD.Studio.EventInstance passos;
+    FMOD.Studio.EventInstance ugh;
     void Start()
     {
+        passos = RuntimeManager.CreateInstance("event:/sfx/passos");
+        ugh = RuntimeManager.CreateInstance("event:/sfx/ugh_cant_push");
         childSpriteHolder = transform.GetChild(1).gameObject;
         playerAnimator = childSpriteHolder.gameObject.GetComponent<Animator>();
         pontoMov = transform.GetChild(0);
@@ -64,14 +67,15 @@ public class playerMoveGrid : MonoBehaviour
         pontoMovAntesTemp = pontoMovAntes;   
         if (Vector2.Distance(transform.position, pontoMov.position) == 0f)
         {
-            if (gameObject.GetComponent<StudioEventEmitter>().CollisionTag == "Torre")  //GAMBIARRA!!!!
+            if (gameObject.GetComponent<StudioEventEmitter>().CollisionTag == "Respawn")  //GAMBIARRA!!!!
             {
-                gameObject.GetComponent<StudioEventEmitter>().CollisionTag = "Imovel";
+                gameObject.GetComponent<StudioEventEmitter>().CollisionTag = "Finish";
                 gameObject.GetComponent<BoxCollider2D>().enabled = true;
             }
             transitandoEntreFases = false; //Código da CameraMov
             if (Mathf.Abs(Input.GetAxisRaw("Horizontal")) == 1f)
             {
+                passos.start();
                 Virar();
                 direcao = (int)Input.GetAxisRaw("Horizontal");
                 pontoMovAntes = pontoMov.position;
@@ -82,6 +86,7 @@ public class playerMoveGrid : MonoBehaviour
 
             else if (Mathf.Abs(Input.GetAxisRaw("Vertical")) == 1f)  
             {
+                passos.start();
                 direcao = (int)Input.GetAxisRaw("Vertical")*16;
                 pontoMovAntes = pontoMov.position;
                 gridAnterior = gridAtual;
@@ -110,6 +115,7 @@ public class playerMoveGrid : MonoBehaviour
 
     public void Voltar()
     {
+        ugh.start();
         Debug.Log("Jogador Voltando");
         pontoMov.position = pontoMovAntes;
         pontoMovAntes = pontoMovAntesTemp;

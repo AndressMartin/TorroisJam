@@ -41,6 +41,9 @@ public class Caixa : MonoBehaviour
 
     public GameObject portaSprite;
 
+    FMOD.Studio.EventInstance porta;
+    private bool playPorta;
+
 
     //Variaveis testes especiais para colisao da rainha
     public bool rainhaProcurandoColl;
@@ -438,12 +441,29 @@ public class Caixa : MonoBehaviour
 
     void AnimPorta(float quantidade)
     {
-        if (portaSprite != null && quantidade > 0)
+        if (portaSprite != null && quantidade > 1)
+        {
+            Debug.Log("Porta abrindo?");
+            portaSprite.transform.position = Vector2.MoveTowards
+                   (portaSprite.transform.position, new Vector2(portaSprite.transform.position.x, transform.position.y + quantidade), velocidade * Time.deltaTime);
+            if (playPorta)
+            {
+                porta = RuntimeManager.CreateInstance("event:/sfx/porta_abrindo");
+                porta.start();
+                playPorta = false;
+            }
+        }
+        
+
+
+        else if (portaSprite != null && quantidade < 1)
+        {
+            playPorta = true;
+            Debug.Log("Porta fechando?");
             portaSprite.transform.position = Vector2.MoveTowards
                 (portaSprite.transform.position, new Vector2(portaSprite.transform.position.x, transform.position.y + quantidade), velocidade * Time.deltaTime);
-        else if (portaSprite != null && quantidade < 0)
-            portaSprite.transform.position = Vector2.MoveTowards
-                (portaSprite.transform.position, new Vector2(portaSprite.transform.position.x, transform.position.y + quantidade), velocidade * Time.deltaTime);
+        }
+            
     }
 
     public void sendParent()

@@ -6,20 +6,36 @@ using TMPro;
 
 public class Cooldown : MonoBehaviour
 {
+
+    public static bool tempoParado;
     private TextMeshProUGUI timerText;
-    [SerializeField] public static float timerTime = 120;
-    public static bool ganhou = false;
+    [SerializeField] public static float timerTime = 120f;
     public static float timerMax = 5f;
+
+    Color white = new Color(255, 255, 255);
+    Color red = new Color(255, 0, 0);
     void Awake()
     {
-        ganhou = false;
         timerText = GetComponent<TextMeshProUGUI>();
         StartCooldownTimer();
     }
 
     private void Update()
     {
-        UpdateTimer();
+        if (!tempoParado)
+        {
+            if (timerTime > 0)
+            {
+                UpdateTimer();
+                timerText.color = white;
+            }
+            else
+            {
+                timerTime = 0;
+                timerText.color = red;
+                timerText.text = "FALHOU";
+            }
+        }
     }
 
     void StartCooldownTimer()
@@ -47,5 +63,15 @@ public class Cooldown : MonoBehaviour
     public static void ReiniciarTimer() //TODO: ReiniciarTimer quando voltar a 0, não quando chamar
     {
         timerTime = timerMax;
+    }
+
+    public static void StopTimer()
+    {
+        tempoParado = true;
+    }
+
+    public static void PlayTimer()
+    {
+        tempoParado = false;
     }
 }

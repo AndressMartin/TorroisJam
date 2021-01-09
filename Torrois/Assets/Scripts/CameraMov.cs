@@ -9,10 +9,13 @@ public class CameraMov : MonoBehaviour
     private GameObject player;
     public GameObject playerMovePoint;
     public GameObject GameManager;
-    bool chmaouJogador;
+    bool chamouJogador;
+
+    public Transform ShakerObj;
 
     void Start()
     {
+        ShakerObj = gameObject.transform.GetChild(0);
         player = GameObject.FindGameObjectWithTag("Player");
         GameManager = GameObject.FindGameObjectWithTag("GameController");
         transform.position = new Vector3(0f, 0f, -10f);
@@ -22,11 +25,14 @@ public class CameraMov : MonoBehaviour
     {
         if (podeMover)
         {
+            GameManager.GetComponent<SalaManager>().SendStats();
+            Cooldown.StopTimer();
             GameManager.GetComponent<SalaManager>().AtivarProxSala();
             GameManager.GetComponent<SalaManager>().DesativarNome();
+            
             FazerMovimento();
         }
-        if (chmaouJogador)
+        if (chamouJogador)
             ResetRewind();
     }
 
@@ -54,18 +60,18 @@ public class CameraMov : MonoBehaviour
         if (Vector2.Distance(player.transform.position, playerMovePoint.transform.position) == 0)
         {
             player.GetComponent<Rewinder>().positions.Clear();
-            chmaouJogador = false;
+            chamouJogador = false;
         }
     }
 
     public void TrazerJogador()
     {
-        player.GetComponent<FMODUnity.StudioEventEmitter>().CollisionTag = "Torre";  //GAMBIARRA!!!!
+        player.GetComponent<FMODUnity.StudioEventEmitter>().CollisionTag = "Respawn";  //GAMBIARRA!!!!
         player.GetComponent<BoxCollider2D>().enabled = false;
         player.GetComponent<playerMoveGrid>().transitandoEntreFases = true;
         playerMovePoint.transform.position = FindClosestWalkableGrid().transform.position;
         player.GetComponent<Rewinder>().firstPosition = FindClosestWalkableGrid().transform.position;
-        chmaouJogador = true;
+        chamouJogador = true;
         //Debug.Log(FindClosestGrid().transform.position);
     }
 
@@ -102,5 +108,8 @@ public class CameraMov : MonoBehaviour
         Debug.Log("Finished Coroutine at timestamp : " + Time.time);
         GameManager.GetComponent<SalaManager>().DesativarSalaAnterior();
         GameManager.GetComponent<SalaManager>().AtivarNome();
+        Cooldown.PlayTimer();
+        GameManager.GetComponent<SalaManager>().TrocarTimer();
+
     }
 }

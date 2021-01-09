@@ -19,7 +19,7 @@ public class Fader : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (player.GetComponent<Rewinder>().isRewinding && player.GetComponent<Rewinder>().tempoExpirado)
+        if (player.GetComponent<Rewinder>().isRewinding)
         {
             fadingOut = true;
         }
@@ -34,7 +34,7 @@ public class Fader : MonoBehaviour
 
     public void fadeOut()
     {
-        thisImage.CrossFadeAlpha(1, .5f, true);
+        thisImage.CrossFadeAlpha(1, .2f, true);
         Debug.Log("Alpha: " + thisImage.canvasRenderer.GetAlpha());
         if (thisImage.canvasRenderer.GetAlpha() >= 0.9f)
         {
@@ -46,7 +46,7 @@ public class Fader : MonoBehaviour
 
     public void fadeIn()
     {
-        thisImage.CrossFadeAlpha(0, .5f, true);
+        thisImage.CrossFadeAlpha(0, .2f, true);
         if (thisImage.canvasRenderer.GetAlpha() <= 0.1f)
         {
             thisImage.canvasRenderer.SetAlpha(0f);

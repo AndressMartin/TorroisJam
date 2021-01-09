@@ -10,11 +10,16 @@ public class SalaManager : MonoBehaviour
     public GameObject[] salasHolder;
     public TextMeshProUGUI SalaName;
     public string[] nomesSalas;
+    public float[] timerSalas;
     public static int indice = 0;
+
+
+    public GameObject persister;
 
     // Start is called before the first frame update
     void Start()
     {
+        TrocarTimer();
         MainCamera = GameObject.FindGameObjectWithTag("MainCamera");
     }
 
@@ -45,8 +50,20 @@ public class SalaManager : MonoBehaviour
 
     public void AtivarNome()
     {
-        int indiceTemp = indice;
         SalaName.transform.parent.gameObject.SetActive(true);
-        SalaName.text = nomesSalas[indiceTemp];
+        SalaName.text = nomesSalas[indice];
+    }
+
+    public void TrocarTimer()
+    {
+        Cooldown.timerMax = timerSalas[indice];
+        Cooldown.ReiniciarTimer();
+    }
+
+    public void SendStats()
+    {
+        string minutes = Mathf.Floor(Cooldown.timerTime / 60).ToString("00");
+        string seconds = (Cooldown.timerTime % 60).ToString("00");
+        persister.GetComponent<getStats>().timerStats[indice] = minutes + ":" + seconds;
     }
 }
