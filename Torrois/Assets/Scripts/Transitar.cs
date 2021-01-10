@@ -32,7 +32,7 @@ public class Transitar : MonoBehaviour
         {
             if (ganhou)
             {
-                SceneManager.LoadScene(2);
+                SceneManager.LoadScene(3);
             }
             passou = true;
             CameraMov.podeMover = true;
