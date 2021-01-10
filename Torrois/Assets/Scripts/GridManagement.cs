@@ -47,30 +47,30 @@ public class GridManagement : MonoBehaviour
                 float posY = (linha * -tileSize) + 0.5f;
                 
                 GridTile.transform.position = new Vector2(posX-8, posY+4);
-                DrawIcon(GridTile, 2);
+                //DrawIcon(GridTile, 2);
                 indice++;
             }
         }
     }
 
-    private void DrawIcon(GameObject gameObject, int idx)
-    {
-        var largeIcons = GetTextures("sv_icon_dot", "_sml", 0, 16);
-        var icon = largeIcons[idx];
-        var egu = typeof(EditorGUIUtility);
-        var flags = BindingFlags.InvokeMethod | BindingFlags.Static | BindingFlags.NonPublic;
-        var args = new object[] { gameObject, icon.image };
-        var setIcon = egu.GetMethod("SetIconForObject", flags, null, new Type[] { typeof(UnityEngine.Object), typeof(Texture2D) }, null);
-        setIcon.Invoke(null, args);
-    }
-    private GUIContent[] GetTextures(string baseName, string postFix, int startIndex, int count)
-    {
-        GUIContent[] array = new GUIContent[count];
-        for (int i = 0; i < count; i++)
-        {
-            array[i] = EditorGUIUtility.IconContent(baseName + (startIndex + i) + postFix);
-        }
-        return array;
-    }
+    //    private void DrawIcon(GameObject gameObject, int idx)
+    //    {
+    //        var largeIcons = GetTextures("sv_icon_dot", "_sml", 0, 16);
+    //        var icon = largeIcons[idx];
+    //        var egu = typeof(EditorGUIUtility);
+    //        var flags = BindingFlags.InvokeMethod | BindingFlags.Static | BindingFlags.NonPublic;
+    //        var args = new object[] { gameObject, icon.image };
+    //        var setIcon = egu.GetMethod("SetIconForObject", flags, null, new Type[] { typeof(UnityEngine.Object), typeof(Texture2D) }, null);
+    //        setIcon.Invoke(null, args);
+    //    }
+    //    private GUIContent[] GetTextures(string baseName, string postFix, int startIndex, int count)
+    //    {
+    //        GUIContent[] array = new GUIContent[count];
+    //        for (int i = 0; i < count; i++)
+    //        {
+    //            array[i] = EditorGUIUtility.IconContent(baseName + (startIndex + i) + postFix);
+    //        }
+    //        return array;
+    //    }
 }
 
