@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Transitar : MonoBehaviour
 {
     BoxCollider2D portaBoxColl;
     public bool portaOpen;
     public bool passou;
+    public bool ganhou;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +30,10 @@ public class Transitar : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            if (ganhou)
+            {
+                SceneManager.LoadScene(2);
+            }
             passou = true;
             CameraMov.podeMover = true;
         }
