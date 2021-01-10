@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class Ending : MonoBehaviour
 {
     public GameObject Panel;
     public GameObject PanelCredits;
     public Image[] imagens;
+    public GameObject aperteEspaco;
     public bool fadingout = false;
     private int indice = 0;
 
@@ -60,6 +62,7 @@ public class Ending : MonoBehaviour
         imagens[3].canvasRenderer.SetAlpha(0f);
         Panel.SetActive(false);
         PanelCredits.SetActive(true);
+        aperteEspaco.SetActive(false);
         indice++;
     }
 }

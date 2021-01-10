@@ -2833,7 +2833,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &145872324
 Transform:
   m_ObjectHideFlags: 0
@@ -3807,7 +3807,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &191035201
 Transform:
   m_ObjectHideFlags: 0
@@ -8697,7 +8697,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &493166322
 Transform:
   m_ObjectHideFlags: 0
@@ -15628,7 +15628,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &852727721
 Transform:
   m_ObjectHideFlags: 0
@@ -16688,7 +16688,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &900867159
 Transform:
   m_ObjectHideFlags: 0
@@ -19108,7 +19108,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2032338173, guid: 60d48d2edd7f1074dba6434f3a73fb67, type: 3}
       propertyPath: nomesSalas.Array.data[4]
-      value: Dislike
+      value: Desgosto
       objectReference: {fileID: 0}
     - target: {fileID: 2032338173, guid: 60d48d2edd7f1074dba6434f3a73fb67, type: 3}
       propertyPath: nomesSalas.Array.data[5]
@@ -19128,7 +19128,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2032338173, guid: 60d48d2edd7f1074dba6434f3a73fb67, type: 3}
       propertyPath: nomesSalas.Array.data[9]
-      value: Esquilo!
+      value: Natal
       objectReference: {fileID: 0}
     - target: {fileID: 2032338173, guid: 60d48d2edd7f1074dba6434f3a73fb67, type: 3}
       propertyPath: salaHolder.Array.data[0]
@@ -19144,7 +19144,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2032338173, guid: 60d48d2edd7f1074dba6434f3a73fb67, type: 3}
       propertyPath: timerSalas.Array.data[0]
-      value: 60
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 2032338173, guid: 60d48d2edd7f1074dba6434f3a73fb67, type: 3}
       propertyPath: timerSalas.Array.data[1]
@@ -19192,11 +19192,11 @@ PrefabInstance:
       objectReference: {fileID: 917323592}
     - target: {fileID: 2032338173, guid: 60d48d2edd7f1074dba6434f3a73fb67, type: 3}
       propertyPath: nomesSalas.Array.data[10]
-      value: Esquilo!
+      value: "Tr\xEAs oit\xE3o"
       objectReference: {fileID: 0}
     - target: {fileID: 2032338173, guid: 60d48d2edd7f1074dba6434f3a73fb67, type: 3}
       propertyPath: nomesSalas.Array.data[11]
-      value: Esquilo!
+      value: "M\xEDmica"
       objectReference: {fileID: 0}
     - target: {fileID: 2032338173, guid: 60d48d2edd7f1074dba6434f3a73fb67, type: 3}
       propertyPath: salasHolder.Array.data[0]
@@ -22931,7 +22931,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 84, y: 0}
-  m_SizeDelta: {x: 351.08362, y: 50}
+  m_SizeDelta: {x: 409.4973, y: 50}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1195875821
 MonoBehaviour:
@@ -22952,7 +22952,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Bem-vindo!
+  m_text: Torrois.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -23021,7 +23021,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1195875821}
-    characterCount: 10
+    characterCount: 8
     spriteCount: 0
     spaceCount: 0
     wordCount: 1
@@ -24649,7 +24649,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1267394584
 Transform:
   m_ObjectHideFlags: 0
@@ -27720,7 +27720,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1407115177
 Transform:
   m_ObjectHideFlags: 0
@@ -28744,7 +28744,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1459459158
 Transform:
   m_ObjectHideFlags: 0
@@ -32662,7 +32662,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1661982993
 Transform:
   m_ObjectHideFlags: 0
@@ -34785,7 +34785,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1776363259
 Transform:
   m_ObjectHideFlags: 0
