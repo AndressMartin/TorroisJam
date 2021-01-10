@@ -37,7 +37,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: ../FMod/Unitytest/Build/Desktop/Master.bank
   Name: Master
-  lastModified: 637455751352207130
+  lastModified: 637457884759561321
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -55,7 +55,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: ../FMod/Unitytest/Build/Desktop/Master.strings.bank
   Name: Master.strings
-  lastModified: 637455751352286884
+  lastModified: 637457884759631259
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -306,6 +306,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 2861
+--- !u!114 &-3295128981779709367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/passos
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/passos
+  guid: 2a6fe2466003634e819f17ecba2df05a
+  Banks:
+  - {fileID: -8626163553006133261}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 80
 --- !u!114 &-3268025659090897953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -375,6 +398,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 1116
+--- !u!114 &-2810961213122387876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/engrenagens
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/engrenagens
+  guid: 679bfe0c6d4bda4ab1d4489f4369594f
+  Banks:
+  - {fileID: -8626163553006133261}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2861
 --- !u!114 &-1807729933961152599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -560,14 +606,14 @@ MonoBehaviour:
   - {fileID: -5722102150807819703}
   - {fileID: -161769159216074216}
   - {fileID: -2826651684034601231}
-  - {fileID: 5683834579718292141}
-  - {fileID: -8849723968108514539}
+  - {fileID: -3295128981779709367}
+  - {fileID: -2810961213122387876}
   EditorParameters: []
   MasterBanks:
   - {fileID: -8626163553006133261}
   StringsBanks:
   - {fileID: -7812789740167254952}
-  stringsBankWriteTime: 637455751352286884
+  stringsBankWriteTime: 637457884759631259
   cacheVersion: 5
 --- !u!114 &77658626284580340
 MonoBehaviour:

@@ -207,7 +207,7 @@ GameObject:
   - component: {fileID: 20202635}
   - component: {fileID: 20202634}
   m_Layer: 5
-  m_Name: SalasTxt
+  m_Name: SalasTxt9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -636,7 +636,7 @@ GameObject:
   - component: {fileID: 201627568}
   - component: {fileID: 201627567}
   m_Layer: 5
-  m_Name: TempoTxt
+  m_Name: TempoTxt7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -792,7 +792,7 @@ GameObject:
   - component: {fileID: 235652000}
   - component: {fileID: 235651999}
   m_Layer: 5
-  m_Name: SalasTxt
+  m_Name: SalasTxt2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -950,7 +950,7 @@ GameObject:
   - component: {fileID: 256526603}
   - component: {fileID: 256526602}
   m_Layer: 5
-  m_Name: TempoTxt
+  m_Name: TempoTxt10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1215,7 +1215,7 @@ GameObject:
   - component: {fileID: 301720925}
   - component: {fileID: 301720924}
   m_Layer: 5
-  m_Name: SalasTxt
+  m_Name: SalasTxt4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1484,7 +1484,7 @@ GameObject:
   - component: {fileID: 449760936}
   - component: {fileID: 449760935}
   m_Layer: 5
-  m_Name: TempoTxt
+  m_Name: TempoTxt3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1640,7 +1640,7 @@ GameObject:
   - component: {fileID: 482052250}
   - component: {fileID: 482052249}
   m_Layer: 5
-  m_Name: TempoTxt
+  m_Name: TempoTxt1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2028,7 +2028,7 @@ GameObject:
   - component: {fileID: 615786247}
   - component: {fileID: 615786246}
   m_Layer: 5
-  m_Name: TempoTxt
+  m_Name: TempoTxt9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2488,7 +2488,7 @@ GameObject:
   - component: {fileID: 840474131}
   - component: {fileID: 840474130}
   m_Layer: 5
-  m_Name: SalasTxt
+  m_Name: SalasTxt3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2646,7 +2646,7 @@ GameObject:
   - component: {fileID: 867431935}
   - component: {fileID: 867431934}
   m_Layer: 5
-  m_Name: SalasTxt
+  m_Name: SalasTxt8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2804,7 +2804,7 @@ GameObject:
   - component: {fileID: 904649920}
   - component: {fileID: 904649919}
   m_Layer: 5
-  m_Name: SalasTxt
+  m_Name: SalasTxt5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2962,7 +2962,7 @@ GameObject:
   - component: {fileID: 908871502}
   - component: {fileID: 908871501}
   m_Layer: 5
-  m_Name: TempoTxt
+  m_Name: TempoTxt11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3265,7 +3265,7 @@ GameObject:
   - component: {fileID: 1021829727}
   - component: {fileID: 1021829726}
   m_Layer: 5
-  m_Name: SalasTxt
+  m_Name: SalasTxt11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3579,7 +3579,7 @@ GameObject:
   - component: {fileID: 1187724027}
   - component: {fileID: 1187724026}
   m_Layer: 5
-  m_Name: SalasTxt
+  m_Name: SalasTxt12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3824,7 +3824,7 @@ MonoBehaviour:
   CollisionTag: 
   Event: event:/music/menu
   PlayEvent: 1
-  StopEvent: 0
+  StopEvent: 2
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0
@@ -3844,7 +3844,7 @@ GameObject:
   - component: {fileID: 1253531524}
   - component: {fileID: 1253531523}
   m_Layer: 5
-  m_Name: TempoTxt
+  m_Name: TempoTxt4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4192,7 +4192,7 @@ GameObject:
   - component: {fileID: 1265543042}
   - component: {fileID: 1265543041}
   m_Layer: 5
-  m_Name: SalasTxt
+  m_Name: SalasTxt10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4426,48 +4426,88 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8180085276947486470, guid: ff2d294ff1aeaef4b9bac5578c977477,
         type: 3}
+      propertyPath: salaNames.Array.size
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8180085276947486470, guid: ff2d294ff1aeaef4b9bac5578c977477,
+        type: 3}
+      propertyPath: timerStats.Array.size
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8180085276947486470, guid: ff2d294ff1aeaef4b9bac5578c977477,
+        type: 3}
+      propertyPath: salaNames.Array.data[9]
+      value: Esquilo!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8180085276947486470, guid: ff2d294ff1aeaef4b9bac5578c977477,
+        type: 3}
+      propertyPath: salaNames.Array.data[10]
+      value: Esquilo!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8180085276947486470, guid: ff2d294ff1aeaef4b9bac5578c977477,
+        type: 3}
+      propertyPath: salaNames.Array.data[11]
+      value: Esquilo!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8180085276947486470, guid: ff2d294ff1aeaef4b9bac5578c977477,
+        type: 3}
       propertyPath: timerStats.Array.data[0]
-      value: 00:00
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8180085276947486470, guid: ff2d294ff1aeaef4b9bac5578c977477,
         type: 3}
       propertyPath: timerStats.Array.data[1]
-      value: 2
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8180085276947486470, guid: ff2d294ff1aeaef4b9bac5578c977477,
         type: 3}
       propertyPath: timerStats.Array.data[2]
-      value: 2
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8180085276947486470, guid: ff2d294ff1aeaef4b9bac5578c977477,
         type: 3}
       propertyPath: timerStats.Array.data[3]
-      value: 2
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8180085276947486470, guid: ff2d294ff1aeaef4b9bac5578c977477,
         type: 3}
       propertyPath: timerStats.Array.data[4]
-      value: 00:00
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8180085276947486470, guid: ff2d294ff1aeaef4b9bac5578c977477,
         type: 3}
       propertyPath: timerStats.Array.data[5]
-      value: 2
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8180085276947486470, guid: ff2d294ff1aeaef4b9bac5578c977477,
         type: 3}
       propertyPath: timerStats.Array.data[6]
-      value: 2
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8180085276947486470, guid: ff2d294ff1aeaef4b9bac5578c977477,
         type: 3}
       propertyPath: timerStats.Array.data[7]
-      value: 2
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8180085276947486470, guid: ff2d294ff1aeaef4b9bac5578c977477,
         type: 3}
       propertyPath: timerStats.Array.data[8]
-      value: 2
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8180085276947486470, guid: ff2d294ff1aeaef4b9bac5578c977477,
+        type: 3}
+      propertyPath: timerStats.Array.data[9]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8180085276947486470, guid: ff2d294ff1aeaef4b9bac5578c977477,
+        type: 3}
+      propertyPath: timerStats.Array.data[10]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8180085276947486470, guid: ff2d294ff1aeaef4b9bac5578c977477,
+        type: 3}
+      propertyPath: timerStats.Array.data[11]
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8180085276947486471, guid: ff2d294ff1aeaef4b9bac5578c977477,
         type: 3}
@@ -4696,7 +4736,7 @@ GameObject:
   - component: {fileID: 1485787881}
   - component: {fileID: 1485787880}
   m_Layer: 5
-  m_Name: TempoTxt
+  m_Name: TempoTxt2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4852,7 +4892,7 @@ GameObject:
   - component: {fileID: 1504258472}
   - component: {fileID: 1504258471}
   m_Layer: 5
-  m_Name: SalasTxt
+  m_Name: SalasTxt6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5114,7 +5154,7 @@ GameObject:
   - component: {fileID: 1636650088}
   - component: {fileID: 1636650087}
   m_Layer: 5
-  m_Name: SalasTxt
+  m_Name: SalasTxt7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5850,7 +5890,7 @@ GameObject:
   - component: {fileID: 1837740501}
   - component: {fileID: 1837740500}
   m_Layer: 5
-  m_Name: SalasTxt
+  m_Name: SalasTxt1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6013,7 +6053,7 @@ GameObject:
   m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1840147751
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6738,7 +6778,7 @@ GameObject:
   - component: {fileID: 2045046621}
   - component: {fileID: 2045046620}
   m_Layer: 5
-  m_Name: TempoTxt
+  m_Name: TempoTxt5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6894,7 +6934,7 @@ GameObject:
   - component: {fileID: 2051651236}
   - component: {fileID: 2051651235}
   m_Layer: 5
-  m_Name: TempoTxt
+  m_Name: TempoTxt8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7089,7 +7129,7 @@ GameObject:
   - component: {fileID: 2077089405}
   - component: {fileID: 2077089404}
   m_Layer: 5
-  m_Name: TempoTxt
+  m_Name: TempoTxt6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7355,7 +7395,7 @@ GameObject:
   - component: {fileID: 2145698540}
   - component: {fileID: 2145698539}
   m_Layer: 5
-  m_Name: TempoTxt
+  m_Name: TempoTxt12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7553,6 +7593,21 @@ PrefabInstance:
       objectReference: {fileID: 20202634}
     - target: {fileID: 5526001026369819394, guid: 17fe94b90f05c714188f7b789b65c3dd,
         type: 3}
+      propertyPath: nameTexts.Array.data[9]
+      value: 
+      objectReference: {fileID: 1265543041}
+    - target: {fileID: 5526001026369819394, guid: 17fe94b90f05c714188f7b789b65c3dd,
+        type: 3}
+      propertyPath: nameTexts.Array.data[10]
+      value: 
+      objectReference: {fileID: 1021829726}
+    - target: {fileID: 5526001026369819394, guid: 17fe94b90f05c714188f7b789b65c3dd,
+        type: 3}
+      propertyPath: nameTexts.Array.data[11]
+      value: 
+      objectReference: {fileID: 1187724026}
+    - target: {fileID: 5526001026369819394, guid: 17fe94b90f05c714188f7b789b65c3dd,
+        type: 3}
       propertyPath: timerTexts.Array.data[0]
       value: 
       objectReference: {fileID: 482052249}
@@ -7596,6 +7651,21 @@ PrefabInstance:
       propertyPath: timerTexts.Array.data[8]
       value: 
       objectReference: {fileID: 615786246}
+    - target: {fileID: 5526001026369819394, guid: 17fe94b90f05c714188f7b789b65c3dd,
+        type: 3}
+      propertyPath: timerTexts.Array.data[9]
+      value: 
+      objectReference: {fileID: 256526602}
+    - target: {fileID: 5526001026369819394, guid: 17fe94b90f05c714188f7b789b65c3dd,
+        type: 3}
+      propertyPath: timerTexts.Array.data[10]
+      value: 
+      objectReference: {fileID: 908871501}
+    - target: {fileID: 5526001026369819394, guid: 17fe94b90f05c714188f7b789b65c3dd,
+        type: 3}
+      propertyPath: timerTexts.Array.data[11]
+      value: 
+      objectReference: {fileID: 2145698539}
     - target: {fileID: 5526001026369819395, guid: 17fe94b90f05c714188f7b789b65c3dd,
         type: 3}
       propertyPath: m_RootOrder

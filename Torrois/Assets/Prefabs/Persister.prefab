@@ -54,8 +54,11 @@ MonoBehaviour:
   - 
   - 
   - 
+  - 
+  - 
+  - 
   salaNames:
-  - Bem-vindo!
+  - Torrois.
   - Marcha, soldado!
   - "Erup\xE7\xE3o"
   - O plano da rainha
@@ -63,6 +66,9 @@ MonoBehaviour:
   - "Cora\xE7\xE3o partido"
   - "Sem tempo, irm\xE3o."
   - Sala Melo
+  - Esquilo!
+  - Esquilo!
+  - Esquilo!
   - Esquilo!
 --- !u!114 &8180085276947486472
 MonoBehaviour:
