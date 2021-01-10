@@ -23,6 +23,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 2861
+--- !u!114 &-8750036475632598890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/engrenagens
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/engrenagens
+  guid: 679bfe0c6d4bda4ab1d4489f4369594f
+  Banks:
+  - {fileID: -8626163553006133261}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2861
 --- !u!114 &-8626163553006133261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37,7 +60,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: ../FMod/Unitytest/Build/Desktop/Master.bank
   Name: Master
-  lastModified: 637453741692650778
+  lastModified: 637458189418072654
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -55,11 +78,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: ../FMod/Unitytest/Build/Desktop/Master.strings.bank
   Name: Master.strings
-  lastModified: 637453741692690788
+  lastModified: 637458189418112661
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1420
+    Value: 1510
   Exists: 1
 --- !u!114 &-6660776989999620961
 MonoBehaviour:
@@ -374,7 +397,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 1000
+  Length: 1116
 --- !u!114 &-1807729933961152599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -560,12 +583,14 @@ MonoBehaviour:
   - {fileID: -5722102150807819703}
   - {fileID: -161769159216074216}
   - {fileID: -2826651684034601231}
+  - {fileID: 1994901037328794170}
+  - {fileID: -8750036475632598890}
   EditorParameters: []
   MasterBanks:
   - {fileID: -8626163553006133261}
   StringsBanks:
   - {fileID: -7812789740167254952}
-  stringsBankWriteTime: 637453741692690788
+  stringsBankWriteTime: 637458189418112661
   cacheVersion: 5
 --- !u!114 &77658626284580340
 MonoBehaviour:
@@ -614,6 +639,29 @@ MonoBehaviour:
   MaxDistance: 0
   Length: 181000
 --- !u!114 &1237792217708878106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/passos
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/passos
+  guid: 2a6fe2466003634e819f17ecba2df05a
+  Banks:
+  - {fileID: -8626163553006133261}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 80
+--- !u!114 &1994901037328794170
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
