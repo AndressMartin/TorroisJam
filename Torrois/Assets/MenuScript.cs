@@ -13,8 +13,9 @@ public class MenuScript : MonoBehaviour
         mouseOver = RuntimeManager.CreateInstance("event:/sfx/menu_selection");
     }
 
-    private void OnMouseOver()
+    public void OnMouseOver()
     {
+        Debug.Log("Mouse Over");
         mouseOver.start();
     }
 }
