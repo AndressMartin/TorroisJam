@@ -7,8 +7,9 @@ Entre nesse jogo incrível de puzzle arcade e tente vencer antes que o tempo aca
 
 ### Para Jogar
 ![capa](https://github.com/AndressMartin/TorroisJam/blob/main/Extras/Images/gameplay.png?raw=false)
-Vá até https://gamejolt.com/games/torrois/574543 e baixe o executável para testar. 
-Para ver o projeto por dentro, baixe a solução compactada aqui, e abra o projeto no Unity. Clique em Build and Run ou teste pelo editor. Certifique-se de que a solução do FMod foi reconhecida pelo editor.
+
+Vá até [GameJolt](https://gamejolt.com/games/torrois/574543) e baixe o executável para testar e jogar. 
+Para ver o projeto por dentro, clone a solução compactada aqui, e abra o projeto no Unity. Clique em Build and Run ou teste pelo editor. Certifique-se de que a solução do FMod foi reconhecida pelo editor.
 
 ### Créditos
 
