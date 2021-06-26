@@ -1,5 +1,5 @@
 # TorroisJam
-
+![alt text](https://github.com/AndressMartin/TorroisJam/blob/main/Extras/Images/capa.png?raw=true)
 ## Jogo desenvolvido em menos de uma semana para a Game Jaaj 2021!
 
 Você é um peão solitário dentro de uma torre. A torre parece estar levemente, bom, quebrada - Suas engrenagens e maquinários estão fora de lugar.
